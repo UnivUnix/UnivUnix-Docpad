@@ -33,7 +33,7 @@
         <!-- Styles -->
         <%- @getBlock('styles').add(@site.styles).toHTML() %>
     </head>
-    <body>
+    <body class="top-navbar">
         <!-- Markup -->
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
@@ -57,8 +57,8 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <section id="content" class="content">
+        <div id="wrap" class="container-fluid">
+            <section id="content" class="content row-fluid">
                 <div id="main" class="span9">
                     <%- @content %>
                 </div>
@@ -82,7 +82,7 @@
                 </aside>
             </section>
 
-            <footer>
+            <footer id="content-info">
                 <div class="foot">
                     <div class="row-fluid">
                         <div class="span6 html">
