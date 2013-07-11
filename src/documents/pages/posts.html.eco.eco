@@ -11,3 +11,4 @@ pageOrder: 2
 		<a href="<%= document.url %>"><%= document.title %></a></li>
 	<% end %>
 </nav>
+<%- @getCommentsBlock() %>

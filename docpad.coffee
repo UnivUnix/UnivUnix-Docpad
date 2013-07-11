@@ -42,7 +42,9 @@ docpadConfig = {
 			# Scripts
 			scripts: [
 				"//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js",
-				"/scripts/script.js"
+				"/scripts/script.js",
+				"/vendor/twitter-bootstrap/js/bootstrap-dropdown.js",
+				"/vendor/twitter-bootstrap/js/bootstrap-collapse.js"
 			]
 
 
@@ -59,7 +61,7 @@ docpadConfig = {
 				"#{@document.title} | #{@site.title}"
 			# if our document does not have it's own title, then we should just use the site's title
 			else
-				@site.title
+				"#{@site.title} | #{@site.description}"
 
 		# Get the prepared site/document description
 		getPreparedDescription: ->

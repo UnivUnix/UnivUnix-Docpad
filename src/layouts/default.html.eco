@@ -38,6 +38,7 @@
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
+                    <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
                     <a class="brand" href="/"></a>
                     <nav id="nav-main" class="nav-collapse">
                         <ul class="nav">
@@ -49,9 +50,9 @@
                         </ul>
                         <div class="navbar-text pull-right">
                             <a class="twitter" href="http://twitter.com/univunix" target="_blank" title="Síguenos en Twitter"></a>
-                            <a class="icons facebook" href="http://www.facebook.com/univunix" target="_blank" title="Síguenos en Facebook"></a>
-                            <a class="icons gplus" href="http://plus.google.com/b/107511248169675151833/107511248169675151833?rel=publisher" target="_blank" title="Síguenos en Google Plus"></a>
-                            <a class="icons rss" href="feed/index.html" target="_blank" title="Feed"></a>
+                            <a class="facebook" href="http://www.facebook.com/univunix" target="_blank" title="Síguenos en Facebook"></a>
+                            <a class="gplus" href="http://plus.google.com/b/107511248169675151833/107511248169675151833?rel=publisher" target="_blank" title="Síguenos en Google Plus"></a>
+                            <a class="rss" href="atom.xml" target="_blank" title="Feed"></a>
                         </div>
                     </nav>
                 </div>
@@ -81,25 +82,23 @@
                     </section>
                 </aside>
             </section>
-
-            <footer id="content-info">
-                <div class="foot">
-                    <div class="row-fluid">
-                        <div class="span6 html">
-                            <p>
-                                <i class="mini-html5"></i> HTML5 <i class="mini-css3"></i> CSS3
-                            </p>
-                        </div>
-                        <div class="span6 commons">
-                            <p>
-                                Contenido bajo licencia CC (BY-SA-NC)
-                            </p>
-                        </div>
+        </div><!-- /container -->
+        <footer id="content-info">
+            <div class="foot">
+                <div class="row-fluid">
+                    <div class="span6 html">
+                        <p>
+                            <i class="mini-html5"></i> HTML5 <i class="mini-css3"></i> CSS3
+                        </p>
+                    </div>
+                    <div class="span6 commons">
+                        <p>
+                            Contenido bajo licencia CC (BY-SA-NC)
+                        </p>
                     </div>
                 </div>
-            </footer>
-        </div><!-- /container -->
-
+            </div>
+        </footer>
         <!-- Scripts -->
         <%- @getBlock('scripts').add(@site.scripts).toHTML() %>
     </body>
