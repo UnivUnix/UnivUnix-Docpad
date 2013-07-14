@@ -1,0 +1,8 @@
+---
+layout: 'contentIndex'
+title: Tutoriales
+pageOrder: 5
+isPaged: true
+pagedCollection: 'tutoriales'
+pageSize: 10
+---

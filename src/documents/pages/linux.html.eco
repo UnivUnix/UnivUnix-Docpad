@@ -1,0 +1,8 @@
+---
+layout: 'contentIndex'
+title: Linux
+pageOrder: 3
+isPaged: true
+pagedCollection: 'linux'
+pageSize: 10
+---

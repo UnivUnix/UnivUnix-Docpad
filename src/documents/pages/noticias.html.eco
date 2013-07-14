@@ -1,0 +1,8 @@
+---
+layout: 'contentIndex'
+title: Noticias
+pageOrder: 4
+isPaged: true
+pagedCollection: 'noticias'
+pageSize: 10
+---
