@@ -13,7 +13,7 @@
         <title><%= @getPreparedTitle() %></title>
         <meta name="description" content="<%= @getPreparedDescription() %>" />
         <meta name="keywords" content="<%= @getPreparedKeywords() %>" />
-        <meta name="author" content="<%= @site.author or '' %>" />
+        <meta name="author" content="<%= @document.author or @site.author %>" />
 
         <!-- Output DocPad produced meta elements -->
         <%- @getBlock('meta').toHTML() %>

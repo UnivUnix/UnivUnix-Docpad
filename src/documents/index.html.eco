@@ -1,8 +1,11 @@
 ---
 layout: 'default'
+isPaged: true
+pagedCollection: 'posts'
+pageSize: 10
 ---
 
-<% for document in @getCollection('posts').toJSON(): %>
+<% for document in @getCollection('posts').toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
     <article id="<%= document.id %>" class="post hentry">
         <header>
             <div class="aligncategory mini"></div>
@@ -31,7 +34,7 @@ layout: 'default'
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Compartir</a>
                 <div class="dropdown-menu" style="padding:10px;">
                     <a class="twitter" href="http://twitter.com/share?url=<%= document.url %>&amp;text=<%= document.title %>-&amp;via=UnivUnix" target="_blank" title="Compártelo en Twitter"></a>
-                    <a class="facebook" href="http://www.facebook.com/sharer.php?u=<%= document.url %>amp;t=<%= document.title %>" target="_blank" title="Recomiéndalo en Facebook"></a>
+                    <a class="facebook" href="http://www.facebook.com/sharer.php?u=<%= document.url %>&amp;t=<%= document.title %>" target="_blank" title="Recomiéndalo en Facebook"></a>
                     <a class="gplus" href="https://plus.google.com/share?url=<%= document.url %>" target="_blank" title="Compártelo en Google Plus"></a>
                     <a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<%= document.url %>&amp;title=<%= document.title %>" target="_blank" title="Divulga el artículo en LinkedIn"></a>
                 </div>

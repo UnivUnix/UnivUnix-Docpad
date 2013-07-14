@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<article class="comment">
+    <h1 class="comment-title"><%= @document.title %></h1>
+    <span class="comment-author"><%= @document.author %></span>
+    <a href="<%= @getDatabase().get(@document.for)?.get('url') %>" class="comment-for"><%= @getDatabase().get(@document.for)?.get('title') %></a>
+    <div class="comment-body">
+        <%- @content %>
+    </div>
+</article>
+
+<!-- <section id="comments">
+    <h3>2 respuestas a “El reto UnivUnix: Sustituir el servidor actual por una Raspberry Pi”</h3>
+
+    <!-- Lista de comentarios 
+    <ol class="commentlist">
+        <li class="comment even thread-even depth-1">
+            <div class="c-container" id="comment-55">
+                <div class="comment-author vcard">
+                    <img width="32" height="32" data-lazy-src="http://0.gravatar.com/avatar/25cfcb7923a33be3cc9624dc1d449d2e?s=32&amp;d=retro&amp;r=G" data-lazy-type="image" src="http://0.gravatar.com/avatar/25cfcb7923a33be3cc9624dc1d449d2e?s=32&amp;d=retro&amp;r=G" alt="" class="lazy data-lazy-ready" style="display: inline;">
+                    <noscript>
+                        &lt;img alt='' src='http://0.gravatar.com/avatar/25cfcb7923a33be3cc9624dc1d449d2e?s=32&amp;amp;d=retro&amp;amp;r=G' class='avatar avatar-32 photo' height='32' width='32'&gt;
+                    </noscript>
+                    <cite class="fn">Dani</cite>
+                    <time datetime="2013-06-19T16:54:11+00:00">
+                        <a href="/linux/el-reto-univunix-sustituir-el-servidor-actual-por-una-raspberry-pi/#comment-55">19/06/2013</a>
+                    </time>
+                    <a title="Editar comentario" href="http://www.univunix.com/wp-admin/comment.php?action=editcomment&amp;c=55" class="comment-edit-link">(Editar)</a>
+                </div>
+
+                <section class="comment">
+                    <p>
+                        ¿¿Ya habéis migrado??
+                    </p>
+                </section>
+
+                <div class="reply-to-comment alignleft">
+                    <a onclick="return addComment.moveForm(&quot;comment-55&quot;, &quot;55&quot;, &quot;respond&quot;, &quot;279&quot;)" href="#comment-55" class="comment-reply-link">Responder</a>
+                </div>
+                <div class="user-agent alignrightfixed">
+                    Usando Google Chrome 27.0.1453.93 en GNU/Linux x64
+                </div>
+
+            </div>
+            <ul class="children">
+                <li class="comment byuser comment-author-Aglezabad bypostauthor odd alt depth-2">
+                    <div class="c-container" id="comment-56">
+                        <div class="comment-author vcard">
+                            <img width="32" height="32" class="avatar avatar-32 photo" src="http://www.univunix.com/forum/download/file.php?avatar=2_1357678128.jpg" alt=""><cite class="fn"><a class="url" rel="external nofollow" href="http://www.interusers.eu">Aglezabad</a></cite>
+                            <time datetime="2013-06-19T16:56:00+00:00">
+                                <a href="/linux/el-reto-univunix-sustituir-el-servidor-actual-por-una-raspberry-pi/#comment-56">19/06/2013</a>
+                            </time>
+                            <a title="Editar comentario" href="http://www.univunix.com/wp-admin/comment.php?action=editcomment&amp;c=56" class="comment-edit-link">(Editar)</a>
+                        </div>
+
+                        <section class="comment">
+                            <p>
+                                Todavía no. Estamos con la tarea de readaptar la web a un entorno como la raspberry pi. Ahora incluiré algunas notas de lo avanzado.
+                            </p>
+                        </section>
+
+                        <div class="reply-to-comment alignleft">
+                            <a onclick="return addComment.moveForm(&quot;comment-56&quot;, &quot;56&quot;, &quot;respond&quot;, &quot;279&quot;)" href="#comment-56" class="comment-reply-link">Responder</a>
+                        </div>
+                        <div class="user-agent alignrightfixed">
+                            Usando IceWeasel 23.0a2 en GNU/Linux x64
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ol>
+
+</section> -->
