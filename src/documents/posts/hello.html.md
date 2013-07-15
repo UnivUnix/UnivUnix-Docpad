@@ -1,6 +1,7 @@
 ```
 title: This is a Hello Blog Post
 layout: post
+categories: ['post']
 tags: ['intro','post']
 ```
 

@@ -35,7 +35,7 @@ docpadConfig = {
 
 			# Styles
 			styles: [
-				"/styles/twitter-bootstrap.css"
+				"/styles/twitter-bootstrap.css",
 				"/styles/style.css"
 			]
 
@@ -77,47 +77,20 @@ docpadConfig = {
 	# =================================
 	# Collections
 	# These are special collections that our website makes available to us
-	# Categories
-
+	
 	collections:
-		pages: (database) ->
-			database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
-			
-		linux: (database) ->
-		  database.findAllLive({categories:$has:'linux'}, [date:-1])
-		
-		arch: (databse) ->
-		  database.findAllLive({categories:$has:'arch'}, [date:-1])
-		  
-    debian: (databse) ->
-      database.findAllLive({categories:$has:'debian'}, [date:-1])
-    
-    fedora: (databse) ->
-      database.findAllLive({categories:$has:'fedora'}, [date:-1])
-    
-    mageia: (databse) ->
-      database.findAllLive({categories:$has:'mageia'}, [date:-1])
+	  
+    pages: (database) ->
+      database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
 
-    mint: (database) ->
-      database.findAllLive({categories:$has:'mint'}, [date:-1])
-    
-    opensuse: (databse) ->
-      database.findAllLive({categories:$has:'opensuse'}, [date:-1])
-    
-    ubuntu: (databse) ->
-      database.findAllLive({categories:$has:'ubuntu'}, [date:-1])
-    
-    noticias: (databse) ->
-      database.findAllLive({categories:$has:'noticias'}, [date:-1])
+    posts: (database) ->
+      database.findAllLive({categories:$in:['post']}, [date:-1])
+
+    linux: (database) ->
+      database.findAllLive({categories:$has:'linux'}, [date:-1])
       
-    otros: (databse) ->
-      database.findAllLive({categories:$has:'default'}, [date:-1])
-    
-    programacion: (databse) ->
-      database.findAllLive({categories:$has:'programacion'}, [date:-1])
-      
-    tutoriales: (databse) ->
-      database.findAllLive({categories:$has:'tutoriales'}, [date:-1])
+    arch: (database) ->
+      database.findAllLive({categories:$has:'arch'}, [date:-1])
 
 	# =================================
 	# Plugins
