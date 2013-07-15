@@ -1,16 +1,15 @@
 ---
 layout: 'default'
-title: 'Linux'
-pageOrder: 3
+title: 'Debian'
 isPaged: true
-pagedCollection: 'posts'
+pagedCollection: 'debian'
 pageSize: 10
 ---
 
-<% for document in @getCollection('posts').toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
+<% for document in @getCollection('debian').toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
 <article id="<%= document.id %>" class="post hentry">
     <header>
-        <div class="aligncategory mini-"></div>
+        <div class="aligncategory mini-<%= getCssClass document.categories %>"></div>
         <h2><a href="<%= document.url %>"> <%= document.title %> </a></h2>
     </header>
     <div class="entry-summary">

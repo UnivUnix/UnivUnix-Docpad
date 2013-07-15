@@ -61,7 +61,7 @@ docpadConfig = {
 				"#{@document.title} | #{@site.title}"
 			# if our document does not have it's own title, then we should just use the site's title
 			else
-				"#{@site.title} | #{@site.description}"
+				"#{@site.title} | El portal unificado de Unix y Linux."
 
 		# Get the prepared site/document description
 		getPreparedDescription: ->
@@ -84,7 +84,7 @@ docpadConfig = {
       database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
 
     posts: (database) ->
-      database.findAllLive({categories:$in:['post']}, [date:-1])
+      database.findAllLive({categories:$in:['linux','arch','debian','fedora','mageia','mint','opensuse','ubuntu','programacion','tutoriales','noticias']}, [date:-1])
 
     linux: (database) ->
       database.findAllLive({categories:$has:'linux'}, [date:-1])
@@ -92,7 +92,34 @@ docpadConfig = {
     arch: (database) ->
       database.findAllLive({categories:$has:'arch'}, [date:-1])
 
-	# =================================
+    debian: (database) ->
+      database.findAllLive({categories:$has:'debian'}, [date:-1])
+
+    fedora: (database) ->
+      database.findAllLive({categories:$has:'fedora'}, [date:-1])
+
+    mageia: (database) ->
+      database.findAllLive({categories:$has:'mageia'}, [date:-1])
+
+    mint: (database) ->
+      database.findAllLive({categories:$has:'mint'}, [date:-1])
+
+    opensuse: (database) ->
+      database.findAllLive({categories:$has:'opensuse'}, [date:-1])
+
+    ubuntu: (database) ->
+      database.findAllLive({categories:$has:'ubuntu'}, [date:-1])
+
+    programacion: (database) ->
+      database.findAllLive({categories:$has:'programacion'}, [date:-1])
+
+    tutoriales: (database) ->
+      database.findAllLive({categories:$has:'tutoriales'}, [date:-1])
+
+    noticias: (database) ->
+      database.findAllLive({categories:$has:'noticias'}, [date:-1])
+
+  # =================================
 	# Plugins
 
 	plugins:

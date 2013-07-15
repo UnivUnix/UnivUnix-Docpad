@@ -1,11 +1,11 @@
 ---
 layout: 'default'
+title: 'Mageia'
 isPaged: true
-pagedCollection: 'posts'
-pageSize: 10
+pagedCollection: 'mageia'
 ---
 
-<% for document in @getCollection('posts').toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
+<% for document in @getCollection('mageia').toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
 <article id="<%= document.id %>" class="post hentry">
     <header>
         <div class="aligncategory mini-<%= getCssClass document.categories %>"></div>

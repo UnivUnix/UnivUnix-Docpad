@@ -1,11 +1,13 @@
 ---
 layout: 'default'
+title: 'Tutoriales'
+pageOrder: 3
 isPaged: true
-pagedCollection: 'posts'
+pagedCollection: 'tutoriales'
 pageSize: 10
 ---
 
-<% for document in @getCollection('posts').toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
+<% for document in @getCollection('tutoriales').toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
 <article id="<%= document.id %>" class="post hentry">
     <header>
         <div class="aligncategory mini-<%= getCssClass document.categories %>"></div>
