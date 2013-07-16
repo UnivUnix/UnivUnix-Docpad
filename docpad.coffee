@@ -43,8 +43,7 @@ docpadConfig = {
 			scripts: [
 				"//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js",
 				"/vendor/twitter-bootstrap/js/bootstrap-dropdown.js",
-				"/vendor/twitter-bootstrap/js/bootstrap-collapse.js",
-				"/scripts/utils.js"
+				"/vendor/twitter-bootstrap/js/bootstrap-collapse.js"
 			]
 
 
@@ -72,12 +71,6 @@ docpadConfig = {
 		getPreparedKeywords: ->
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
-
-    getCssIcon: (categories) ->
-      # return "tutorials"  if $.inArray("tutoriales", categories) > -1
-      # return "news"  if $.inArray("noticias", categories) > -1
-      # return "programming"  if $.inArray("programación", categories) > -
-      "algo"
 
 	# =================================
 	# Collections
@@ -137,7 +130,6 @@ docpadConfig = {
 					tarExtractClean: true
 				}
 			]
-
 
 	# =================================
 	# DocPad Events
