@@ -41,10 +41,10 @@ docpadConfig = {
 
 			# Scripts
 			scripts: [
-				"//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js",
-				"/scripts/script.js",
+				"//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js",
 				"/vendor/twitter-bootstrap/js/bootstrap-dropdown.js",
-				"/vendor/twitter-bootstrap/js/bootstrap-collapse.js"
+				"/vendor/twitter-bootstrap/js/bootstrap-collapse.js",
+				"/scripts/utils.js"
 			]
 
 
@@ -73,6 +73,11 @@ docpadConfig = {
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
 
+    getCssIcon: (categories) ->
+      # return "tutorials"  if $.inArray("tutoriales", categories) > -1
+      # return "news"  if $.inArray("noticias", categories) > -1
+      # return "programming"  if $.inArray("programación", categories) > -
+      "algo"
 
 	# =================================
 	# Collections

@@ -9,7 +9,7 @@ pageSize: 10
 <% for document in @getCollection('programacion').toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
 <article id="<%= document.id %>" class="post hentry">
     <header>
-        <div class="aligncategory mini-<%= getCssClass document.categories %>"></div>
+        <div class="aligncategory mini-<%= @getCssClass %>"></div>
         <h2><a href="<%= document.url %>"> <%= document.title %> </a></h2>
     </header>
     <div class="entry-summary">
