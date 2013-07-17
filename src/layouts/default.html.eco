@@ -42,10 +42,12 @@
                     <a class="brand" href="/"></a>
                     <nav id="nav-main" class="nav-collapse">
                         <ul class="nav">
-                            <% for document in @getCollection('pages').toJSON(): %>
-                            <li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
-                                <a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
-                            </li>
+                            <% for category in @getCollection('indexes').toJSON(): %>
+                            	<% if category.indexOrder : %>
+	                            <li typeof="sioc:Page" about="<%= category.url %>" class="<%= 'active'  if @document.url is category.url %>">
+	                                <a href="<%= category.url %>" property="dc:title"><%= category.title %></a>
+	                            </li>
+	                            <% end %>
                             <% end %>
                         </ul>
                         <div class="navbar-text pull-right">

@@ -1,6 +1,7 @@
 ---
 layout: 'default'
 title: 'Fedora'
+index: true
 isPaged: true
 pagedCollection: 'fedora'
 pageSize: 10

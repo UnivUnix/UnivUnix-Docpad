@@ -1,7 +1,8 @@
 ---
 layout: 'default'
 title: 'Tutoriales'
-pageOrder: 3
+index: true
+indexOrder: 3
 isPaged: true
 pagedCollection: 'tutoriales'
 pageSize: 10

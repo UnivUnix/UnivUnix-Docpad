@@ -1,6 +1,7 @@
 ---
 layout: 'default'
 title: 'Arch'
+index: true
 isPaged: true
 pagedCollection: 'arch'
 pageSize: 10

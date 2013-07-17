@@ -1,5 +1,6 @@
 ---
 layout: 'default'
+index: true
 isPaged: true
 pagedCollection: 'posts'
 pageSize: 10
@@ -7,28 +8,33 @@ pageSize: 10
 
 <% for document in @getCollection('posts').toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
 <article id="<%= document.id %>" class="post hentry">
-    <header>
+    <header>    		
         <div class="aligncategory mini-<%= document.categories[0] %>"></div>
         <h2><a href="<%= document.url %>"> <%= document.title %> </a></h2>
     </header>
     <div class="entry-summary">
-        <img src="" data-lazy-type="image" data-lazy-src="" class="lazy lazy-hidden alignthumb" alt="">
+        <img src="<%= @getUrl("/img/placeholder.gif") %>" data-lazy-type="image" data-lazy-src="" class="lazy lazy-hidden alignthumb" alt="">
         <noscript>
             <img src="" class="alignthumb" alt="">
         </noscript>
         <div class="post-content">
-            <%- document.content.slice(0,500) %>
+            <%- document.extract %>
         </div>
     </div>
     <footer>
         <div class="alignleft">
             <i class="icon-calendar icon-white"></i>
             <time class="updated" datetime="<%= document.date %>">
-                <%= document.date.toDateString() %>
+                <%= document.date %>
             </time>
             <i class="icon-folder-open icon-white"></i>
-            <% for category in document.categories: %>
-                <a href="<%= category %>"></a>
+            <% for category in @getCollection('indexes').toJSON(): %>
+                <% for cat in document.categories : %>
+	            	<% if category.pagedCollection==cat : %>
+	            	    <a href="<%= category.url %>"><%= category.title %></a>,
+	            	<% end %>
+	        	<% end %>
+            <% end %>
             <i class="icon-comment icon-white"></i>
         </div>
         <div class="dropdown all-camera-dropdown alignleft">

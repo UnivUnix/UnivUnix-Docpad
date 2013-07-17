@@ -42,10 +42,10 @@ docpadConfig = {
 			# Scripts
 			scripts: [
 				"//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js",
+				"/scripts/lazyload.min.js",
 				"/vendor/twitter-bootstrap/js/bootstrap-dropdown.js",
 				"/vendor/twitter-bootstrap/js/bootstrap-collapse.js"
 			]
-
 
 
 		# -----------------------------
@@ -71,6 +71,10 @@ docpadConfig = {
 		getPreparedKeywords: ->
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
+		
+		getUrl: (document) ->
+		  # return @site.url + (@getPath(document))
+		  return document
 
 	# =================================
 	# Collections
@@ -80,6 +84,9 @@ docpadConfig = {
 	  
     pages: (database) ->
       database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
+
+    indexes: (database) ->
+      database.findAllLive({index: true}, [indexOrder:1, title:1])
 
     posts: (database) ->
       database.findAllLive({categories:$in:['linux','arch','debian','fedora','mageia','mint','opensuse','ubuntu','programacion','tutoriales','noticias']}, [date:-1])
@@ -158,6 +165,12 @@ docpadConfig = {
 					res.redirect(newUrl+req.url, 301)
 				else
 					next()
+					
+  enviroments:
+    development:
+      templateData:
+        site:
+          url: 'http://localhost:9778'
 }
 
 

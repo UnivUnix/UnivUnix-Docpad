@@ -1,6 +1,7 @@
 ---
 layout: 'default'
 title: 'Mint'
+index: true
 isPaged: true
 pagedCollection: 'mint'
 pageSize: 10

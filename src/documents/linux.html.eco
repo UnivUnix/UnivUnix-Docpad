@@ -1,7 +1,8 @@
 ---
 layout: 'default'
 title: 'Linux'
-pageOrder: 2
+index: true
+indexOrder: 2
 isPaged: true
 pagedCollection: 'linux'
 pageSize: 10

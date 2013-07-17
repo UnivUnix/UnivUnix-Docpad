@@ -1,7 +1,8 @@
 ---
 layout: 'default'
 title: 'Noticias'
-pageOrder: 1
+index: true
+indexOrder: 1
 isPaged: true
 pagedCollection: 'noticias'
 pageSize: 10

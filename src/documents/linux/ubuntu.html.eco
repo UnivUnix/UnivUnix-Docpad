@@ -1,6 +1,7 @@
 ---
 layout: 'default'
 title: 'Ubuntu'
+index: true
 isPaged: true
 pagedCollection: 'ubuntu'
 pageSize: 10
