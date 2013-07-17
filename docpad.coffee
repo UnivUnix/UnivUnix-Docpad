@@ -41,8 +41,8 @@ docpadConfig = {
 
 			# Scripts
 			scripts: [
-				"//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js",
-				"/scripts/lazyload.min.js",
+				"/scripts/jquery-min.js",
+				"/scripts/lazyload-min.js",
 				"/vendor/twitter-bootstrap/js/bootstrap-dropdown.js",
 				"/vendor/twitter-bootstrap/js/bootstrap-collapse.js"
 			]
@@ -71,7 +71,7 @@ docpadConfig = {
 		getPreparedKeywords: ->
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
-		
+			
 		getUrl: (document) ->
 		  # return @site.url + (@getPath(document))
 		  return document

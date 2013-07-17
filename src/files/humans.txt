@@ -1,43 +1,26 @@
-/* the humans responsible & colophon */
-/* humanstxt.org */
-
-
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+	Author: Angel Gonzalez
+	Contact: aglezabad[at]gmail.com
+	Google+ profile: https://plus.google.com/113350477294024138382
+	Twitter: @Interusers	
+	From: Madrid, Spain
+
+	Author: Fernando Moro
+	Contact: ferthedems[at]gmail.com
+	Google+ profile: https://plus.google.com/112156722898396647740
+	Twitter: @fegnimaggie
+	From: Madrid, Spain
 
 /* THANKS */
-  Names (& URL):
+
+	The Twitter-Bootstrap team.
+	The Google and CloudFlare Teams.
+	Guillermo Hernandez Hernandez for helping us with the web design.
 
 /* SITE */
-  Standards: HTML5, CSS3
-  Components: Modernizr, jQuery
-  Software:
-
-
-
-                               -o/-
-                               +oo//-
-                              :ooo+//:
-                             -ooooo///-
-                             /oooooo//:
-                            :ooooooo+//-
-                           -+oooooooo///-
-           -://////////////+oooooooooo++////////////::
-            :+ooooooooooooooooooooooooooooooooooooo+:::-
-              -/+ooooooooooooooooooooooooooooooo+/::////:-
-                -:+oooooooooooooooooooooooooooo/::///////:-
-                  --/+ooooooooooooooooooooo+::://////:-
-                     -:+ooooooooooooooooo+:://////:--
-                       /ooooooooooooooooo+//////:-
-                      -ooooooooooooooooooo////-
-                      /ooooooooo+oooooooooo//:
-                     :ooooooo+/::/+oooooooo+//-
-                    -oooooo/::///////+oooooo///-
-                    /ooo+::://////:---:/+oooo//:
-                   -o+/::///////:-      -:/+o+//-
-                   :-:///////:-            -:/://
-                     -////:-                 --//:
-                       --                       -:
+	Last update: Jun 28, 2013
+	Language: Spanish / Castellano.
+	Doctype: HTML5.
+	Standars: HTML5, CSS.
+	Components: jQuery, Twitter Bootstrap.
+	Software: Debian, GIMP, Nginx.
