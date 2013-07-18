@@ -6,7 +6,7 @@ pageSize: 10
 ---
 
 for document in (@getCollection('posts').toJSON()[@document.page.startIdx...@document.page.endIdx])
-  @partial('article-extract.html.coffee', document)
+  text @partial('article-extract.html.coffee', document)
 if @hasPrevPage() || @hasNextPage()
 	nav id: "post-nav", ->
 		ul class: "pager", ->

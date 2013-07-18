@@ -1,0 +1,69 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'docpad-plugin-coffeecup@2',
+1 verbose cli   '--save' ]
+2 info using npm@1.3.2
+3 info using node@v0.10.10
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'docpad-plugin-coffeecup@2', null ]
+6 verbose cache add name=undefined spec="docpad-plugin-coffeecup@2" args=["docpad-plugin-coffeecup@2",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'docpad-plugin-coffeecup@2',
+7 verbose parsed url   path: 'docpad-plugin-coffeecup@2',
+7 verbose parsed url   href: 'docpad-plugin-coffeecup@2' }
+8 verbose cache add name="docpad-plugin-coffeecup" spec="2" args=["docpad-plugin-coffeecup","2"]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: '2',
+9 verbose parsed url   path: '2',
+9 verbose parsed url   href: '2' }
+10 verbose addNamed [ 'docpad-plugin-coffeecup', '2' ]
+11 verbose addNamed [ null, '>=2.0.0-0 <3.0.0-0' ]
+12 silly lockFile 02578d3d-docpad-plugin-coffeecup-2 docpad-plugin-coffeecup@2
+13 verbose lock docpad-plugin-coffeecup@2 /home/angel/.npm/02578d3d-docpad-plugin-coffeecup-2.lock
+14 silly addNameRange { name: 'docpad-plugin-coffeecup',
+14 silly addNameRange   range: '>=2.0.0-0 <3.0.0-0',
+14 silly addNameRange   hasData: false }
+15 verbose url raw docpad-plugin-coffeecup
+16 verbose url resolving [ 'https://registry.npmjs.org/', './docpad-plugin-coffeecup' ]
+17 verbose url resolved https://registry.npmjs.org/docpad-plugin-coffeecup
+18 info trying registry request attempt 1 at 23:00:27
+19 http GET https://registry.npmjs.org/docpad-plugin-coffeecup
+20 http 404 https://registry.npmjs.org/docpad-plugin-coffeecup
+21 silly registry.get cb [ 404,
+21 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+21 silly registry.get     date: 'Thu, 18 Jul 2013 21:00:53 GMT',
+21 silly registry.get     'content-type': 'application/json',
+21 silly registry.get     'content-length': '52',
+21 silly registry.get     'cache-control': 'must-revalidate' } ]
+22 silly lockFile 02578d3d-docpad-plugin-coffeecup-2 docpad-plugin-coffeecup@2
+23 silly lockFile 02578d3d-docpad-plugin-coffeecup-2 docpad-plugin-coffeecup@2
+24 error 404 'docpad-plugin-coffeecup' is not in the npm registry.
+24 error 404 You should bug the author to publish it
+24 error 404
+24 error 404 Note that you can also install from a
+24 error 404 tarball, folder, or http url, or git url.
+25 error System Linux 3.9.0-sabayon
+26 error command "node" "/usr/bin/npm" "install" "docpad-plugin-coffeecup@2" "--save"
+27 error cwd /home/angel/Aptana Studio 3 Workspace/UnivUnix-RPi
+28 error node -v v0.10.10
+29 error npm -v 1.3.2
+30 error code E404
+31 verbose exit [ 1, true ]
