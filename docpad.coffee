@@ -1,3 +1,34 @@
+# Import
+moment = require('moment')
+
+#Authors file
+authors = [
+  {
+    user: "Aglezabad",
+    email: "aglezabad@gmail.com"
+    gplusProfile: "",
+    twitterProfile: "",
+    avatar: "",
+    description: ""
+  },
+  {
+    user: "Ferthedems",
+    email: "",
+    gplusProfile: "",
+    twitterProfile: "",
+    avatar: "",
+    description: ""
+  },
+  {
+    user: "Kennynek",
+    email: "",
+    gplusProfile: "",
+    twitterProfile: "",
+    avatar: "",
+    description: ""
+  }
+]
+
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig = {
@@ -28,10 +59,10 @@ docpadConfig = {
         """
 
       # The website author's name
-      author: "Aglezabad"
+      author: authors
 
       # The website author's email
-      email: "aglezabad@gmail.com"
+      email: authors[0].email
 
       # Styles
       styles: [
@@ -75,6 +106,17 @@ docpadConfig = {
     getUrl: (document) ->
       # return @site.url + (@getPath(document))
       return document
+
+    # Post meta
+    postDatetime: (date, format="YYYY-MM-DD") ->
+      return moment(date).format(format)
+    postDate: (date, format="DD/MM/YYYY") ->
+      return moment(date).format(format)
+
+    getCssCategory: (categories) ->
+      for index in @getCollection('indexes').toJSON()
+        for category in categories
+          return "mini-" + category if index.pagedCollection == category
 
   # =================================
   # Collections

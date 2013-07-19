@@ -1,21 +1,26 @@
+---
+cacheable: true
+---
+
 article id: @id, class: "post hentry", ->
   header ->
-    div class: "aligncategory mini-" + @categories[0]
+    div class: "aligncategory " + @getCssCategory(@categories)
     h2 ->
       a href: @url, ->
         text @title
-    div class: "entry-summary", ->
-      img src: "", 'data-lazy-type': "image", 'data-lazy-src': "", class: "lazy lazy-hidden alignthumb", alt: ""
-      noscript ->
-        img src: "", class: "alignthumb", alt: ""
+  div class: "entry-summary", ->
+    img src: @getUrl("/img/placeholder.gif"), 'data-lazy-type': "image", 'data-lazy-src': "", class: "lazy lazy-hidden alignthumb", alt: ""
+    noscript ->
+      img src: "", class: "alignthumb", alt: ""
     div class: "post-content", ->
-      text ""
+      text @content
   footer ->
     div class: "alignleft", ->
       i class: "icon-calendar icon-white"
-      time class: "updated", datetime: "aa", ->
-        text "aa"
+      time class: "updated", datetime: @postDatetime(@date), ->
+        text @postDate(@date)
       i class: "icon-folder-open icon-white"
+        
       i class: "icon-comment icon-white"
     div class: "dropdown all-camera-dropdown alignleft", ->
       i class: "icon-plus-sign icon-white"

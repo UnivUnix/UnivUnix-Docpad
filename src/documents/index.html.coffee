@@ -1,12 +1,13 @@
 ---
 layout: 'default'
+index: true
 isPaged: true
 pagedCollection: 'posts'
 pageSize: 10
 ---
 
 for document in (@getCollection('posts').toJSON()[@document.page.startIdx...@document.page.endIdx])
-  text @partial('article-extract.html.coffee', document)
+  text @partial('article-extract.html.coffee', @, document)
 if @hasPrevPage() || @hasNextPage()
 	nav id: "post-nav", ->
 		ul class: "pager", ->
