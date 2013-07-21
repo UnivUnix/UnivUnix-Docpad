@@ -20,7 +20,7 @@ html ->
     text @getBlock('styles').add(@site.styles).toHTML()
 
     body class: "top-navbar", ->
-      div class: "navbar navbar-fixed-top", ->
+      header class: "navbar navbar-fixed-top", ->
         div class: "navbar-inner", ->
           div class: "container", ->
             a class: "btn btn-navbar", 'data-target': ".nav-collapse", 'data-toggle': "collapse", ->
@@ -35,9 +35,12 @@ html ->
                       document.title
               div class: "navbar-text pull-right", ->
                 a class: "twitter", href: "http://twitter.com/univunix", target: "_blank", title: "Síguenos en Twitter"
-                a class: "facebook", href: "http://twitter.com/univunix", target: "_blank", title: "Síguenos en Twitter"
-                a class: "gplus", href: "http://twitter.com/univunix", target: "_blank", title: "Síguenos en Twitter"
-                a class: "rss", href: "http://twitter.com/univunix", target: "_blank", title: "Síguenos en Twitter"
+                a class: "facebook", href: "http://www.facebook.com/univunix", target: "_blank", title: "Síguenos en Facebook"
+                a class: "gplus", href: "http://plus.google.com/b/107511248169675151833/107511248169675151833?rel=publisher", target: "_blank", title: "Síguenos en Google+"
+                a class: "rss", href: @getUrl("/feeds/rss.xml"), target: "_blank", title: "Nuestro feed en RSS", ->
+                    "RSS"
+                a class: "rss", href: @getUrl("/feeds/atom.xml"), target: "_blank", title: "Nuestro feed en ATOM", ->
+                    "ATOM"
     div id: "wrap", class: "container-fluid", ->
       section id: "content", class: "content row-fluid", ->
         div id: "main", class: "span9", ->

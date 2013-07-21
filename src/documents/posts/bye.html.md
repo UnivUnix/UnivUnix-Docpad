@@ -1,7 +1,7 @@
 ```
 title: This is a Goodbye Blog Post
 layout: post
-categories: ['linux','debian']
+categories: ['otros']
 tags: ['outro','post']
 ```
 

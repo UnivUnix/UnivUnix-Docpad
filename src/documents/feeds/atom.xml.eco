@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title><%= @site.title %></title>
-	<link href="<%= @site.url %>/atom.xml" rel="self"/>
+	<link href="<%= @site.url %>/feeds/atom.xml" rel="self"/>
 	<link href="<%= @site.url %>"/>
 	<updated><%= @site.date.toISOString() %></updated>
 	<id><%= @site.url %></id>
 	<author>
-		<name><%= @site.author %></name>
+		<name><%= @getAuthorsName() %></name>
 		<email><%= @site.email %></email>
 	</author>
 
@@ -16,7 +16,7 @@
 			<link href="<%= @site.url+'/'+document.url %>"/>
 			<updated><%= document.date.toISOString() %></updated>
 			<id><%= @site.url+'/'+document.url %></id>
-			<content type="html"><%= document.contentRendered %></content>
+			<content type="html"><%= document.contentRenderedWithoutLayouts %></content>
 		</entry>
 	<% end %>
 </feed>

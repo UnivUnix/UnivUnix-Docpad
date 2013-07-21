@@ -47,6 +47,7 @@ docpadConfig = {
 
       # The default title of our website
       title: "UnivUnix"
+      titleComplement: "El portal unificado de Unix y Linux."
 
       # The website description (for SEO)
       description: """
@@ -91,7 +92,7 @@ docpadConfig = {
         "#{@document.title} | #{@site.title}"
       # if our document does not have it's own title, then we should just use the site's title
       else
-        "#{@site.title} | El portal unificado de Unix y Linux."
+        "#{@site.title} | #{@site.titleComplement}"
 
     # Get the prepared site/document description
     getPreparedDescription: ->
@@ -106,17 +107,20 @@ docpadConfig = {
     getUrl: (document) ->
       # return @site.url + (@getPath(document))
       return document
+    
+    getAuthorsName: () ->
+      authorStr = ""
+      for author in @site.author
+        authorStr += author.name + ","
+      return authorStr
 
     # Post meta
     postDatetime: (date, format="YYYY-MM-DD") ->
       return moment(date).format(format)
     postDate: (date, format="DD/MM/YYYY") ->
       return moment(date).format(format)
-
-    getCssCategory: (categories) ->
-      for index in @getCollection('indexes').toJSON()
-        for category in categories
-          return "mini-" + category if index.pagedCollection == category
+    postDaterss: (date, format="ddd, DD MMM YYYY HH:mm:ss ZZ") ->
+      return moment(date).format(format)
 
   # =================================
   # Collections

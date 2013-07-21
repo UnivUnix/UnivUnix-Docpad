@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title><%= @site.title %></title>
+        <atom:link href="<%= @site.url %>/feeds/rss.xml" rel="self"/>
+        <link><%= @site.url %></link>
+        <description><%= @site.titleComplement %></description>
+        <lastBuildDate><%= @postDaterss(@site.date) %></lastBuildDate>
+        <language>es-es</language>
+        
+        <% for document in @getCollection('posts').toJSON(): %>
+            <item>
+                <title><%= document.title %></title>
+                <link><%= @site.url+'/'+document.url %></link>
+                <guid><%= @site.url+'/'+document.url %></guid>
+                <pubDate><%= @postDaterss(document.date) %></pubDate>
+                <description><%= document.contentRenderedWithoutLayouts %></description>
+            </item>
+        <% end %>
+    </channel>
+</rss>
