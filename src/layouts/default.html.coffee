@@ -29,10 +29,11 @@ html ->
             a class: "brand", href: "/"
             nav id: "nav-main", class: "nav-collapse", ->
               ul class: "nav", ->
-                for document in @getCollection('pages').toJSON()
-                  li typeof: "sioc:Page", about: document.url, class: ('active' if @document.url is document.url), ->
-                    a href: document.url, property: "dc:title", ->
-                      document.title
+                for document in @getCollection('indexes').toJSON()
+                  if document.indexOrder?
+                    li typeof: "sioc:Page", about: document.url, class: ('active' if @document.url is document.url), ->
+                      a href: document.url, property: "dc:title", ->
+                        document.title
               div class: "navbar-text pull-right", ->
                 a class: "twitter", href: "http://twitter.com/univunix", target: "_blank", title: "Síguenos en Twitter"
                 a class: "facebook", href: "http://www.facebook.com/univunix", target: "_blank", title: "Síguenos en Facebook"

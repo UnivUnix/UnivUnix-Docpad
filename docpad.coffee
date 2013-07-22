@@ -114,12 +114,31 @@ docpadConfig = {
         authorStr += author.name + ","
       return authorStr
 
+    getCategoryPages: (categories) ->
+      catsHtml = ""
+      for category in @getCollection('indexes').toJSON()
+        for cat in categories
+          if category.title?
+            if category.title.toLowerCase() == cat
+              catsHtml += '<a href="' + category.url + '">' + category.title + '</a>, '
+      return catsHtml
+    
+    getCategoryCss: (categories) ->
+      cssCat = ""
+      for category in @getCollection('indexes').toJSON()
+        for cat in categories
+          if category.title?
+            if category.title.toLowerCase() == cat
+              cssCat = "mini-" + cat
+      return cssCat
+              
+
     # Post meta
     postDatetime: (date, format="YYYY-MM-DD") ->
       return moment(date).format(format)
     postDate: (date, format="DD/MM/YYYY") ->
       return moment(date).format(format)
-    postDaterss: (date, format="ddd, DD MMM YYYY HH:mm:ss ZZ") ->
+    postDateRFC: (date, format="ddd, DD MMM YYYY HH:mm:ss ZZ") ->
       return moment(date).format(format)
 
   # =================================

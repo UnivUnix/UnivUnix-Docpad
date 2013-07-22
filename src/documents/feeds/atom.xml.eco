@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title><%= @site.title %></title>
 	<link href="<%= @site.url %>/feeds/atom.xml" rel="self"/>
-	<link href="<%= @site.url %>"/>
+	<link href="<%= @site.url %>/"/>
 	<updated><%= @site.date.toISOString() %></updated>
 	<id><%= @site.url %></id>
 	<author>

@@ -1,7 +1,7 @@
 ```
 title: This is a Page
 layout: page
-categories: ['linux']
+categories: ['linux', 'debian']
 tags: ['intro','page']
 pageOrder: 1
 ```

@@ -4,7 +4,7 @@ cacheable: true
 
 article id: @document.id, class: "post hentry", ->
   header ->
-    div class: "aligncategory mini-" + @document.categories[0]
+    div class: "aligncategory " + @getCategoryCss(@document.categories)
     h2 ->
       a href: @document.url, ->
         text @document.title
@@ -21,7 +21,7 @@ article id: @document.id, class: "post hentry", ->
       time class: "updated", datetime: @postDatetime(@document.date), ->
         text @postDate(@document.date)
       i class: "icon-folder-open icon-white"
-        
+      text @getCategoryPages(@document.categories)
       i class: "icon-comment icon-white"
     div class: "dropdown all-camera-dropdown alignleft", ->
       i class: "icon-plus-sign icon-white"
