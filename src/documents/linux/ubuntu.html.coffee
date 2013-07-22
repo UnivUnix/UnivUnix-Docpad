@@ -1,13 +1,13 @@
 ---
 layout: 'default'
-title: 'Debian'
+title: 'Ubuntu'
 index: true
 isPaged: true
-pagedCollection: 'debian'
+pagedCollection: 'ubuntu'
 pageSize: 10
 ---
 
-for document in (@getCollection('debian').toJSON()[@document.page.startIdx...@document.page.endIdx])
+for document in (@getCollection('ubuntu').toJSON()[@document.page.startIdx...@document.page.endIdx])
   text @partial('article-extract.html.coffee',@,{document: document})
 if @hasPrevPage() || @hasNextPage()
   nav id: "post-nav", ->

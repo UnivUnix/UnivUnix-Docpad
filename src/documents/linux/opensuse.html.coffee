@@ -1,13 +1,13 @@
 ---
 layout: 'default'
-title: 'Debian'
+title: 'Opensuse'
 index: true
 isPaged: true
-pagedCollection: 'debian'
+pagedCollection: 'opensuse'
 pageSize: 10
 ---
 
-for document in (@getCollection('debian').toJSON()[@document.page.startIdx...@document.page.endIdx])
+for document in (@getCollection('opensuse').toJSON()[@document.page.startIdx...@document.page.endIdx])
   text @partial('article-extract.html.coffee',@,{document: document})
 if @hasPrevPage() || @hasNextPage()
   nav id: "post-nav", ->

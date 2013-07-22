@@ -4,7 +4,7 @@ title: '404 Not Found'
 dynamic: true
 ---
 
-div clas: "hero-unit", ->
+div class: "hero-unit", ->
   h1 "404 Not Found"
   p ->
     text "Ooops! It looks like the document you requested at "

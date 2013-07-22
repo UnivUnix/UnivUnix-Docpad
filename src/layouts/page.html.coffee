@@ -2,6 +2,13 @@
 layout: default
 ---
 
-article id: "page", class: "page", ->
-  h1 @document.title
-  div class: "page-content", @content
+article id: @document.id, class: "page hentry", ->
+  header ->
+    h2 ->
+      @document.title
+  div class: "entry-content", ->
+    text @content
+  footer ->
+    i class: "icon-calendar icon-white"
+    time class: "updated", datetime: @postDatetime(@document.date), ->
+      text @postDate(@document.date)

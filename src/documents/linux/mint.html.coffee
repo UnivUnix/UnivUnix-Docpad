@@ -1,9 +1,9 @@
 ---
 layout: 'default'
-title: 'Debian'
+title: 'Mint'
 index: true
 isPaged: true
-pagedCollection: 'debian'
+pagedCollection: 'mint'
 pageSize: 10
 ---
 

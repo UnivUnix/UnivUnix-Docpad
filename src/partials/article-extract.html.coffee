@@ -1,6 +1,3 @@
----
-cacheable: true
----
 
 article id: @document.id, class: "post hentry", ->
   header ->
@@ -10,7 +7,7 @@ article id: @document.id, class: "post hentry", ->
         text @document.title
   div class: "entry-summary", ->
     if @document.thumbnail?
-      img src: @getUrl("/img/placeholder.gif"), 'data-lazy-type': "image", 'data-lazy-src': @getThumbnail("img/fondotux.png"), class: "lazy lazy-hidden alignthumb", alt: ""
+      img src: @getUrl("/img/placeholder.gif"), 'data-lazy-type': "image", 'data-lazy-src': @document.thumbnail, class: "lazy lazy-hidden alignthumb", alt: ""
       noscript ->
         img src: "", class: "alignthumb", alt: ""
     div class: "post-content", ->

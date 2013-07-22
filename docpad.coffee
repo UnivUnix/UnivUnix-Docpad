@@ -111,7 +111,7 @@ docpadConfig = {
     getAuthorsName: () ->
       authorStr = ""
       for author in @site.author
-        authorStr += author.name + ","
+        authorStr += author.user + ","
       return authorStr
 
     getCategoryPages: (categories) ->
@@ -131,7 +131,15 @@ docpadConfig = {
             if category.title.toLowerCase() == cat
               cssCat = "mini-" + cat
       return cssCat
-              
+
+    isDocCategory: (categories, indexTitle) ->
+      result = false
+      if categories?
+        for cat in categories
+          if indexTitle?
+            if indexTitle.toLowerCase() == cat
+              result = true
+      return result  
 
     # Post meta
     postDatetime: (date, format="YYYY-MM-DD") ->

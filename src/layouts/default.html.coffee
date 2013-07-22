@@ -31,7 +31,7 @@ html ->
               ul class: "nav", ->
                 for document in @getCollection('indexes').toJSON()
                   if document.indexOrder?
-                    li typeof: "sioc:Page", about: document.url, class: ('active' if @document.url is document.url), ->
+                    li typeof: "sioc:Page", about: document.url, class: ('active' if @isDocCategory(@document.categories, document.title) or @document.url == document.url ), ->
                       a href: document.url, property: "dc:title", ->
                         document.title
               div class: "navbar-text pull-right", ->
