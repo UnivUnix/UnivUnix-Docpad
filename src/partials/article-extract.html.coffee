@@ -11,7 +11,7 @@ article id: @document.id, class: "post hentry", ->
       noscript ->
         img src: "", class: "alignthumb", alt: ""
     div class: "post-content", ->
-      text @document.contentRenderedWithoutLayouts
+      text @document.contentRenderedWithoutLayouts.slice(0,500)
   footer ->
     div class: "alignleft", ->
       i class: "icon-calendar icon-white"
