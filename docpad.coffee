@@ -68,7 +68,7 @@ docpadConfig = {
       # Styles
       styles: [
         "/styles/twitter-bootstrap.css",
-        "/styles/style.css"
+        "/styles/app.css"
       ]
 
       # Scripts
@@ -76,7 +76,8 @@ docpadConfig = {
         "/scripts/jquery-min.js",
         "/scripts/lazyload-min.js",
         "/vendor/twitter-bootstrap/js/bootstrap-dropdown.js",
-        "/vendor/twitter-bootstrap/js/bootstrap-collapse.js"
+        "/vendor/twitter-bootstrap/js/bootstrap-collapse.js",
+        "/scripts/app.js"
       ]
 
 

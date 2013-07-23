@@ -3,6 +3,7 @@ author: Ferthedems
 date: 2013-01-13 16:31:37+00:00
 layout: post
 title: echo '¡Hola, mundo!'
+thumbnail: ['/attachments/2013/01/tuxamanecer.jpg', 'Amanecer de Tux', 'Amanecer fotografiado por María del Mar: http://www.flickr.com/photos/46942656@N04/8362840448']
 categories: ['noticias']
 tags: ['presentacion', 'web']
 ---

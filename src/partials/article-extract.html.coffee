@@ -7,11 +7,11 @@ article id: @document.id, class: "post hentry", ->
         text @document.title
   div class: "entry-summary", ->
     if @document.thumbnail?
-      img src: @getUrl("/img/placeholder.gif"), 'data-lazy-type': "image", 'data-lazy-src': @document.thumbnail, class: "lazy lazy-hidden alignthumb", alt: ""
+      img src: @getUrl("/img/placeholder.gif"), 'data-original': @getThumbnail(@getUrl(@document.thumbnail[0])), class: "lazy alignthumb", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
       noscript ->
-        img src: "", class: "alignthumb", alt: ""
+        img src: @getThumbnail(@getUrl(@document.thumbnail[0])), class: "alignthumb", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
     div class: "post-content", ->
-      text @document.contentRenderedWithoutLayouts.slice(0,500)
+      text @document.contentRenderedWithoutLayouts.slice(0,450) + "..."
   footer ->
     div class: "alignleft", ->
       i class: "icon-calendar icon-white"

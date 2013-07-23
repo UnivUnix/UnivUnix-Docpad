@@ -19,7 +19,7 @@ html ->
 
     text @getBlock('styles').add(@site.styles).toHTML()
 
-    body class: "top-navbar", ->
+    body class: "locked-navbar", ->
       header class: "navbar navbar-fixed-top", ->
         div class: "navbar-inner", ->
           div class: "container", ->
@@ -59,7 +59,7 @@ html ->
                       a href: document.url, property: "dc:title", ->
                         document.title
     
-    footer id: "content-info", ->
+    footer id: "content-info", class: "navbar-fixed-bottom", ->
       div class: "foot", ->
         div class: "row-fluid", ->
           div class: "span6 html", ->
