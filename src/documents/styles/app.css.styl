@@ -15,22 +15,32 @@ border-bottom-radius()
   -webkit-border-bottom-left-radius arguments
 
 .locked-navbar
-    padding 100px 0
-
+  padding 100px 0
+.alignthumb
+  float left
+  margin-right 0.5em
+.html
+  text-align left
+.commons
+  text-align right
 .lazy
-    display none
+  display none
 
 body
+  font-family 'Open Sans', sans-serif
   background #f8f8f8 url('../img/pw_maze_white.png') repeat center top fixed
-  .admin-bar .navbar-fixed-top
-    top 28px
   .navbar-inner
     background #2e2e2e
-  .navbar 
+  .navbar
     .brand
       background url('../img/univ-navbar.png') no-repeat 20px -400px
       width 191px
       height 50px
+    .nav-collapse
+      .nav
+        li
+          a
+            font-weight lighter
     .nav
       position relative
       left 0
@@ -38,6 +48,7 @@ body
       float left
       padding 15px 10px 0 0
       font-size 20px
+      font-weight lighter
       li
         padding-left 8px
         a
@@ -84,7 +95,7 @@ body
       padding 20px 2px
       float left
       background url('../img/univ-navbar.png') no-repeat 2px -226px
-      font-weight bold
+      font-weight normal
       text-decoration none
       color #fff
   #content
@@ -104,7 +115,7 @@ body
         line-height 1.1em
         border-bottom 1px solid #d2d2d2
     .entry-summary
-      padding 0 15px 15px
+      padding 0 15px
       background #ffffff
       border-bottom 1px solid
       overflow hidden
@@ -294,6 +305,7 @@ body
           text-shadow 0 1px 0 #ffffff
           text-shadow 1px 1px 2px rgba(150,150,150,1)
           font-size 1.3em
+          font-weight normal
       .widgetcontent
         padding 0 10px 10px 10px
         background #2d2d2d
@@ -317,10 +329,6 @@ body
   .foot
     max-width 960px
     margin 0 auto
-  .html
-    text-align left
-  .commons
-    text-align right
   .aligncenter
     display block
     margin 0 auto
@@ -332,9 +340,6 @@ body
     .alignnone
       margin-left 0
       margin-right 0
-  .alignthumb
-    float left
-    margin-right 0.5em
   .aligncategory
     float left
     margin-top 0.3em
@@ -441,15 +446,9 @@ body
     height 27px
     display block
     margin-top 8px
-    
-@media (min-width: 980px) {
-    #content {
-        margin-top: 40px;
-    }
-}
 @media (max-width: 979px) {
-    body.top-navbar {
-        padding-top: 0;
+    .locked-navbar {
+        padding: 0 20px;
     }
     .html {
         text-align: center;
@@ -475,4 +474,22 @@ body
         margin: 0 auto;
         padding-bottom: 5px;
     }
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff') format('woff');
 }

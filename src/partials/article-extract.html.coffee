@@ -7,9 +7,9 @@ article id: @document.id, class: "post hentry", ->
         text @document.title
   div class: "entry-summary", ->
     if @document.thumbnail?
-      img src: @getUrl("/img/placeholder.gif"), 'data-original': @getThumbnail(@getUrl(@document.thumbnail[0])), class: "lazy alignthumb", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
+      img src: @getUrl("/img/placeholder.gif"), 'data-original': @getThumbnail(@getUrl(@document.thumbnail[0]), 'thumbnail'), class: "lazy alignthumb", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
       noscript ->
-        img src: @getThumbnail(@getUrl(@document.thumbnail[0])), class: "alignthumb", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
+        img src: @getThumbnail(@getUrl(@document.thumbnail[0]), 'thumbnail'), class: "alignthumb", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
     div class: "post-content", ->
       text @getContentExtract(String(@document.contentRenderedWithoutLayouts)) + "..."
   footer ->

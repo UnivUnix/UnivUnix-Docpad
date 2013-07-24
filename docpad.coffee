@@ -249,6 +249,23 @@ docpadConfig = {
       templateData:
         site:
           url: 'http://localhost:9778'
+
+  plugins:
+    thumbnails:
+      presets:
+        'thumbnail':
+          w: 120
+          h: 120
+          q: 80
+        'small':
+          w: 250
+          h: 250
+        'medium':
+          w: 350
+          h: 350
+        'large':
+          w: 500
+          h: 500
 }
 
 

@@ -8,22 +8,15 @@ pageOrder: 1
 
 UnivUnix es propiedad de:
 
-
-
-
-Ángel González Residente en Madrid - Madrid 28013 N.I.F.: 51142684E
-
-
-
-
-Fernando Moro Residente en Valdemoro - Valdemoro 28340 N.I.F.: 02299659G
-
-
-
+* Ángel González Residente en Madrid - Madrid 28013 N.I.F.: 51142684E
+* Fernando Moro Residente en Valdemoro - Valdemoro 28340 N.I.F.: 02299659G
 
 La página web http://univunix.com es explotada publicitariamente por Ángel González y Fernando Moro (los propietarios)
 
+### Condiciones del servicio.
 
+**0. El usuario o visitante de la página web http://univunix.com tiene la obligación de leer las condiciones de prestación del servicio que se detallan en este texto,
+ de manera que asume estas como válidas en la prestación del servicio.**
 
 
 

@@ -16,7 +16,7 @@
 			<link href="<%= @site.url+'/'+document.url %>"/>
 			<updated><%= document.date.toISOString() %></updated>
 			<id><%= @site.url+'/'+document.url %></id>
-			<content type="html"><%= document.contentRenderedWithoutLayouts %>...</content>
+			<content type="html"><%= @getContentExtract(String(document.contentRenderedWithoutLayouts)) %>...</content>
 		</entry>
 	<% end %>
 </feed>
