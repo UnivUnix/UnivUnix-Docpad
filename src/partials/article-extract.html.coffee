@@ -11,7 +11,7 @@ article id: @document.id, class: "post hentry", ->
       noscript ->
         img src: @getThumbnail(@getUrl(@document.thumbnail[0])), class: "alignthumb", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
     div class: "post-content", ->
-      text @document.contentRenderedWithoutLayouts.slice(0,450) + "..."
+      text @getContentExtract(String(@document.contentRenderedWithoutLayouts)) + "..."
   footer ->
     div class: "alignleft", ->
       i class: "icon-calendar icon-white"

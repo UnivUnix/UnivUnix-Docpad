@@ -140,7 +140,11 @@ docpadConfig = {
           if indexTitle?
             if indexTitle.toLowerCase() == cat
               result = true
-      return result  
+      return result
+
+    getContentExtract: (content) ->
+      i=content.search("</p>")
+      content[0..i+3]
 
     # Post meta
     postDatetime: (date, format="YYYY-MM-DD") ->
