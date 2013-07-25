@@ -24,9 +24,12 @@ module.exports = (BasePlugin) ->
         @referencesOthers()
         return @partial('comments-area.html.coffee', @)
 
+      templateData.getTotalPostComments = (document) ->
+        @referencesOthers()
+        return @getComments(document).length
       # getComments
-      templateData.getComments = ->
-        return docpad.getCollection(plugin.getConfig().collectionName).findAll(for: @document.relativeBase)
+      templateData.getComments = (document = @document)->
+        return docpad.getCollection(plugin.getConfig().collectionName).findAll(for: document.relativeBase)
 
       # Chain
       @

@@ -22,6 +22,7 @@ article id: @document.id, class: "post hentry", ->
         i class: "icon-folder-open icon-white"
         text @getCategoryPages(@document.categories)
         i class: "icon-comment icon-white"
+        text @getTotalPostComments()
       div class: "dropdown all-camera-dropdown", ->
         i class: "icon-plus-sign icon-white"
         a class: "dropdown-toggle", 'data-toggle': "dropdown", href:"#share", ->

@@ -15,7 +15,8 @@ border-bottom-radius()
   -webkit-border-bottom-left-radius arguments
 
 .locked-navbar
-  padding 100px 0
+  padding-top 100px
+  padding-bottom 100px
 .alignthumb
   float left
   margin-right 0.5em
@@ -132,6 +133,14 @@ body
       color #ffffff
       border-bottom-radius 7px
       padding 15px
+  #comments
+  #response
+    background #2e2e2e
+    color #ffffff
+    border-top-radius 7px
+    border-bottom-radius 7px
+    .alert
+      margin 0 20px
   h1,h2,h3,h4,h5,h6
     margin 0 0 10px 0       
   .video-container
@@ -450,8 +459,9 @@ body
     h3
       font-weight lighter
 @media (max-width: 979px) {
-    .locked-navbar {
-        padding: 0;
+    .locked-navbar{
+        padding-top: 0;
+        padding-bottom: 0;   
     }
     .html {
         text-align: center;
