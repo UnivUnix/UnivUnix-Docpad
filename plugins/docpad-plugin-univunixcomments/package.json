@@ -1,0 +1,60 @@
+{
+  "name": "docpad-plugin-univunixcomments",
+  "version": "2.1.0",
+  "description": "Fork of Docpad native comments plugin. Edition for UnivUnix.",
+  "homepage": "http://docpad.org/plugin/nativecomments",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "comments",
+    "comment"
+  ],
+  "author": {
+    "name": "Ángel González",
+    "email": "aglezabad@gmail.com",
+    "url": "http://www.univunix.com/"
+  },
+  "maintainers": [
+    {
+      "name": "Ángel González",
+      "email": "aglezabad@gmail.com",
+      "url": "https://github.com/Aglezabad"
+    },
+    {
+      "name": "Benjamin Lupton",
+      "email": "b@lupton.cc",
+      "url": "https://github.com/balupton"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Benjamin Lupton",
+      "email": "b@lupton.cc",
+      "url": "https://github.com/balupton"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/docpad/docpad-plugin-nativecomments/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/docpad/docpad-plugin-nativecomments.git"
+  },
+  "engines": {
+    "node": ">=0.4"
+  },
+  "dependencies": {
+  	"docpad-plugin-partials": "~2.7.0"
+  },
+  "peerDependencies": {
+    "docpad": ">=6.46 <7"
+  },
+  "devDependencies": {
+    "rimraf": "~2.2.2",
+    "chai": "~1.7.2",
+    "superagent": "~0.15.4",
+    "coffee-script": "~1.6.2",
+    "docpad": ">=6.46 <7"
+  },
+  "main": "./src/univunixcomments.plugin.coffee"
+}
