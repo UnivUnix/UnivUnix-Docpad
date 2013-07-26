@@ -55,9 +55,9 @@ html ->
               div class: "widgetcontent", ->
                 ul ->
                   for document in @getCollection('pages').toJSON()
-                    li class: "page_item", ->
-                      a href: document.url, property: "dc:title", ->
-                        document.title
+                    li class: ('active' if @document.url == document.url), ->
+                        a href: document.url, property: "dc:title", ->
+                          document.title
     
     footer id: "content-info", class: "navbar-fixed-bottom", ->
       div class: "foot", ->

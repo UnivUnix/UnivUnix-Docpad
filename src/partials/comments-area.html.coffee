@@ -13,9 +13,10 @@ else
           p ->
             comment.contentRenderedWithoutLayouts
 section id:"response", ->
-  div class: "padded-element", ->
+  header ->
     h3 ->
       "Deja tu comentario:"
+  div class: "entry-response", ->
     div class: "alert alert-info", ->
       p ->
         "Todos los campos marcados con '*' son obligatorios."

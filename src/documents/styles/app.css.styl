@@ -19,7 +19,7 @@ border-bottom-radius()
   padding-bottom 100px
 .alignthumb
   float left
-  margin-right 0.5em
+  margin 0.5em
 .html
   text-align left
 .commons
@@ -120,11 +120,15 @@ body
       background #ffffff
       border-bottom 1px solid
       overflow hidden
+      .alignthumb
+        margin 0.5em
     .entry-content
       padding 0 15px 10px
       background #ffffff
       border-bottom 1px solid
       overflow hidden
+      .alignthumb
+      	margin 2em
       h1,h2,h3,h4,h5,h6
         margin 0 0 10px 10px
         border-bottom 1px solid #d2d2d2
@@ -133,14 +137,6 @@ body
       color #ffffff
       border-bottom-radius 7px
       padding 15px
-  #comments
-  #response
-    background #2e2e2e
-    color #ffffff
-    border-top-radius 7px
-    border-bottom-radius 7px
-    .alert
-      margin 0 20px
   h1,h2,h3,h4,h5,h6
     margin 0 0 10px 0       
   .video-container
@@ -327,7 +323,16 @@ body
             border-bottom 1px dotted #444444
             padding 5px 0
             :last-child
-              border none
+            a
+              color #ffffff
+              text-decoration none
+          .active
+            border-radius 3px
+            background #e5e5e5
+            a
+              color #333333
+              text-decoration none
+              
         a:hover
           color #ffffff
   #content-info
@@ -455,9 +460,32 @@ body
     height 27px
     display block
     margin-top 8px
+  #comments
   #response
-    h3
-      font-weight lighter
+    border-radius 7px
+    box-shadow 0 0 10px #d1d1d1
+    header
+      padding 0 15px
+      border-top-radius 7px
+      color #fff
+      background #333333
+      border-bottom 1px solid #ffffff
+      h3
+        padding 5px 0
+        line-height 1.1em
+        border-bottom 1px solid #d2d2d2
+        font-weight lighter
+    .entry-response
+      padding 0 15px 10px
+      background #ffffff
+      border-bottom 1px solid
+      overflow hidden
+      #commentform
+      	label
+      	  float left
+    border-bottom-radius 7px
+    .alert
+      margin 0 20px
 @media (max-width: 979px) {
     .locked-navbar{
         padding-top: 0;
