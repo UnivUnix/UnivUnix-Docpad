@@ -66,18 +66,20 @@ module.exports = (BasePlugin) ->
       server.all @getConfig().postUrl, (req,res,next) ->
         # Prepare
         config = plugin.getConfig()
-        now = new Date(req.body.date or null)
+        now = new Date()
         nowTime = now.getTime()
         nowString = now.toString()
         redirect = req.body.redirect ? req.query.redirect ? 'back'
 
         # Prepare
         documentAttributes =
-          data: req.body.body or ''
+          data: req.body.comment or ''
           meta:
-            title: req.body.title or "Comment at #{nowString}"
             for: req.body.for or ''
             author: req.body.author or ''
+            email: req.body.email or ''
+            url: req.body.url or ''
+            userAgent: req.body.userAgent or 'Desconocido'
             date: now
             fullPath: docpad.config.documentsPaths[0]+"/#{config.relativeDirPath}/#{nowTime}#{config.extension}"
 

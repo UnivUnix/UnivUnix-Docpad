@@ -23,14 +23,22 @@ section id:"response", ->
       p ->
         "La dirección email no será mostrada al público."
     form id:"commentform", method:"POST", action:"/comment", ->
-      label 'for':"author", ->
-        "Nombre: *"
-      input id:"author", class:"text", type:"text", 'aria-required':"true", tabindex:"1", size:"22", value:"", name:"author"
-      label 'for':"email", ->
-        "Email: *"
-      input id:"email", class:"text", type:"text", 'aria-required':"true", tabIndex:"2", size:"22", value:"", name:"email"
-      label 'for':"url", ->
-        "Web:"
-      input id:"url", class:"text", type:"text", tabIndex:"3", size:"22", value:"", name:"url"
-    
+      input type:"hidden", name:"for", value:@document.relativeBase
+      input type:"hidden", name:"userAgent", value:"User Agent"
+      p class:"comment-author", ->
+        label 'for':"author", ->
+          "Nombre: *"
+        input id:"author", class:"text", type:"text", 'aria-required':"true", tabindex:"1", size:"22", value:"", name:"author"
+      p class:"comment-email", ->
+        label 'for':"email", ->
+          "Email: *"
+        input id:"email", class:"text", type:"text", 'aria-required':"true", tabIndex:"2", size:"22", value:"", name:"email"
+      p class:"comment-web", ->
+        label 'for':"url", ->
+          "Web:"
+        input id:"url", class:"text", type:"text", tabIndex:"3", size:"22", value:"", name:"url"
+      p class:"comment-content", ->
+        textarea id:"comment", class:"input-xlarge", tabIndex:"4", name:"comment"
+      p class:"comment-submit", ->
+        input id:"submit", class:"btn btn-primary", type:"submit", value:"Enviar", tabIndex:"5", name:"submit"
     

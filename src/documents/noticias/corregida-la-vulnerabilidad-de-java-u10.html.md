@@ -1,12 +1,12 @@
 ---
 author: Ferthedems
-date: 2013-01-14 13:34:53+00:00
+date: 2013-01-14 12:34:53+01:00
 layout: post
 slug: corregida-la-vulnerabilidad-de-java-u10
 title: Corregida la vulnerabilidad de Java u10
-thumbnail: ['attachments/2013/01/java-logo.jpg']
-categories: ['noticias']
-tags: ['java','linux','mac','vulnerabilidad','windows']
+thumbnail: ['/attachments/2013/01/java-logo.jpg','Logo de Java']
+categories: ['noticias','linux']
+tags: ['java','mac','vulnerabilidad','windows']
 ---
 
 La **vulnerabilidad encontrada en Java hace unos días**

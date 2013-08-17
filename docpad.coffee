@@ -54,11 +54,6 @@ docpadConfig = {
         Una web donde te pondremos al día en la información que rodea a Linux y programación: noticias, tutoriales y software variado e interesante.
         """
 
-      # The website keywords (for SEO) separated by commas
-      keywords: """
-        place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
-        """
-
       # The website author's name
       author: authors
 
@@ -67,16 +62,16 @@ docpadConfig = {
 
       # Styles
       styles: [
-        "/styles/twitter-bootstrap.css",
-        "/styles/app.css"
+        "/styles/bootstrap.css"
       ]
 
       # Scripts
       scripts: [
         "/scripts/jquery-min.js",
         "/scripts/lazyload-min.js",
-        "/vendor/twitter-bootstrap/js/bootstrap-dropdown.js",
-        "/vendor/twitter-bootstrap/js/bootstrap-collapse.js",
+        "/vendor/twitter-bootstrap/js/transition.js",
+        "/vendor/twitter-bootstrap/js/dropdown.js",
+        "/vendor/twitter-bootstrap/js/collapse.js",
         "/scripts/app.js"
       ]
 
@@ -121,7 +116,7 @@ docpadConfig = {
         for cat in categories
           if category.title?
             if category.title.toLowerCase() == cat
-              catsHtml += '<a href="' + category.url + '">' + category.title + '</a>, '
+              catsHtml += '<a class="btn btn-small btn-default" href="' + category.url + '">' + category.title + '</a>'
       return catsHtml
     
     getCategoryCss: (categories) ->
@@ -130,7 +125,7 @@ docpadConfig = {
         for cat in categories
           if category.title?
             if category.title.toLowerCase() == cat
-              cssCat = "mini-" + cat
+              cssCat = cat + "-icon"
       return cssCat
 
     isDocCategory: (categories, indexTitle) ->
@@ -153,6 +148,9 @@ docpadConfig = {
       return moment(date).format(format)
     postDateRFC: (date, format="ddd, DD MMM YYYY HH:mm:ss ZZ") ->
       return moment(date).format(format)
+
+    formatURL: (url) ->
+      return url.replace(/\s/g, "%20")
 
   # =================================
   # Collections

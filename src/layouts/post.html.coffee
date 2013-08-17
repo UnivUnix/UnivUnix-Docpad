@@ -28,8 +28,8 @@ article id: @document.id, class: "post hentry", ->
         a class: "dropdown-toggle", 'data-toggle': "dropdown", href:"#share", ->
           text "Compartir"
         div class: "dropdown-menu", style: "padding:10px", ->
-          a class: "twitter", href: "http://twitter.com/share?url=" + @document.url + "&amp;text=" + @document.title + "-&amp;via=UnivUnix", target: "_blank", title: "Compártelo en Twitter"
-          a class: "facebook", href: "http://www.facebook.com/sharer.php?u=" + @document.url + "&amp;t=" + @document.title, target: "_blank", title: "Recomiéndalo en Facebook"
+          a class: "twitter", href: "http://twitter.com/share?url=" + @document.url + "&amp;text=" + @formatURL(@document.title) + "-&amp;via=UnivUnix", target: "_blank", title: "Compártelo en Twitter"
+          a class: "facebook", href: "http://www.facebook.com/sharer.php?u=" + @document.url + "&amp;t=" + @formatURL(@document.title), target: "_blank", title: "Recomiéndalo en Facebook"
           a class: "gplus", href: "https://plus.google.com/share?url=" + @document.url, target: "_blank", title: "Compártelo en Google Plus"
-          a class: "linkedin", href: "http://www.linkedin.com/shareArticle?mini=true&amp;url=" + @document.url + "&amp;title=" + @document.title, target: "_blank", title: "Divulga el artículo en LinkedIn"
+          a class: "linkedin", href: "http://www.linkedin.com/shareArticle?mini=true&amp;url=" + @document.url + "&amp;title=" + @formatURL(@document.title), target: "_blank", title: "Divulga el artículo en LinkedIn"
 text @getCommentsBlock()
