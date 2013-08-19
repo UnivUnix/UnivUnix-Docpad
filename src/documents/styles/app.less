@@ -26,13 +26,13 @@
 
 //Navbar
 //---------------------
-@navbar-bg: #2e2e2e;
+@navbar-default-bg: #2e2e2e;
 @navbar-height: 60px;
-@navbar-color: #fff;
-@navbar-link-active-color: darken(@navbar-color, 100%);
-@navbar-link-active-bg: lighten(@navbar-bg, 50%);
-@navbar-link-color: @navbar-color;
-@navbar-link-hover-color: #56bcda;
+@navbar-default-color: #fff;
+@navbar-default-link-active-color: darken(@navbar-default-color, 100%);
+@navbar-default-link-active-bg: lighten(@navbar-default-bg, 50%);
+@navbar-default-link-color: @navbar-default-color;
+@navbar-default-link-hover-color: #56bcda;
 
 //=====================
 //Mixins
@@ -131,7 +131,7 @@ article{
 }
 .navbar{
   font-weight: 500;
-  color: @navbar-color;
+  color: @navbar-default-color;
 }
 .navbar-text{
   .navbar-link{
