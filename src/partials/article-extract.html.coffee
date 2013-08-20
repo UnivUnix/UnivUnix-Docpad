@@ -15,26 +15,29 @@ article id: @document.id, class: "post hentry", ->
   footer ->
     div class: "container", ->
       div class: "pull-left", ->
-        button type:"button", class:"btn btn-small btn-default", ->
-          i class: "glyphicon glyphicon-calendar"
-          time class: "updated", datetime: @postDatetime(@document.date), ->
-            text @postDate(@document.date)
+        div class:"btn-group", ->
+          button type:"button", class:"btn btn-small btn-default", ->
+            i class: "glyphicon glyphicon-calendar"
+            time class: "updated", datetime: @postDatetime(@document.date), ->
+              text @postDate(@document.date)
         div class: "btn-group", ->
           button type:"button", class:"btn btn-small btn-default", ->
             i class: "glyphicon glyphicon-folder-open"
           text @getCategoryPages(@document.categories)
-        a class: "btn btn-small btn-default", href:@document.url + "#response", ->
-          i class: "glyphicon glyphicon-comment"
-          text @getTotalPostComments(@document)
-      div class: "dropdown all-camera-dropdown pull-left", ->
-        a class: "btn btn-small btn-default dropdown-toggle", 'data-toggle':"dropdown", href:"#share", ->
-          i class: "glyphicon glyphicon-plus-sign"
-          text "Compartir"
-        div class: "dropdown-menu", style: "padding:10px", ->
-          a class: "btn-tt", href: "http://twitter.com/share?url=" + @document.url + "&amp;text=" + @formatURL(@document.title) + "-&amp;via=UnivUnix", target: "_blank", title: "Compártelo en Twitter"
-          a class: "btn-fb", href: "http://www.facebook.com/sharer.php?u=" + @document.url + "&amp;t=" + @formatURL(@document.title), target: "_blank", title: "Recomiéndalo en Facebook"
-          a class: "btn-gp", href: "https://plus.google.com/share?url=" + @document.url, target: "_blank", title: "Compártelo en Google Plus"
-          a class: "btn-lin", href: "http://www.linkedin.com/shareArticle?mini=true&amp;url=" + @document.url + "&amp;title=" + @formatURL(@document.title), target: "_blank", title: "Divulga el artículo en LinkedIn"
+        div class: "btn-group", ->
+          a class:"btn btn-small btn-default", href:@document.url + "#comments", ->
+            i class: "glyphicon glyphicon-comment"
+          a class: "btn btn-small btn-default", href:@document.url + "#response", ->
+            text @getTotalPostComments(@document)
+        div class: "dropdown all-camera-dropdown pull-left", ->
+          a class: "btn btn-small btn-default dropdown-toggle", 'data-toggle':"dropdown", href:"#share", ->
+            i class: "glyphicon glyphicon-plus-sign"
+            text "Compartir"
+          div class: "dropdown-menu", style: "padding:10px", ->
+            a class: "btn-tt", href: "http://twitter.com/share?url=" + @document.url + "&amp;text=" + @formatURL(@document.title) + "-&amp;via=UnivUnix", target: "_blank", title: "Compártelo en Twitter"
+            a class: "btn-fb", href: "http://www.facebook.com/sharer.php?u=" + @document.url + "&amp;t=" + @formatURL(@document.title), target: "_blank", title: "Recomiéndalo en Facebook"
+            a class: "btn-gp", href: "https://plus.google.com/share?url=" + @document.url, target: "_blank", title: "Compártelo en Google Plus"
+            a class: "btn-lin", href: "http://www.linkedin.com/shareArticle?mini=true&amp;url=" + @document.url + "&amp;title=" + @formatURL(@document.title), target: "_blank", title: "Divulga el artículo en LinkedIn"
       div class: "pull-right", ->
         a class: "btn btn-small btn-default", href: @document.url, title: "Continuar leyendo", ->
           text "Continuar leyendo"

@@ -1,6 +1,6 @@
 commentsLength = @getComments().length
 if commentsLength is 0
-  div class: "alert", ->
+  div class: "alert alert-warning", ->
     p ->
       "No hay comentarios aún. ¡Sé el primero!"
 else
