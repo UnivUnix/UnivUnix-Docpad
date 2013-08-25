@@ -19,56 +19,57 @@ html ->
     text @getBlock('styles').add(@site.styles).toHTML()
 
   body ->
-    header class: "navbar navbar-default navbar-fixed-top", ->
-      div class: "navbar-header", ->
-        button type: "button", class: "navbar-toggle", 'data-toggle': "collapse", 'data-target': ".navbar-responsive-collapse", ->
-          span class: "sr-only", ->
-            text "Toogle navigation"
-          for num in [3..1]
-            span class: "icon-bar"
-        a id:"brand", class: "navbar-brand", href: "/"
-      div class: "collapse navbar-collapse navbar-ex1-collapse navbar-responsive-collapse", ->
-        ul class: "nav navbar-nav", ->
-          for document in @getCollection('indexes').toJSON()
-            if document.indexOrder?
-              li class: ('active' if @isDocCategory(@document.categories, document.title) or @document.url == document.url), ->
-                a href: document.url, property: "dc:title", ->
-                  document.title
-        ul class: "nav navbar-nav pull-right", ->
-          li class: "dropdown", ->
-            a class: "dropdown-toggle", 'data-toggle': "dropdown", href: "#social", ->
-              text "Síguenos"
-              span class: "caret"
-            ul id: "follow-dropdown", class: "dropdown-menu", role: "menu", ->                     
-              li role:"menuitem", ->
-                a href: "http://twitter.com/univunix", target: "_blank", title: "Síguenos en Twitter", ->
-                  text "Twitter"
-              li role:"menuitem", ->
-                a href: "http://www.facebook.com/univunix", target: "_blank", title: "Síguenos en Facebook", ->
-                  text "Facebook"
-              li role:"menuitem", ->
-                a href: "http://plus.google.com/b/107511248169675151833/107511248169675151833?rel=publisher", target: "_blank", title: "Síguenos en Google+", ->
-                  text "Google +"
-              li class: "divider"
-              li class: "dropdown-header", ->
-                text "Feeds"
-              li role:"menuitem", ->
-                a href: @getUrl("/feeds/rss.xml"), target: "_blank", title: "Nuestro feed en RSS", ->
-                  text "RSS"
-              li role:"menuitem", ->
-                a href: @getUrl("/feeds/atom.xml"), target: "_blank", title: "Nuestro feed en ATOM", ->
-                  text "ATOM"
+    header class: "navbar navbar-default navbar-fixed-top", role:"navigation", ->
+      div class: "container", ->
+        div class: "navbar-header", ->
+          button type: "button", class: "navbar-toggle", 'data-toggle': "collapse", 'data-target': ".navbar-responsive-collapse", ->
+            span class: "sr-only", ->
+              text "Toogle navigation"
+            for num in [3..1]
+              span class: "icon-bar"
+          a id:"brand", class: "navbar-brand", href: "/"
+        div class: "collapse navbar-collapse navbar-ex1-collapse navbar-responsive-collapse", ->
+          ul class: "nav navbar-nav", ->
+            for document in @getCollection('indexes').toJSON()
+              if document.indexOrder?
+                li class: ('active' if @isDocCategory(@document.categories, document.title) or @document.url == document.url), ->
+                  a href: document.url, property: "dc:title", ->
+                    document.title
+          ul class: "nav navbar-nav pull-right", ->
+            li class: "dropdown", ->
+              a class: "dropdown-toggle", 'data-toggle': "dropdown", href: "#social", ->
+                text "Síguenos"
+                span class: "caret"
+              ul id: "follow-dropdown", class: "dropdown-menu", role: "menu", ->                     
+                li role:"menuitem", ->
+                  a href: "http://twitter.com/univunix", target: "_blank", title: "Síguenos en Twitter", ->
+                    text "Twitter"
+                li role:"menuitem", ->
+                  a href: "http://www.facebook.com/univunix", target: "_blank", title: "Síguenos en Facebook", ->
+                    text "Facebook"
+                li role:"menuitem", ->
+                  a href: "http://plus.google.com/b/107511248169675151833/107511248169675151833?rel=publisher", target: "_blank", title: "Síguenos en Google+", ->
+                    text "Google +"
+                li class: "divider"
+                li class: "dropdown-header", ->
+                  text "Feeds"
+                li role:"menuitem", ->
+                  a href: @getUrl("/feeds/rss.xml"), target: "_blank", title: "Nuestro feed en RSS", ->
+                    text "RSS"
+                li role:"menuitem", ->
+                  a href: @getUrl("/feeds/atom.xml"), target: "_blank", title: "Nuestro feed en ATOM", ->
+                    text "ATOM"
     div id: "wrap", class: "container", ->
       section id: "content", class: "content row", ->
         div id: "main", class: "col-sm-9 col-12 col-lg-9", ->
           text @content
         aside id: "sidebar", class: "col-sm-3 col-12 col-lg-3", ->
-          section id: "pages", class: "widget widget_pages", ->
-            div class: "widget-inner", ->
-              div class: "widgettitle", ->
+          section id: "pages", class: "widget", ->
+            div class: "container", ->
+              div class: "widget-title", ->
                 h3 ->
                   text "Acerca de:"
-              div class: "widgetcontent", ->
+              div class: "widget-content", ->
                 ul ->
                   for document in @getCollection('pages').toJSON()
                     li class: ('active' if @document.url == document.url), ->
