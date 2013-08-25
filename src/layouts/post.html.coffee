@@ -8,9 +8,9 @@ article id: @document.id, class: "post hentry", ->
       @document.title
   div class: "entry-content", ->
     if @document.thumbnail?
-      img src: @getUrl("/img/placeholder.gif"), 'data-original': @getThumbnail(@document.thumbnail[0], 'medium'), class: "lazy alignthumb", alt: @document.thumbnail[1] if @document.thumbnail[1]?
+      img src: @getUrl("/img/placeholder.gif"), 'data-original': @getThumbnail(@document.thumbnail[0], 'medium'), class: "lazy img-responsive img-rounded", alt: @document.thumbnail[1] if @document.thumbnail[1]?
       noscript ->
-        img src: @getThumbnail(@document.thumbnail[0], 'medium'), class: "alignthumb", alt: @document.thumbnail[1] if @document.thumbnail[1]?
+        img src: @getThumbnail(@document.thumbnail[0], 'medium'), class: "img-responsive img-rounded", alt: @document.thumbnail[1] if @document.thumbnail[1]?
     div class: "content-post", ->
       text @content
   footer ->
