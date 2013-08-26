@@ -31,9 +31,9 @@ article id: @document.id, class: "post hentry", ->
       div class: "pull-right", ->
         div class:"btn-group", ->
           button type:"button", class:"btn btn-small btn-default dropdown-toggle", 'data-toggle':"dropdown", ->
-            i class: "glyphicon glyphicon-plus-sign"
+            i class: "glyphicon glyphicon-retweet"
             text "Compartir"
-          div class: "dropdown-menu", style: "padding:10px", ->
+          div class: "dropdown-menu dropdown-padded pull-left", ->
             a class: "btn-tt", href: "http://twitter.com/share?url=" + @document.url + "&amp;text=" + @formatURL(@document.title) + "-&amp;via=UnivUnix", target: "_blank", title: "Compártelo en Twitter"
             a class: "btn-fb", href: "http://www.facebook.com/sharer.php?u=" + @document.url + "&amp;t=" + @formatURL(@document.title), target: "_blank", title: "Recomiéndalo en Facebook"
             a class: "btn-gp", href: "https://plus.google.com/share?url=" + @document.url, target: "_blank", title: "Compártelo en Google Plus"
