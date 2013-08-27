@@ -1,34 +1,6 @@
 # Import
 moment = require('moment')
 
-#Authors file
-authors = [
-  {
-    user: "Aglezabad",
-    email: "aglezabad@gmail.com"
-    gplusProfile: "",
-    twitterProfile: "",
-    avatar: "",
-    description: ""
-  },
-  {
-    user: "Ferthedems",
-    email: "",
-    gplusProfile: "",
-    twitterProfile: "",
-    avatar: "",
-    description: ""
-  },
-  {
-    user: "Kennynek",
-    email: "",
-    gplusProfile: "",
-    twitterProfile: "",
-    avatar: "",
-    description: ""
-  }
-]
-
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig = {
@@ -54,11 +26,8 @@ docpadConfig = {
         Una web donde te pondremos al día en la información que rodea a Linux y programación: noticias, tutoriales y software variado e interesante.
         """
 
-      # The website author's name
-      author: authors
-
       # The website author's email
-      email: authors[0].email
+      email: ""
 
       # Styles
       styles: [
@@ -104,11 +73,11 @@ docpadConfig = {
       # return @site.url + (@getPath(document))
       return document
     
-    getAuthorsName: () ->
-      authorStr = ""
-      for author in @site.author
-        authorStr += author.user + ","
-      return authorStr
+    getAuthorsPages: (authors) ->
+      authorsHtml = ""
+      for author in authors
+        authorsHtml += '<a class="btn btn-small btn-default" href="/authors/' + author.toLowerCase() + '">' + author + '</a>'
+      return authorsHtml
 
     getCategoryPages: (categories) ->
       catsHtml = ""
@@ -164,8 +133,11 @@ docpadConfig = {
     indexes: (database) ->
       database.findAllLive({index: true}, [indexOrder:1, title:1])
 
+    authors: (database) ->
+      database.findAllLive({layout: 'author'}, [title:1])
+
     posts: (database) ->
-      database.findAllLive({categories:$in:['linux','arch','debian','fedora','mageia','mint','opensuse','ubuntu','programacion','tutoriales','noticias']}, [date:-1])
+      database.findAllLive({categories: $exists: true}, [date:-1])
 
     linux: (database) ->
       database.findAllLive({categories:$has:'linux'}, [date:-1])

@@ -5,11 +5,6 @@
 	<link href="<%= @site.url %>/"/>
 	<updated><%= @site.date.toISOString() %></updated>
 	<id><%= @site.url %></id>
-	<author>
-		<name><%= @getAuthorsName() %></name>
-		<email><%= @site.email %></email>
-	</author>
-
 	<% for document in @getCollection('posts').toJSON(): %>
 		<entry>
 			<title><%= document.title %></title>

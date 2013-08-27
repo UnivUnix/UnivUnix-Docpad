@@ -1,5 +1,5 @@
 ---
-author: Ferthedems y Aglezabad
+authors: ['Ferthedems', 'Aglezabad']
 date: 2013-01-13 16:31:37+00:00
 layout: post
 title: echo '¡Hola, mundo!'

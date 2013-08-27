@@ -25,7 +25,7 @@ article id: @document.id, class: "post hentry", ->
         div class: "btn-group", ->
           button type:"button", class:"btn btn-small btn-default", ->
             i class:"glyphicon glyphicon-user"
-              #sdfsb
+          text @getAuthorsPages(@document.authors)
         div class:"btn-group", ->
           button type:"button", class:"btn btn-small btn-default", ->
             i class: "glyphicon glyphicon-folder-open"

@@ -1,5 +1,5 @@
 ---
-author: Aglezabad
+authors: ['Aglezabad']
 date: 2013-8-1 16:04:36+01:00
 layout: page
 title: LSSI
