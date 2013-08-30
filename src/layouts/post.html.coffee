@@ -18,25 +18,25 @@ article id: @document.id, class: "post hentry", ->
   footer ->
     div class:"container", ->
       div class: "pull-left", ->
-        button type:"button", class:"btn btn-small btn-default", ->
+        button type:"button", class:"btn btn-sm btn-default", ->
           i class: "glyphicon glyphicon-calendar"
           time class: "updated", datetime: @postDatetime(@document.date), ->
             text @postDate(@document.date)
         div class: "btn-group", ->
-          button type:"button", class:"btn btn-small btn-default", ->
+          button type:"button", class:"btn btn-sm btn-default", ->
             i class:"glyphicon glyphicon-user"
           text @getAuthorsPages(@document.authors)
         div class:"btn-group", ->
-          button type:"button", class:"btn btn-small btn-default", ->
+          button type:"button", class:"btn btn-sm btn-default", ->
             i class: "glyphicon glyphicon-folder-open"
           text @getCategoryPages(@document.categories)
         div class:"btn-group", ->
-          a href:"#comments", class:"btn btn-small btn-default", ->
+          a href:"#comments", class:"btn btn-sm btn-default", ->
             i class: "glyphicon glyphicon-comment"
-          a href:"#response", class:"btn btn-small btn-default", ->
+          a href:"#response", class:"btn btn-sm btn-default", ->
             text @getTotalPostComments()
       div class: "dropdown all-camera-dropdown pull-right", ->
-        button type:"button", class:"btn btn-small btn-default dropdown-toggle", 'data-toggle':"dropdown", ->
+        button type:"button", class:"btn btn-sm btn-default dropdown-toggle", 'data-toggle':"dropdown", ->
           i class: "glyphicon glyphicon-retweet"
           text "Compartir"
         div class: "dropdown-menu dropdown-padded pull-left", ->
