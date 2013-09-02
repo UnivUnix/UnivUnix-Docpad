@@ -134,7 +134,7 @@ docpadConfig = {
       database.findAllLive({index: true}, [indexOrder:1, title:1])
 
     authors: (database) ->
-      database.findAllLive({layout: 'author'}, [title:1])
+      database.findAllLive({authorOrder: $exists: true}, [authorOrder:1,title:1])
 
     posts: (database) ->
       database.findAllLive({categories: $exists: true}, [date:-1])
