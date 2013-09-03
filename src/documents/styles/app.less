@@ -63,6 +63,12 @@
   -webkit-border-top-right-radius: @radius;
   -webkit-border-top-left-radius: @radius;
 }
+.border-bottom-radius(@radius){
+  border-bottom-right-radius: @radius;
+  border-bottom-left-radius: @radius;
+  -webkit-border-bottom-right-radius: @radius;
+  -webkit-border-bottom-left-radius: @radius;
+}
 
 //=====================
 //Classes
@@ -122,6 +128,53 @@ article{
     color: #ffffff;
     .border-bottom-radius(7px);
     padding: 15px;
+  }
+}
+
+#sidebar{
+  .widget{
+    .container{
+      margin: 0 0 20px 0;
+      background: #2e2e2e;
+      .border-radius(7px);
+      box-shadow: 2px #d1d1d1;
+      .widget-title{
+        background: #3198b6;
+        padding: 0 10px;
+        .border-top-radius(7px);
+        h3{
+          color: #fff;
+          text-shadow: 0 1px 0 #fff;
+          text-shadow: 1px 1px 2px rgba(150,150,150,1);
+        }
+      }
+      .widget-content{
+        padding: 0 10px 10px 10px;
+        background: #2d2d2d;
+        .border-bottom-radius(7px);
+        color: #fff;
+        ul{
+          list-style: none;
+          margin: 0;
+          li{
+            border-bottom: 1px dotted #444;
+            padding: 5px 0;
+            a:last-child{
+              color: #fff;
+              text-decoration: none;
+            }
+          }
+          .active{
+            .border-radius(3px);
+            background: #e5e5e5;
+            a{
+              color: #333;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
