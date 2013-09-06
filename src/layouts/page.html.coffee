@@ -9,6 +9,7 @@ article id: @document.id, class: "page hentry", ->
   div class: "entry-content", ->
     text @content
   footer ->
-    i class: "icon-calendar icon-white"
-    time class: "updated", datetime: @postDatetime(@document.date), ->
-      text @postDate(@document.date)
+    button type:"button", class:"btn btn-sm btn-default", ->
+      i class: "glyphicon glyphicon-calendar"
+      time class: "updated", datetime: @postDatetime(@document.date), ->
+        text @postDate(@document.date)
