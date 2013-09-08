@@ -1,6 +1,6 @@
 ---
-layout: 'default'
-title: 'Opensuse'
+layout: wrap-9-3
+title: 'OpenSUSE'
 index: true
 isPaged: true
 pagedCollection: 'opensuse'

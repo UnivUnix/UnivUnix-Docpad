@@ -1,5 +1,5 @@
 ---
-layout: 'default'
+layout: wrap-12
 title: '500 Internal Server Error'
 dynamic: true
 ---

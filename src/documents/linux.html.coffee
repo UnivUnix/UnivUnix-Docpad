@@ -1,5 +1,5 @@
 ---
-layout: 'default'
+layout: wrap-9-3
 title: 'Linux'
 index: true
 indexOrder: 2

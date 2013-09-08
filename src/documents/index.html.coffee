@@ -1,5 +1,5 @@
 ---
-layout: 'default'
+layout: wrap-9-3
 index: true
 isPaged: true
 pagedCollection: 'posts'

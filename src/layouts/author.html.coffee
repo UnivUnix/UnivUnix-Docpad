@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: wrap-3-6-3
 ---
 
-article id: @document.id, class: "author hentry", ->
+article id: @document.id, class: "author hentry row", ->
   div id: "img-profile", class: "col-12 col-sm-3 col-lg-3", ->
     if @document.imgprofile?
       img src: @getUrl("/img/placeholder.gif"), 'data-original': @getThumbnail(@document.imgprofile, 'medium'), class: "lazy img-responsive img-rounded", alt: "User image"

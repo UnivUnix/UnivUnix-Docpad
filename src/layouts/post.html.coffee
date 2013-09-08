@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: wrap-9-3
 ---
 
 article id: @document.id, class: "post hentry", ->
