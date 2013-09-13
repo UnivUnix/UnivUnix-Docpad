@@ -34,7 +34,7 @@ article id: @document.id, class: "post hentry", ->
           a href:"#comments", class:"btn btn-sm btn-default", ->
             i class: "glyphicon glyphicon-comment"
           a href:"#response", class:"btn btn-sm btn-default", ->
-            text @getTotalPostComments()
+            
       div class: "dropdown all-camera-dropdown pull-right", ->
         button type:"button", class:"btn btn-sm btn-default dropdown-toggle", 'data-toggle':"dropdown", ->
           i class: "glyphicon glyphicon-retweet"
@@ -44,4 +44,3 @@ article id: @document.id, class: "post hentry", ->
           a class: "btn-fb", href: "http://www.facebook.com/sharer.php?u=" + @document.url + "&amp;t=" + @formatURL(@document.title), target: "_blank", title: "Recomiéndalo en Facebook"
           a class: "btn-gp", href: "https://plus.google.com/share?url=" + @document.url, target: "_blank", title: "Compártelo en Google Plus"
           a class: "btn-lin", href: "http://www.linkedin.com/shareArticle?mini=true&amp;url=" + @document.url + "&amp;title=" + @formatURL(@document.title), target: "_blank", title: "Divulga el artículo en LinkedIn"
-text @getCommentsBlock()

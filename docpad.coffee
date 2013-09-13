@@ -44,6 +44,9 @@ docpadConfig = {
         "/vendor/twitter-bootstrap/js/affix.js",
         "/scripts/app.js"
       ]
+      
+      services:
+        disqus: "univunix"
 
 
     # -----------------------------

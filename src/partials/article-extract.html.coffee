@@ -27,7 +27,7 @@ article id: @document.id, class: "post hentry", ->
           a class:"btn btn-sm btn-default", href:@document.url + "#comments", ->
             i class: "glyphicon glyphicon-comment"
           a class: "btn btn-sm btn-default", href:@document.url + "#response", ->
-            text @getTotalPostComments(@document)
+            
       div class: "pull-right", ->
         div class:"btn-group", ->
           button type:"button", class:"btn btn-sm btn-default dropdown-toggle", 'data-toggle':"dropdown", ->
