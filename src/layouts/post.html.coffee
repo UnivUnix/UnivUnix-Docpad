@@ -31,10 +31,9 @@ article id: @document.id, class: "post hentry", ->
             i class: "glyphicon glyphicon-folder-open"
           text @getCategoryPages(@document.categories)
         div class:"btn-group", ->
-          a href:"#comments", class:"btn btn-sm btn-default", ->
+          button type:"button", class:"btn btn-sm btn-default", ->
             i class: "glyphicon glyphicon-comment"
-          a href:"#response", class:"btn btn-sm btn-default", ->
-            
+          a href:"#disqus_thread", class:"btn btn-sm btn-default"
       div class: "dropdown all-camera-dropdown pull-right", ->
         button type:"button", class:"btn btn-sm btn-default dropdown-toggle", 'data-toggle':"dropdown", ->
           i class: "glyphicon glyphicon-retweet"
@@ -44,3 +43,17 @@ article id: @document.id, class: "post hentry", ->
           a class: "btn-fb", href: "http://www.facebook.com/sharer.php?u=" + @document.url + "&amp;t=" + @formatURL(@document.title), target: "_blank", title: "Recomiéndalo en Facebook"
           a class: "btn-gp", href: "https://plus.google.com/share?url=" + @document.url, target: "_blank", title: "Compártelo en Google Plus"
           a class: "btn-lin", href: "http://www.linkedin.com/shareArticle?mini=true&amp;url=" + @document.url + "&amp;title=" + @formatURL(@document.title), target: "_blank", title: "Divulga el artículo en LinkedIn"
+div id:"disqus_thread"
+script type:"text/javascript", ->
+  text 'var disqus_shortname="univunix";(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="//"+disqus_shortname+".disqus.com/embed.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()'
+script type:"text/javascript", ->
+  text 'var disqus_shortname="univunix";(function(){var e=document.createElement("script");e.async=true;e.type="text/javascript";e.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("HEAD")[0]||document.getElementsByTagName("BODY")[0]).appendChild(e)})()'
+noscript ->
+  text "Please enable JavaScript to view the "
+  a href:"http://disqus.com/?ref_noscript", ->
+    text "comments powered by Disqus."
+a href:"http://disqus.com", class:"dsq-brlink", ->
+  text "comments powered by "
+  span class:"logo-disqus", ->
+    text "Disqus"
+  
