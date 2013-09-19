@@ -30,7 +30,7 @@
     "npm": "1.2"
   },
   "dependencies": {
-    "docpad": "~6.52.1",
+    "docpad": "~6.53.0",
     "docpad-plugin-downloader": "~2.1.2",
     "docpad-plugin-cleanurls": "~2.5.1",
     "docpad-plugin-coffeescript": "~2.2.2",

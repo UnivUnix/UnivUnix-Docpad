@@ -26,8 +26,8 @@ article id: @document.id, class: "post hentry", ->
         div class: "btn-group", ->
           a class:"btn btn-sm btn-default", href:@document.url + "#comments", ->
             i class: "glyphicon glyphicon-comment"
-          a class: "btn btn-sm btn-default", href:@document.url + "#response", ->
-            
+          a class: "btn btn-sm btn-default", href:@document.url + "#disqus_thread", ->
+            text "-"
       div class: "pull-right", ->
         div class:"btn-group", ->
           button type:"button", class:"btn btn-sm btn-default dropdown-toggle", 'data-toggle':"dropdown", ->

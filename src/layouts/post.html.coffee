@@ -33,7 +33,8 @@ article id: @document.id, class: "post hentry", ->
         div class:"btn-group", ->
           button type:"button", class:"btn btn-sm btn-default", ->
             i class: "glyphicon glyphicon-comment"
-          a href:"#disqus_thread", class:"btn btn-sm btn-default"
+          a href:"#disqus_thread", class:"btn btn-sm btn-default", ->
+            text "-"
       div class: "dropdown all-camera-dropdown pull-right", ->
         button type:"button", class:"btn btn-sm btn-default dropdown-toggle", 'data-toggle':"dropdown", ->
           i class: "glyphicon glyphicon-retweet"
@@ -46,8 +47,6 @@ article id: @document.id, class: "post hentry", ->
 div id:"disqus_thread"
 script type:"text/javascript", ->
   text 'var disqus_shortname="univunix";(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="//"+disqus_shortname+".disqus.com/embed.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()'
-script type:"text/javascript", ->
-  text 'var disqus_shortname="univunix";(function(){var e=document.createElement("script");e.async=true;e.type="text/javascript";e.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("HEAD")[0]||document.getElementsByTagName("BODY")[0]).appendChild(e)})()'
 noscript ->
   text "Please enable JavaScript to view the "
   a href:"http://disqus.com/?ref_noscript", ->
