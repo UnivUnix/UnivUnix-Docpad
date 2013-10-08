@@ -228,9 +228,8 @@ docpadConfig = {
     thumbnails:
       presets:
         'thumbnail':
-          w: 120
-          h: 120
-          q: 80
+          w: 700
+          h: 440
         'small':
           w: 250
           h: 250
