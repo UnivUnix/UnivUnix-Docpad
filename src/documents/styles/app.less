@@ -60,28 +60,58 @@
 body{
   margin-top: 85px;
   background: #f8f8f8 url('../img/pw_maze_white.png') repeat center top fixed;
-	.sprite{
-		background: url('../img/sprites.png') no-repeat top left;
-	}
   .navbar{
     font-weight: 500;
     color: @navbar-default-color;
-    .sprite-brand{
-      background-position: 0 0;
-			width: 156px;
-      height: 40px;
-      margin-top: 5px;
-      margin-bottom: 5px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-		}
-		.sprite-share{
-			background-position: 0 -934px;
-			width: 30px;
-			height: 30px;
-			margin-top: 10px !important;
-			margin-bottom: 10px !important;
-			margin-right: 10px;
+    a{
+      text-decoration: none;
+    }
+		.sprite{
+			background: url('../img/sprites.png') no-repeat top left;
+      &-brand{
+        background-position: 0 0;
+        width: 156px;
+        height: 40px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      &-cc{
+        background-position: 0 -70px;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 3px;
+      }
+      &-html5{
+        background-position: 0 -287px;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 3px;
+      }
+      &-css3{
+        background-position: 0 -124px;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 3px;
+      }
+      &-share{
+        background-position: 0 -934px;
+        width: 30px;
+        height: 30px;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        margin-right: 10px;
+        &:hover{
+          background-position: 0 -874px;
+        }
+      }
 		}
   }
   //Posts
@@ -111,7 +141,7 @@ body{
         a{
           color: #fff;
         }
-        :hover{
+        &:hover{
           background: rgba(0, 0, 0, 0.4);
           .transition(background-color, 200ms, linear);
         }

@@ -21,6 +21,7 @@ html lang: "es", ->
     text @getBlock('styles').add(@site.styles).toHTML()
 
   body ->
+	
     header class: "navbar navbar-inverse navbar-fixed-top", role:"navigation", ->
       div class: "container", ->
         div class: "navbar-header", ->
@@ -39,24 +40,29 @@ html lang: "es", ->
                     document.title
           ul class: "nav navbar-nav pull-right", ->
             li ->
-              a class: "dropdown-toggle", 'data-toggle': "dropdown", href: "#social", ->
-                text "Síguenos"
-                span class: "sprite sprite-share"
-    div id: "wrap", class: "container", role: "document", ->
+              a class: "sprite sprite-share", 'data-toggle': "modal", href: "#social"
+		
+			div class: "modal", id: "social", ->
+				div class: "dialog", ->
+					div class: "header", ->
+						h3 ->
+							text "Síguenos en cualquier medio."
+					div class: "body"
+		div id: "wrap", class: "container", role: "document", ->
       section id: "content", class: "row", ->
         text @content
     footer class: "navbar navbar-inverse navbar-fixed-bottom", ->
       div class: "container", ->
         p class: "navbar-text pull-left", ->
           a class: "navbar-link", target:"_blank", href:"http://validator.w3.org/check?uri=http%3A%2F%2Fwww.univunix.com%2F", ->
-            i class: "html5-icon"
+            i class: "sprite sprite-html5"
             text "HTML5"
           a class: "navbar-link", target:"_blank", href:"http://jigsaw.w3.org/css-validator/validator?uri=www.univunix.com", ->
-            i class: "css3-icon"
+            i class: "sprite sprite-css3"
             text "CSS3"
         p class: "navbar-text pull-right", ->
           a class: "navbar-link", target:"_blank", href:"http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES", ->
-            i class: "cc-icon"
+            i class: "sprite sprite-cc"
             text "BY-NC-SA"
 script type:"text/javascript", ->
   text 'var disqus_shortname="univunix";(function(){var e=document.createElement("script");e.async=true;e.type="text/javascript";e.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("HEAD")[0]||document.getElementsByTagName("BODY")[0]).appendChild(e)})()'

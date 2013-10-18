@@ -42,6 +42,7 @@ docpadConfig = {
         "/vendor/twitter-bootstrap/js/dropdown.js",
         "/vendor/twitter-bootstrap/js/collapse.js",
         "/vendor/twitter-bootstrap/js/affix.js",
+        "/vendor/twitter-bootstrap/js/modal.js",
         "/scripts/app.js"
       ]
       
