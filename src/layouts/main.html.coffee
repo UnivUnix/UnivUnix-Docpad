@@ -47,7 +47,33 @@ html lang: "es", ->
 					div class: "header", ->
 						h3 ->
 							text "Síguenos en cualquier medio."
-					div class: "body"
+					div class: "body", ->
+            div id: "social-links", ->
+              div class: "social-link", ->
+                span class: "modal-facebook", ->
+                  i class: "sprite sprite-modal-facebook"
+                a class: "modal-facebook", href:"", ->
+                  text "Facebook."
+              div class: "social-link", ->
+                span class: "modal-twitter", ->
+                  i class: "sprite sprite-modal-twitter"
+                a class: "modal-twitter", href:"", ->
+                  text "Twitter."
+              div class: "social-link", ->
+                span class: "modal-google", ->
+                  i class: "sprite sprite-modal-google"
+                a class: "modal-google", href: "", ->
+                  text "Google+."
+              div class: "social-link", ->
+                span class: "modal-rss", ->
+                  i class: "sprite sprite-modal-rss"
+                a class: "modal-rss", href: "", ->
+                  text "RSS."
+              div class: "social-link", ->
+                span class: "modal-rss", ->
+                  i class: "sprite sprite-modal-rss"
+                a class: "modal-rss", href: "", ->
+                  text "ATOM."
 		div id: "wrap", class: "container", role: "document", ->
       section id: "content", class: "row", ->
         text @content
