@@ -66,115 +66,45 @@ body{
     a{
       text-decoration: none;
     }
-		.sprite{
-			background: url('../img/sprites.png') no-repeat top left;
-      &-brand{
-        background-position: 0 0;
-        width: 156px;
-        height: 40px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        padding-top: 5px;
-        padding-bottom: 5px;      
+  }
+  .modal{
+    &-link{
+      padding: 10px 0;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 5px;
+      span{
+        display: inline-table;
+        width: 41px;
+        text-align: center;
       }
-      &-cc{
-        background-position: 0 -70px;
-        width: 30px;
-        height: 30px;
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 3px;
+      a{
+        display: inline-table;
+        color: #fff;
+        text-decoration: none;
+        margin: 0;
+        width: 80%;
+        text-align: center;
       }
-      &-html5{
-        background-position: 0 -287px;
-        width: 30px;
-        height: 30px;
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 3px;
-      }
-      &-css3{
-        background-position: 0 -124px;
-        width: 30px;
-        height: 30px;
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 3px;
-      }
-      &-share{
-        background-position: 0 -934px;
-        width: 30px;
-        height: 30px;
-        margin-top: 10px !important;
-        margin-bottom: 10px !important;
-        margin-right: 10px;
-        &:hover{
-          background-position: 0 -874px;
-        }
-        &-facebook{
-          background-position: 0 -407px;
-          margin: 0;
-          display: inline-block;
-          &:hover{
-            background-position: 0 -347px;
-          }
-        }
-        &-google{
-          background-position: 0 -527px;
-          margin: 0;
-          display: inline-block;
-          &:hover{
-            background-position: 0 -467px;
-          }
-        }
-        &-linkedin{
-          background-position: 0 -647px;
-          margin: 0;
-          display: inline-block;
-          &:hover{
-            background-position: 0 -587px;
-          }
-        }
-        &-twitter{
-          background-position: 0 -767px;
-          margin: 0;
-          display: inline-block;
-          &:hover{
-            background-position: 0 -707px;
-          }
-        }
-      }
-      &-modal{
-        width: 20px;
-        height: 20px;
-        display: inline-block;
-        vertical-align: middle;
-        &-facebook{
-          background-position: 0 -190px;
-        }
-        &-google{
-          background-position: 0 -240px;
-        }
-        &-rss{
-          background-position: 0 -827px;
-        }
-        &-twitter{
-          background-position: 0 -994px;
-        }
-      }    
-		}
-    .modal{
       &-facebook{
-        
+        span, a{
+          background: #354f88;
+        }
       }
       &-twitter{
-        
+        span, a{
+          background: #45b0e3;
+        }
       }
       &-google{
-      
+        span, a{
+          background: #ce3e26;
+        }
       }
       &-rss{
-        
+        span, a{
+          background: #ed8832;
+        }
       }
     }
   }
@@ -248,5 +178,104 @@ body{
         border-bottom: 1px solid @border-bottom-bg;
       }
     }
-  }  
+  }
+//Sprite
+//-----------------------
+  .sprite{
+    background: url('../img/sprites.png') no-repeat top left;
+    &-brand{
+      background-position: 0 0;
+      width: 156px;
+      height: 40px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;      
+    }
+    &-cc{
+      background-position: 0 -70px;
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 3px;
+    }
+    &-html5{
+      background-position: 0 -287px;
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 3px;
+    }
+    &-css3{
+      background-position: 0 -124px;
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 3px;
+    }
+    &-share{
+      background-position: 0 -934px;
+      width: 30px;
+      height: 30px;
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+      margin-right: 10px;
+      &:hover{
+        background-position: 0 -874px;
+      }
+      &-facebook{
+        background-position: 0 -407px;
+        margin: 0;
+        display: inline-block;
+        &:hover{
+          background-position: 0 -347px;
+        }
+      }
+      &-google{
+        background-position: 0 -527px;
+        margin: 0;
+        display: inline-block;
+        &:hover{
+          background-position: 0 -467px;
+        }
+      }
+      &-linkedin{
+        background-position: 0 -647px;
+        margin: 0;
+        display: inline-block;
+        &:hover{
+          background-position: 0 -587px;
+        }
+      }
+      &-twitter{
+        background-position: 0 -767px;
+        margin: 0;
+        display: inline-block;
+        &:hover{
+          background-position: 0 -707px;
+        }
+      }
+    }
+    &-modal{
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      &-facebook{
+        background-position: 0 -190px;
+      }
+      &-google{
+        background-position: 0 -240px;
+      }
+      &-rss{
+        background-position: 0 -827px;
+      }
+      &-twitter{
+        background-position: 0 -994px;
+      }
+    }    
+  }
 }
