@@ -24,6 +24,14 @@
 //---------------------
 @border-bottom-bg: #d2d2d2;
 
+//Modal
+//---------------------
+@size-modal-link: 32px;
+
+//Sprite
+//---------------------
+@size-modal-icon: 20px;
+
 //=====================
 //Mixins
 //=====================
@@ -68,23 +76,36 @@ body{
     }
   }
   .modal{
+    &-body{
+      padding: 0;
+    }
+    &-footer{
+      margin-top: 0 !important;
+    }
     &-link{
       padding: 10px 0;
       text-transform: uppercase;
       text-align: center;
       margin: 5px;
       span{
-        display: inline-table;
-        width: 41px;
+        display: inline-block;
+        width: @size-modal-link;
+        height: @size-modal-link;
         text-align: center;
+        i{
+          margin: (@size-modal-link - @size-modal-icon)/2;
+        }
       }
       a{
-        display: inline-table;
+        display: inline-block;
         color: #fff;
         text-decoration: none;
         margin: 0;
         width: 80%;
+        height: @size-modal-link;
+        line-height: @size-modal-link;
         text-align: center;
+        vertical-align: middle;
       }
       &-facebook{
         span, a{
