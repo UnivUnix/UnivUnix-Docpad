@@ -3,7 +3,8 @@ authors: ['Ferthedems', 'Aglezabad']
 date: 2013-01-13 16:31:37+00:00
 layout: post
 title: echo '¡Hola, mundo!'
-thumbnail: ['/attachments/2013/01/tuxamanecer.jpg', 'Amanecer de Tux', 'Amanecer fotografiado por <a href="http://www.flickr.com/photos/46942656@N04/8362840448">María del Mar</a>']
+thumbnail: /attachments/2013/01/tuxamanecer.jpg
+thumbdesc: Amanecer de Tux
 categories: ['noticias']
 tags: ['presentacion', 'web']
 ---

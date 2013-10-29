@@ -45,10 +45,6 @@ docpadConfig = {
         "/vendor/twitter-bootstrap/js/modal.js",
         "/scripts/app.js"
       ]
-      
-      services:
-        disqus: "univunix"
-
 
     # -----------------------------
     # Helper Functions
@@ -76,7 +72,7 @@ docpadConfig = {
 
     getUrl: (document) ->
       # return @site.url + (@getPath(document))
-      return document
+      return @getPath(document)
     
     getAuthorsPages: (authors) ->
       authorsHtml = ""
@@ -85,22 +81,13 @@ docpadConfig = {
       return authorsHtml
 
     getCategoryPages: (categories) ->
-      catsHtml = ""
-      for category in @getCollection('indexes').toJSON()
-        for cat in categories
-          if category.title?
-            if category.title.toLowerCase() == cat
-              catsHtml += '<a class="btn btn-sm btn-default" href="' + category.url + '">' + category.title + '</a>'
-      return catsHtml
-    
-    getCategoryCss: (categories) ->
-      cssCat = ""
-      for category in @getCollection('indexes').toJSON()
-        for cat in categories
-          if category.title?
-            if category.title.toLowerCase() == cat
-              cssCat = cat + "-icon"
-      return cssCat
+      catHtml = ""
+      for webcat in @getCollection('indexes').toJSON()
+        for doccat in categories
+          if webcat.title?
+            if webcat.title.toLowerCase() == doccat
+              catHtml += '<i class="glyphicon glyphicon-paperclip"></i><a href="' + webcat.url + '">' + webcat.title + '</a>'
+      return catHtml
 
     isDocCategory: (categories, indexTitle) ->
       result = false
@@ -110,10 +97,6 @@ docpadConfig = {
             if indexTitle.toLowerCase() == cat
               result = true
       return result
-
-    getContentExtract: (content) ->
-      i=content.search("</p>")
-      content[0..i+3]
 
     # Post meta
     postDatetime: (date, format="YYYY-MM-DD") ->

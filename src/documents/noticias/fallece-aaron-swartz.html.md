@@ -3,7 +3,8 @@ authors: ['Aglezabad']
 date: 2013-01-14 15:03:00+00:00
 layout: post
 title: Fallece Aaron Swartz, co-autor de las RSS
-thumbnail: []
+thumbnail: ''
+thumbdesc: ''
 categories: ['noticias']
 tags: ['personalidades', 'RSS']
 ---

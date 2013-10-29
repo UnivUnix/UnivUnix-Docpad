@@ -51,27 +51,27 @@ html lang: "es", ->
                 div class: "modal-link modal-link-facebook", ->
                   span ->
                     i class: "sprite sprite-modal sprite-modal-facebook"
-                  a href:"", ->
+                  a href:"http://www.facebook.com/univunix", ->
                     text "Facebook"
                 div class: "modal-link modal-link-twitter", ->
-                  span class: "itwitter", ->
+                  span ->
                     i class: "sprite sprite-modal sprite-modal-twitter"
-                  a class: "atwitter", href:"", ->
+                  a href:"http://twitter.com/univunix", ->
                     text "Twitter"
                 div class: "modal-link modal-link-google", ->
-                  span class: "igoogle", ->
+                  span ->
                     i class: "sprite sprite-modal sprite-modal-google"
-                  a class: "agoogle", href: "", ->
+                  a href: "http://plus.google.com/b/107511248169675151833/107511248169675151833?rel=publisher", ->
                     text "Google+"
                 div class: "modal-link modal-link-rss", ->
-                  span class: "irss", ->
+                  span ->
                     i class: "sprite sprite-modal sprite-modal-rss"
-                  a class: "arss", href: "", ->
+                  a href: @getUrl("feeds/rss.xml"), ->
                     text "RSS"
                 div class: "modal-link modal-link-rss", ->
-                  span class: "irss", ->
+                  span ->
                     i class: "sprite sprite-modal sprite-modal-rss"
-                  a class: "arss", href: "", ->
+                  a href: @getUrl("feeds/atom.xml"), ->
                     text "ATOM"
             div class: "modal-footer", ->
               button 'type': "button", class: "btn btn-sm btn-default", 'data-dismiss': "modal", ->
@@ -80,10 +80,11 @@ html lang: "es", ->
     text @content
     footer class: "navbar navbar-inverse navbar-fixed-bottom", ->
       div class: "container", ->
-        p class: "navbar-text pull-left", ->
+        p class: "navbar-text", ->
           a class: "navbar-link", target:"_blank", href:"http://validator.w3.org/check?uri=http%3A%2F%2Fwww.univunix.com%2F", ->
             i class: "sprite sprite-html5"
             text "HTML5"
+        p class: "navbar-text", ->
           a class: "navbar-link", target:"_blank", href:"http://jigsaw.w3.org/css-validator/validator?uri=www.univunix.com", ->
             i class: "sprite sprite-css3"
             text "CSS3"
