@@ -1,5 +1,5 @@
 ---
-layout: wrap-12
+layout: wrap-9-3
 title: '404 Not Found'
 dynamic: true
 ---

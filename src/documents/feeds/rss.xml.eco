@@ -14,7 +14,6 @@
                 <link><%= @site.url+'/'+document.url %></link>
                 <guid><%= @site.url+'/'+document.url %></guid>
                 <pubDate><%= @postDateRFC(document.date) %></pubDate>
-                <description><%= @getContentExtract(String(document.contentRenderedWithoutLayouts)) %>...</description>
             </item>
         <% end %>
     </channel>

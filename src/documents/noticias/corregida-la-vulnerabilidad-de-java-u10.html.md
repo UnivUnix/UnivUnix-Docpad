@@ -3,8 +3,7 @@ authors: ['Ferthedems']
 date: 2013-01-14 12:34:53+01:00
 layout: post
 title: Corregida la vulnerabilidad de Java u10
-thumbnail: /attachments/2013/01/java-logo.jpg
-thumbdesc: Logo de Java
+thumbnail: ['/attachments/2013/01/java-logo.jpg', 'Logo de Java']
 categories: ['noticias','linux']
 tags: ['java','mac','vulnerabilidad','windows']
 ---

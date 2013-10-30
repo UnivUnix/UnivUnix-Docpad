@@ -2,9 +2,9 @@
 article id: @document.id, class: "col-sm-6 separator", ->
   div class:"thumbnail", ->
     #if @document.thumbnail?
-      img src: @getUrl("/img/placeholder.gif"), 'data-original': @getThumbnail(@getUrl(@document.thumbnail)), 'thumbnail'), class:"lazy img-responsive", alt: @document.thumbdesc if @document.thumbdesc? or ""
-      noscript ->
-        img src: @getThumbnail(@getUrl(@document.thumbnail), 'thumbnail'), class:"img-responsive", alt: @document.thumbdesc if @document.thumbdesc? or ""
+     # img src: @getUrl("/img/placeholder.gif"), 'data-original': @getThumbnail(@getUrl(@document.thumbnail[0])), 'thumbnail'), class:"lazy img-responsive", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
+      #noscript ->
+       # img src: @getThumbnail(@getUrl(@document.thumbnail[0]), 'thumbnail'), class:"img-responsive", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
     # else
       # img src: @getUrl("img/placeholder.gif"), 'data-original': @getThumbnail(@getUrl("img/placeholder.gif"), 'thumbnail'), class:"lazy img-responsive", alt:"No thumbnail"
       # noscript ->
@@ -19,10 +19,10 @@ article id: @document.id, class: "col-sm-6 separator", ->
       div class:"text-center", ->
         button type:"button", class:"btn btn-sm btn-default", ->
           i class:"glyphicon glyphicon-calendar"
-          # time class:"updated" datetime: @postDatetime(@document.date), ->
-            # text @postDate(@document.date)
+          time class:"updated" datetime: @postDatetime(@document.date), ->
+            text @postDate(@document.date)
         div class:"btn-group", ->
-          a class:"btn btn-sm btn-default", href: @document.url + "#disqus_thread", ->
+          a class:"btn btn-sm btn-default", href: @document.url + "#comments", ->
             i class:"glyphicon glyphicon-comment"
           a class:"btn btn-sm btn-default", href: @document.url + "#disqus_thread", ->
             text "-"
