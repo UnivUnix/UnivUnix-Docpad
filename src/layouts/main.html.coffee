@@ -54,24 +54,24 @@ html lang: "es", ->
                   a href:"", ->
                     text "Facebook"
                 div class: "modal-link modal-link-twitter", ->
-                  span class: "itwitter", ->
+                  span ->
                     i class: "sprite sprite-modal sprite-modal-twitter"
-                  a class: "atwitter", href:"", ->
+                  a href:"", ->
                     text "Twitter"
                 div class: "modal-link modal-link-google", ->
-                  span class: "igoogle", ->
+                  span ->
                     i class: "sprite sprite-modal sprite-modal-google"
-                  a class: "agoogle", href: "", ->
+                  a href: "", ->
                     text "Google+"
                 div class: "modal-link modal-link-rss", ->
-                  span class: "irss", ->
+                  span ->
                     i class: "sprite sprite-modal sprite-modal-rss"
-                  a class: "arss", href: "", ->
+                  a href: "", ->
                     text "RSS"
                 div class: "modal-link modal-link-rss", ->
-                  span class: "irss", ->
+                  span ->
                     i class: "sprite sprite-modal sprite-modal-rss"
-                  a class: "arss", href: "", ->
+                  a href: "", ->
                     text "ATOM"
             div class: "modal-footer", ->
               button 'type': "button", class: "btn btn-sm btn-default", 'data-dismiss': "modal", ->
