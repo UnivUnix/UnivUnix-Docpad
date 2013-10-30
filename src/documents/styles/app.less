@@ -12,14 +12,6 @@
   src: local('Lato Regular'), local('Lato-Regular'), url('http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff') format('woff');
 }
 
-//Navbar
-//---------------------
-@navbar-default-color: #fff;
-@navbar-default-link-active-color: darken(@navbar-default-color, 100%);
-@navbar-default-link-active-bg: lighten(@navbar-default-bg, 50%);
-@navbar-default-link-color: @navbar-default-color;
-@navbar-default-link-hover-color: #56bcda;
-
 //Post
 //---------------------
 @border-bottom-bg: #d2d2d2;
@@ -70,7 +62,8 @@ body{
   background: #f8f8f8 url('../img/pw_maze_white.png') repeat center top fixed;
   .navbar{
     font-weight: 500;
-    color: @navbar-default-color;
+    font-size: 1.15em;
+    line-height: 50px;
     a{
       text-decoration: none;
     }
@@ -217,25 +210,25 @@ body{
       background-position: 0 -70px;
       width: 30px;
       height: 30px;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 3px;
+      display: block;
+      margin: 10px;
+      padding: 10px;
     }
     &-html5{
       background-position: 0 -287px;
       width: 30px;
       height: 30px;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 3px;
+      display: block;
+      margin: 10px;
+      padding: 10px;
     }
     &-css3{
       background-position: 0 -124px;
       width: 30px;
       height: 30px;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 3px;
+      display: block;
+      margin: 10px;
+      padding: 10px;
     }
     &-share{
       background-position: 0 -934px;
