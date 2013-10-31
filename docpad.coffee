@@ -87,7 +87,7 @@ docpadConfig = {
         for cat in categories
           if category.title?
             if category.title.toLowerCase() == cat
-              catsHtml += '<a class="btn btn-sm btn-default" href="' + category.url + '">' + category.title + '</a>'
+              catsHtml += '<a href="' + category.url + '"><i class="glyphicon glyphicon-paperclip"></i>' + category.title + '</a>'
       return catsHtml
     
     getCategoryCss: (categories) ->
