@@ -1,14 +1,14 @@
 ---
 layout: wrap-12
-title: '500 Internal Server Error'
+title: 'Error 500'
 dynamic: true
 ---
 
 div class: "hero-unit", ->
-  h1 "500 Internal Server Error"
+  h1 "Error 500. Fallo interno del servidor."
   p ->
-    text "Ooops! Something went wrong while we were processing your request to "
+    text "Algo falló en el servidor mientras solicitaba este documento: "
     code @req.url
-    text "Here's the details:"
+    text "Aquí se encuentra el error detallado:"
   p ->
     pre @err.message or @err.stack

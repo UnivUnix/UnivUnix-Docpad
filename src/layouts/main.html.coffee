@@ -13,7 +13,7 @@ html lang: "es", ->
       meta "name": "keywords", "content": @getPreparedKeywords()
     meta "name": "viewport", "content": "width=device-width, initial-scale=1.0"
 
-    link rel: "shortcut icon",                href: "/icons/favicon.ico"
+    link rel: "shortcut icon",                href: "/icons/favicon.png"
     link rel: "apple-touch-icon",             href: "/icons/apple-icon.png"
     
     ie "lt IE 9", ->

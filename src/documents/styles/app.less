@@ -122,6 +122,9 @@ body{
       }
     }
   }
+  .separator{
+    margin-bottom: 30px;
+  }
   //Posts
   //---------------------
   article{
@@ -165,9 +168,54 @@ body{
         font-size: 0.8em;
       }
       footer{
+        border-top: 1px solid #a4a4a4;
         padding: 10px;
         .btn{
           margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  //Sidebar
+  //--------------------
+  aside{
+    .widget{
+      .container{
+        margin: 0 0 20px 0;
+        padding: 0;
+        .border-radius(7px);
+        box-shadow: rgba(128, 128, 128, 0.74) 0 2px 4px;
+        max-width: none;
+      }
+      &-title{
+        background: #3198B6;
+        padding: 1px 15px;
+        .border-top-radius(4px);
+        h3{
+          color: #fff;
+          text-shadow: 0 1px 0 #fff;
+          text-shadow: 1px 1px 2px rgba(150,150,150,1);
+          font-size: 1.3em;
+          margin-top: 10px;
+        }
+      }
+      &-content{
+        padding: 0 10px 10px 10px;
+        background: #2d2d2d;
+        .border-bottom-radius(7px);
+        color: #fff;
+        ul{
+          list-style: none;
+          margin: 0;
+          padding: 5px 0;
+          li{
+            border-bottom: 1px dotted #444;
+            padding: 5px;
+            &:last-child{
+              border-bottom: none;
+              padding: 5px;
+            }
+          }
         }
       }
     }
@@ -192,6 +240,7 @@ body{
         border-bottom: 1px solid @border-bottom-bg;
       }
     }
+    
   }
 //Sprite
 //-----------------------

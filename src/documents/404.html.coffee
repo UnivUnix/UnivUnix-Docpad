@@ -1,12 +1,12 @@
 ---
 layout: wrap-12
-title: '404 Not Found'
+title: 'Error 404'
 dynamic: true
 ---
 
 div class: "hero-unit", ->
-  h1 "404 Not Found"
+  h1 "Error 404. Archivo no encontrado."
   p ->
-    text "Ooops! It looks like the document you requested at "
+    text "Parece que el documento que ha solicitado:"
     code @req.url 
-    text "couldn't be found."
+    text "no ha podido ser encontrado."

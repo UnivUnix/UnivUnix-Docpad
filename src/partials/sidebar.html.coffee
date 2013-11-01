@@ -1,4 +1,4 @@
-aside id: "sidebar", class: "col-sm-3 col-12 col-lg-3", role: "complementary", ->
+aside id: "sidebar", class: "col-lg-3", role: "complementary", ->
   section id: "pages", class: "widget", ->
     div class: "container", ->
       div class: "widget-title", ->
