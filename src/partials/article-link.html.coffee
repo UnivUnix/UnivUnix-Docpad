@@ -13,7 +13,7 @@ article id: @document.id, class: "col-sm-6 separator", ->
         a href: @document.url, ->
           text @document.title
       p ->
-        text @getCategoryPages(@document.categories)
+        text @partial('category-list.html.coffee', @, {categories: @document.categories})
     footer ->
       div class: "text-center", ->
         button type: "button", class: "btn btn-sm btn-default", ->

@@ -72,7 +72,6 @@ docpadConfig = {
       @site.keywords.concat(@document.keywords or []).join(', ')
 
     getUrl: (document) ->
-      # return @site.url + (@getPath(document))
       return document
     
     getAuthorsPages: (authors) ->
@@ -90,18 +89,13 @@ docpadConfig = {
               catsHtml += '<a href="' + category.url + '"><i class="glyphicon glyphicon-folder-open"></i> ' + category.title + '</a>'
       return catsHtml
 
-    isDocCategory: (categories, indexTitle) ->
-      result = false
+    isPageCategory: (categories, indexTitle) ->
       if categories?
         for cat in categories
           if indexTitle?
             if indexTitle.toLowerCase() == cat
-              result = true
-      return result
-
-    getContentExtract: (content) ->
-      i=content.search("</p>")
-      content[0..i+3]
+              return true
+      return false
 
     # Post meta
     postDatetime: (date, format="YYYY-MM-DD") ->

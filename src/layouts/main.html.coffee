@@ -34,7 +34,7 @@ html lang: "es", ->
           ul class: "nav navbar-nav", ->
             for document in @getCollection('indexes').toJSON()
               if document.indexOrder?
-                li class: ('active' if @isDocCategory(@document.categories, document.title) or @document.url == document.url), ->
+                li class: ('active' if @isPageCategory(@document.categories, document.title) or @document.url == document.url), ->
                   a href: document.url, property: "dc:title", ->
                     document.title
           ul class: "nav navbar-nav pull-right", ->
