@@ -2,9 +2,10 @@
 layout: wrap-9-3
 ---
 
-article id: @document.id, class: "post hentry", ->
-  header ->
-    h2 ->
+article id: @document.id, class: "post", ->
+  header class: "post-header"
+  section class: "post-content", ->
+    h1 ->
       @document.title
   div class: "entry-content", ->
     if @document.thumbnail?

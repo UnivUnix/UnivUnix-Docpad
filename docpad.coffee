@@ -87,17 +87,8 @@ docpadConfig = {
         for cat in categories
           if category.title?
             if category.title.toLowerCase() == cat
-              catsHtml += '<a href="' + category.url + '"><i class="glyphicon glyphicon-paperclip"></i>' + category.title + '</a>'
+              catsHtml += '<a href="' + category.url + '"><i class="glyphicon glyphicon-folder-open"></i> ' + category.title + '</a>'
       return catsHtml
-    
-    getCategoryCss: (categories) ->
-      cssCat = ""
-      for category in @getCollection('indexes').toJSON()
-        for cat in categories
-          if category.title?
-            if category.title.toLowerCase() == cat
-              cssCat = cat + "-icon"
-      return cssCat
 
     isDocCategory: (categories, indexTitle) ->
       result = false
