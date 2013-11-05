@@ -41,7 +41,6 @@ docpadConfig = {
         "/vendor/twitter-bootstrap/js/transition.js",
         "/vendor/twitter-bootstrap/js/dropdown.js",
         "/vendor/twitter-bootstrap/js/collapse.js",
-        "/vendor/twitter-bootstrap/js/affix.js",
         "/vendor/twitter-bootstrap/js/modal.js",
         "/scripts/app.js"
       ]
@@ -82,8 +81,8 @@ docpadConfig = {
         for cat in categories
           if indexTitle?
             if indexTitle.toLowerCase() == cat
-              return true
-      return false
+              true
+      false
 
     postDate: (date, type) ->
       format = switch type
@@ -94,7 +93,7 @@ docpadConfig = {
       
 
     formatURL: (url) ->
-      return url.replace(/\s/g, "%20")
+      url.replace(/\s/g, "%20")
 
   # =================================
   # Collections
@@ -150,17 +149,6 @@ docpadConfig = {
   # =================================
   # Plugins
 
-  plugins:
-    downloader:
-      downloads: [
-        {
-          name: 'Twitter Bootstrap'
-          path: 'src/files/vendor/twitter-bootstrap'
-          url: 'https://nodeload.github.com/twitter/bootstrap/tar.gz/master'
-          tarExtractClean: true
-        }
-      ]
-
   # =================================
   # DocPad Events
 
@@ -201,17 +189,8 @@ docpadConfig = {
         'thumbnail':
           w: 700
           h: 440
-        'small':
-          w: 250
-          h: 250
-        'medium':
-          w: 350
-          h: 350
-        'large':
-          w: 500
-          h: 500
-}
 
+}
 
 # Export our DocPad Configuration
 module.exports = docpadConfig
