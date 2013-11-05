@@ -18,8 +18,8 @@ article id: @document.id, class: "col-sm-6 separator", ->
       div class: "text-center", ->
         button type: "button", class: "btn btn-sm btn-default", ->
           i class: "glyphicon glyphicon-calendar"
-          time class: "updated", datetime: @postDatetime(@document.date), ->
-            text @postDate(@document.date)
+          time class: "updated", datetime: @postDate(@document.date, "html"), ->
+            text @postDate(@document.date, "ue")
         div class: "btn-group", ->
           a class: "btn btn-sm btn-default", href: @document.url+"#disqus_thread", ->
             i class: "glyphicon glyphicon-comment"

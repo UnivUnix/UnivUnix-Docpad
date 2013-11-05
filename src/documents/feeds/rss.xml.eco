@@ -5,7 +5,7 @@
         <atom:link href="<%= @site.url %>/feeds/rss.xml" rel="self"/>
         <link><%= @site.url %></link>
         <description><%= @site.titleComplement %></description>
-        <lastBuildDate><%= @postDateRFC(@site.date) %></lastBuildDate>
+        <lastBuildDate><%= @postDate(@site.date) %></lastBuildDate>
         <language>es-es</language>
         
         <% for document in @getCollection('posts').toJSON(): %>
@@ -13,7 +13,7 @@
                 <title><%= document.title %></title>
                 <link><%= @site.url+'/'+document.url %></link>
                 <guid><%= @site.url+'/'+document.url %></guid>
-                <pubDate><%= @postDateRFC(document.date) %></pubDate>
+                <pubDate><%= @postDate(document.date) %></pubDate>
             </item>
         <% end %>
     </channel>

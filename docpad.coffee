@@ -23,7 +23,7 @@ docpadConfig = {
 
       # The website description (for SEO)
       description: """
-        Una web donde te pondremos al día en la información que rodea a Linux y programación: noticias, tutoriales y software variado e interesante.
+        Una web donde te pondremos al día en la información que rodea a Linux y derivados de Unix: noticias, tutoriales y software variado e interesante.
         """
 
       # The website author's email
@@ -70,24 +70,12 @@ docpadConfig = {
     getPreparedKeywords: ->
       # Merge the document keywords with the site keywords
       @site.keywords.concat(@document.keywords or []).join(', ')
+      
+    #--------------------------------
+    # Custom functions
 
     getUrl: (document) ->
       return document
-    
-    getAuthorsPages: (authors) ->
-      authorsHtml = ""
-      for author in authors
-        authorsHtml += '<a class="btn btn-sm btn-default" href="/authors/' + author.toLowerCase() + '">' + author + '</a>'
-      return authorsHtml
-
-    getCategoryPages: (categories) ->
-      catsHtml = ""
-      for category in @getCollection('indexes').toJSON()
-        for cat in categories
-          if category.title?
-            if category.title.toLowerCase() == cat
-              catsHtml += '<a href="' + category.url + '"><i class="glyphicon glyphicon-folder-open"></i> ' + category.title + '</a>'
-      return catsHtml
 
     isPageCategory: (categories, indexTitle) ->
       if categories?
@@ -97,13 +85,13 @@ docpadConfig = {
               return true
       return false
 
-    # Post meta
-    postDatetime: (date, format="YYYY-MM-DD") ->
-      return moment(date).format(format)
-    postDate: (date, format="DD/MM/YYYY") ->
-      return moment(date).format(format)
-    postDateRFC: (date, format="ddd, DD MMM YYYY HH:mm:ss ZZ") ->
-      return moment(date).format(format)
+    postDate: (date, type) ->
+      format = switch type
+        when "html" then "YYYY-MM-DD"
+        when "ue" then "DD/MM/YYYY"
+        else "ddd, DD MMM YYYY HH:mm:ss ZZ"
+      moment(date).format(format)
+      
 
     formatURL: (url) ->
       return url.replace(/\s/g, "%20")

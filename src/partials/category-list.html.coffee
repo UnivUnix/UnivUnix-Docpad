@@ -1,7 +1,6 @@
-for cat in @getCollection('indexes').toJSON()
-  for doccat in @categories
-    if cat.title?
-      if cat.title.toLowerCase() == doccat
-        a href: cat.url, ->
-          i class: "glyphicon glyphicon-folder-open"
-          text cat.title
+for webCategory in @getCollection('indexes').toJSON()
+  if webCategory.title?
+    if @categories.indexOf(webCategory.title.toLowerCase()) isnt -1
+      a href: webCategory.url, ->
+        i class: "glyphicon glyphicon-folder-open"
+        text webCategory.title

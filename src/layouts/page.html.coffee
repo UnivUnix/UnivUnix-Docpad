@@ -11,5 +11,5 @@ article id: @document.id, class: "page hentry", ->
   footer ->
     button type:"button", class:"btn btn-sm btn-default", ->
       i class: "glyphicon glyphicon-calendar"
-      time class: "updated", datetime: @postDatetime(@document.date), ->
-        text @postDate(@document.date)
+      time class: "updated", datetime: @postDate(@document.date, "html"), ->
+        text @postDate(@document.date, "ue")
