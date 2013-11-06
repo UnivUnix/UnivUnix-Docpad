@@ -8,7 +8,7 @@ pageSize: 10
 
 for document in (@getCollection('posts').toJSON()[@document.page.startIdx...@document.page.endIdx])
   text @partial('article-link.html.coffee', @, {document: document})
-if @hasPrevPage() || @hasNextPage()
+if @hasPrevPage() or @hasNextPage()
 	nav id: "post-nav", ->
 		ul class: "pager", ->
 			unless @hasPrevPage()
@@ -19,7 +19,7 @@ if @hasPrevPage() || @hasNextPage()
 			    li class: "previous", ->
 			    	a href: @getPrevPage(), ->
 						text "← Anteriores"
-			if !@hasNextPage()
+			unless @hasNextPage()
 				li class: "disabled next", ->
 					a ->
 						text "Nuevas →"

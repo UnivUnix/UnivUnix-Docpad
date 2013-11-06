@@ -26,7 +26,7 @@ html lang: "es", ->
         div class: "navbar-header", ->
           button type: "button", class: "navbar-toggle", 'data-toggle': "collapse", 'data-target': "#navigation", ->
             span class: "sr-only", ->
-              text "Toogle navigation"
+              text "Toggle navigation"
             for num in [3..1]
               span class: "icon-bar"
           a id:"brand", class: "sprite sprite-brand navbar-brand", href: "/"

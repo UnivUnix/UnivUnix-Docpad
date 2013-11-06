@@ -1,11 +1,11 @@
 article id: @document.id, class: "col-sm-6 separator", ->
   div class: "thumbnail thumb-hover", ->
     if @document.thumbnail?
-      img src: @getThumbnail(@getUrl("/img/placeholder.png")), 'data-original': @getThumbnail(@getUrl(@document.thumbnail[0]), 'thumbnail'), class: "lazy img-responsive", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
+      img src: @getUrl("/img/placeholder.gif"), 'data-src': @getThumbnail(@getUrl(@document.thumbnail[0]), 'thumbnail'), class: "img-responsive", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
       noscript ->
         img src: @getThumbnail(@getUrl(@document.thumbnail[0]), 'thumbnail'), class: "img-responsive", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
     else
-      img src: @getThumbnail(@getUrl("/img/placeholder.png")), 'data-original': @getThumbnail(@getUrl("/img/placeholder.png"), 'thumbnail'), class: "lazy img-responsive", alt: "No article image"
+      img src: @getUrl("/img/placeholder.gif"), 'data-src': @getThumbnail(@getUrl("/img/placeholder.png"), 'thumbnail'), class: "img-responsive", alt: "No article image"
       noscript ->
         img src: @getThumbnail(@getUrl("/img/placeholder.png"), 'thumbnail'), class: "lazy img-responsive", alt: "No article image"  
     header class: "caption", ->
