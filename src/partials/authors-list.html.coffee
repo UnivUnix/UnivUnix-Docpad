@@ -1,3 +1,4 @@
+i class: "glyphicon glyphicon-user"
 for author in @authors
-  a class: "btn btn-sm btn-default", href: "/authors/" + author.toLowerCase(), ->
+  a class: "author", href: "/authors/" + author.toLowerCase(), ->
     text author
