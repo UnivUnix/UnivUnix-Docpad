@@ -20,3 +20,13 @@ article id: @document.id, class: "post", ->
       a class: "sprite sprite-share sprite-share-google", href: "https://plus.google.com/share?url=" + @document.url, target: "_blank", title: "Compártelo en Google Plus"
       a class: "sprite sprite-share sprite-share-linkedin", href: "http://www.linkedin.com/shareArticle?mini=true&amp;url=" + @document.url + "&amp;title=" + @formatURL(@document.title), target: "_blank", title: "Divulga el artículo en LinkedIn"
     div class: "tag-list"
+    div id: "disqus_thread"
+    noscript ->
+      text "Please enable JavaScript to view the "
+      a href: "http://disqus.com/?ref_noscript", ->
+        text "comments powered by Disqus."
+    a href: "http://disqus.com", class: "dsq-brlink", ->
+      text "comments powered by "
+      span class: "logo-disqus", ->
+        text "Disqus"
+text @getBlock('scripts').add(@site.postscripts).toHTML()

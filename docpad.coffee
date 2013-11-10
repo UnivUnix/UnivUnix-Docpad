@@ -42,7 +42,12 @@ docpadConfig = {
         "/vendor/twitter-bootstrap/js/dropdown.js",
         "/vendor/twitter-bootstrap/js/collapse.js",
         "/vendor/twitter-bootstrap/js/modal.js",
+        "/scripts/disqus-count.js",
         "/scripts/app.js"
+      ]
+
+      postscripts: [
+        "/scripts/disqus.js"
       ]
 
 
@@ -81,8 +86,8 @@ docpadConfig = {
         for cat in categories
           if indexTitle?
             if indexTitle.toLowerCase() == cat
-              true
-      false
+              return true
+      return false
 
     postDate: (date, type) ->
       format = switch type
@@ -100,15 +105,12 @@ docpadConfig = {
   # These are special collections that our website makes available to us
   
   collections:
-    
+
     pages: (database) ->
-      database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
+      database.findAllLive({isPage: true}, [pageOrder:1,title:1])
 
-    indexes: (database) ->
-      database.findAllLive({index: true}, [indexOrder:1, title:1])
-
-    authors: (database) ->
-      database.findAllLive({authorOrder: $exists: true}, [authorOrder:1,title:1])
+    categoryPages: (database) ->
+      database.findAllLive({isCategoryPage: true}, [categoryOrder:1, title: 1])
 
     posts: (database) ->
       database.findAllLive({categories: $exists: true}, [date:-1])

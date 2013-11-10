@@ -95,6 +95,4 @@ html lang: "es", ->
           ul class: "nav navbar-nav pull-right", ->
             li ->
               a class: "sprite sprite-cc", target:"_blank", href:"http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"
-script type:"text/javascript", ->
-  text 'var disqus_shortname="univunix";(function(){var e=document.createElement("script");e.async=true;e.type="text/javascript";e.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("HEAD")[0]||document.getElementsByTagName("BODY")[0]).appendChild(e)})()'
 text @getBlock('scripts').add(@site.scripts).toHTML()
