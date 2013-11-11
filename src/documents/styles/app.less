@@ -59,6 +59,7 @@
 //---------------------
 body{
   margin-top: 85px;
+  margin-bottom: 85px;
   background: #f8f8f8 url('../img/pw_maze_white.png') repeat center top fixed;
   .navbar{
     font-weight: 500;
@@ -125,6 +126,9 @@ body{
   .separator{
     margin-bottom: 30px;
   }
+  .lazy{
+    display: none;
+  }
   //Posts
   //---------------------
   article{
@@ -137,11 +141,12 @@ body{
       background: #2d2d2d;
       padding: 0;
       border: 0;
+      text-align: center;
       .border-radius(0);
       box-shadow: rgba(128, 128, 128, 0.74) 0 2px 4px;
       img{
         z-index: -1;
-        min-height: 238px;
+        margin: auto;
       }
       .caption{
         position: absolute;

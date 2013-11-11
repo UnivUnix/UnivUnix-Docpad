@@ -1,18 +1,10 @@
 ---
-author: Ferthedems
-comments: true
+authors: ['Ferthedems']
 date: 2013-01-16 22:48:43+00:00
 layout: post
-slug: humans-txt-somos-humanos-no-maquinas
 title: Humans.txt, somos humanos, no máquinas
-wordpress_id: 84
-categories:
-- Noticias
-following_users:
-- Ferthedems
-tags:
-- Humans.txt
-- Web
+categories: ['noticias']
+tags: ['humans.txt', 'web']
 ---
 
 ![Participantes Humans.txt](http://www.univunix.com/wp-content/uploads/01-what-is-humans-txt.png)Cuando visitamos una página web, normalmente nos dedicamos a interactuar con el interfaz y **no somos conscientes** de que en su proceso de creación hubo unas **personas** que se tuvieron que **pelear con** todas **las tecnologías** que nosotros utilizamos para obtener como resultado ese producto, e incluso diariamente hay **personas volcadas** en que el **servicio** que se nos brinda sea **satisfactorio**. Por esa misma razón, porque las personas que nos dedicamos al mundo de la informática y lo trabajamos "desde dentro" _no somos mecanismos autómatas_, considero bastante bonito el proyecto [Humans.txt](http://humanstxt.org/ES).

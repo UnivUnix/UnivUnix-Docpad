@@ -1,23 +1,10 @@
 ---
-author: Ferthedems
-comments: true
+authors: ['Ferthedems']
 date: 2013-01-16 08:00:40+00:00
 layout: post
-slug: videojuegos-estilo-pacman
 title: ¡A comer cocos en Linux! Videojuegos estilo Pacman
-wordpress_id: 73
-categories:
-- Linux
-ef_editorial_meta:
-- Requiere foto
-- Tema
-following_users:
-- Aglezabad
-- Ferthedems
-tags:
-- Juegos
-- Linux
-- Pacman
+categories: ['linux']
+tags: ['juegos', 'pacman']
 ---
 
 ![Pacman](http://www.univunix.com/wp-content/uploads/CapturaPacMan1-150x150.png)Últimamente estamos recibiendo una gran **oleada** de** _juegos indie_ **de gran **calidad** que para pasar el tiempo muerto están francamente bien. Muchos de ellos son **compatibles con Linux**, lo cual (en nuestro caso) los hace mucho más interesantes aún. En esta ocasión hablaremos de **dos juegos inspirados en el mítico Pacman** (también conocido como el _Comecocos_).

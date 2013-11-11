@@ -2,7 +2,7 @@
 layout: wrap-9-3
 isPaged: true
 pagedCollection: 'posts'
-pageSize: 10
+pageSize: 6
 ---
 
-text @partial('index-loop.html.coffee', @, {document: @document})
+text @partial('article-list.html.coffee', @, {collection: 'posts'})

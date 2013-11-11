@@ -37,7 +37,7 @@ docpadConfig = {
       # Scripts
       scripts: [
         "/scripts/jquery-min.js",
-        "/scripts/unveil-min.js",
+        "/scripts/lazyload-min.js",
         "/vendor/twitter-bootstrap/js/transition.js",
         "/vendor/twitter-bootstrap/js/dropdown.js",
         "/vendor/twitter-bootstrap/js/collapse.js",
@@ -113,40 +113,40 @@ docpadConfig = {
       database.findAllLive({isCategoryPage: true}, [categoryOrder:1, title: 1])
 
     posts: (database) ->
-      database.findAllLive({categories: $exists: true}, [date:-1])
+      database.findAllLive({categories:$exists:true}, [date:-1])
 
-    linux: (database) ->
-      database.findAllLive({categories:$has:'linux'}, [date:-1])
+    linux: ->
+      @getCollection('posts').findAllLive({categories:$has:'linux'}, [date:-1])
       
-    arch: (database) ->
-      database.findAllLive({categories:$has:'arch'}, [date:-1])
+    arch: ->
+      @getCollection('posts').findAllLive({categories:$has:'arch'}, [date:-1])
 
-    debian: (database) ->
-      database.findAllLive({categories:$has:'debian'}, [date:-1])
+    debian: ->
+      @getCollection('posts').findAllLive({categories:$has:'debian'}, [date:-1])
 
-    fedora: (database) ->
-      database.findAllLive({categories:$has:'fedora'}, [date:-1])
+    fedora: ->
+      @getCollection('posts').findAllLive({categories:$has:'fedora'}, [date:-1])
 
-    mageia: (database) ->
-      database.findAllLive({categories:$has:'mageia'}, [date:-1])
+    mageia: ->
+      @getCollection('posts').findAllLive({categories:$has:'mageia'}, [date:-1])
 
-    mint: (database) ->
-      database.findAllLive({categories:$has:'mint'}, [date:-1])
+    mint: ->
+      @getCollection('posts').findAllLive({categories:$has:'mint'}, [date:-1])
 
-    opensuse: (database) ->
-      database.findAllLive({categories:$has:'opensuse'}, [date:-1])
+    opensuse: ->
+      @getCollection('posts').findAllLive({categories:$has:'opensuse'}, [date:-1])
 
-    ubuntu: (database) ->
-      database.findAllLive({categories:$has:'ubuntu'}, [date:-1])
+    ubuntu: ->
+      @getCollection('posts').findAllLive({categories:$has:'ubuntu'}, [date:-1])
 
-    programacion: (database) ->
-      database.findAllLive({categories:$has:'programacion'}, [date:-1])
+    programacion: ->
+      @getCollection('posts').findAllLive({categories:$has:'programacion'}, [date:-1])
 
-    tutoriales: (database) ->
-      database.findAllLive({categories:$has:'tutoriales'}, [date:-1])
+    tutoriales: ->
+      @getCollection('posts').findAllLive({categories:$has:'tutoriales'}, [date:-1])
 
-    noticias: (database) ->
-      database.findAllLive({categories:$has:'noticias'}, [date:-1])
+    noticias: ->
+      @getCollection('posts').findAllLive({categories:$has:'noticias'}, [date:-1])
 
   # =================================
   # Plugins
@@ -184,6 +184,11 @@ docpadConfig = {
       templateData:
         site:
           url: 'http://localhost:9778'
+
+    production:
+      templateData:
+        site:
+          url: 'http://www.univunix.com'
 
   plugins:
     thumbnails:

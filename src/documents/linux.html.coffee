@@ -5,7 +5,7 @@ isCategoryPage: true
 categoryOrder: 2
 isPaged: true
 pagedCollection: 'linux'
-pageSize: 10
+pageSize: 6
 ---
 
-text @partial('index-loop.html.coffee', @, {document: @document})
+text @partial('article-list.html.coffee', @, {collection: 'linux'})

@@ -1,27 +1,10 @@
 ---
-author: Aglezabad
-comments: true
+authors: ['Aglezabad']
 date: 2013-01-16 15:00:56+00:00
 layout: post
-slug: fedora-18-disponible
 title: Fedora 18 ya está disponible
-wordpress_id: 77
-categories:
-- Fedora
-- Linux
-- Noticias
-ef_editorial_meta:
-- Contador de palabras
-- Fecha 1º borrador
-- Requiere foto
-- Tema
-following_users:
-- Aglezabad
-- Ferthedems
-tags:
-- Fedora
-- Linux
-- Versiones
+categories: ['fedora', 'linux', 'noticias']
+tags: ['novedades', 'versiones']
 ---
 
 [![fedora-logo](http://www.univunix.com/wp-content/uploads/fedora-logo-300x296.png)](http://www.univunix.com/wp-content/uploads/fedora-logo.png)Por fin ya está aquí, Fedora 18 llega con cambios notables e importantes, entre los que se incluye una mejor compatibilidad en entornos _dual-boot_ con Windows 8, que explicaremos en detalle a continuación; y el rediseño de anaconda, el instalador del sistema. He aquí la lista de cambios:
@@ -55,5 +38,3 @@ tags:
 Estos aspectos son los que habría que destacar, ya que el resto de cambios se atribuyen a soluciones de bugs, poner como obsoleto algunas órdenes y añadir las últimas versiones de las aplicaciones.
 
 Ya está disponible [en el portal de la distribución](http://fedoraproject.org/get-fedora?stF18) para su descarga, así que os animo a obtenerla y probarla.
-
-

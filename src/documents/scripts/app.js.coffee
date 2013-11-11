@@ -1,2 +1,4 @@
 $(document).ready ->
-  $('img').unveil()
+  $('img.lazy').show().lazyload({
+  	effect: "fadeIn"
+  })
