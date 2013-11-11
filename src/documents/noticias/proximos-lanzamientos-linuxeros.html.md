@@ -3,6 +3,7 @@ authors: ['Ferthedems']
 date: 2013-01-15 19:00:30+00:00
 layout: post
 title: Próximos lanzamientos linuxeros
+thumbnail: ['/attachments/2013/01/kde_logo.png', 'Logo de KDE']
 categories: ['noticias']
 tags: ['lanzamientos', 'linux']
 ---

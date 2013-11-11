@@ -3,6 +3,7 @@ authors: ['Aglezabad']
 date: 2013-01-16 15:00:56+00:00
 layout: post
 title: Fedora 18 ya está disponible
+thumbnail: ['/attachments/2013/01/fedora-logo.png', 'Logo de Fedora']
 categories: ['fedora', 'linux', 'noticias']
 tags: ['novedades', 'versiones']
 ---

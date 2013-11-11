@@ -213,10 +213,11 @@ docpadConfig = {
 
   plugins:
     thumbnails:
-      presets:
-        'thumbnail':
-          w: 700
-          h: 440
+      targets:
+        'thumbnail': (img,args) ->
+          return img
+            .resize(700)
+            .crop(700, 440)
 
 }
 
