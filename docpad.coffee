@@ -81,6 +81,7 @@ docpadConfig = {
     getUrl: (document) ->
       return document
 
+
     isPageCategory: (categories, indexTitle) ->
       if categories?
         for cat in categories
@@ -88,6 +89,26 @@ docpadConfig = {
             if indexTitle.toLowerCase() == cat
               return true
       return false
+
+
+    uniqueArray: (origArray) ->
+      resArray = []
+      origLength = origArray.length
+      x = 0
+
+      while x < origLength
+        found = undefined
+        y = 0
+        while y < resArray.length
+          if origArray[x].title is resArray[y].title
+            found = true
+            break
+          y++
+        origArray[x].url = origArray[x].url.replace(/\.(\d)+/, "") 
+        resArray.push origArray[x] unless found
+        x++
+      resArray
+
 
     postDate: (date, type) ->
       format = switch type

@@ -32,7 +32,7 @@ html lang: "es", ->
           a id:"brand", class: "sprite sprite-brand navbar-brand", href: "/"
         div id:"navigation", class: "collapse navbar-collapse navbar-ex1-collapse navbar-responsive-collapse", ->
           ul class: "nav navbar-nav", ->
-            for document in @getCollection('categoryPages').toJSON()
+            for document in @uniqueArray(@getCollection('categoryPages').toJSON())
               if document.categoryOrder?
                 li class: ('active' if @isPageCategory(@document.categories, document.title) or @document.url == document.url), ->
                   a href: document.url, property: "dc:title", ->
