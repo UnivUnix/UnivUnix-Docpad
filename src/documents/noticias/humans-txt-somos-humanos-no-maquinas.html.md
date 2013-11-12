@@ -3,6 +3,7 @@ authors: ['Ferthedems']
 date: 2013-01-16 22:48:43+00:00
 layout: post
 title: Humans.txt, somos humanos, no máquinas
+thumbnail: ['/attachments/2013/01/01-what-is-humans-txt.png', 'Humans.txt']
 categories: ['noticias']
 tags: ['humans.txt', 'web']
 ---

@@ -79,7 +79,7 @@ html lang: "es", ->
                 text "Cerrar"
     text @content
     footer class: "navbar navbar-inverse navbar-fixed-bottom", ->
-      div class: "container", ->
+      div class: "container navbar-center", ->
         div class: "navbar-header", ->
           button type: "button", class: "navbar-toggle", 'data-toggle': "collapse", 'data-target': "#validation", ->
             span class: "sr-only", ->
@@ -92,7 +92,6 @@ html lang: "es", ->
               a class: "sprite sprite-html5", target:"_blank", href:"http://validator.w3.org/check?uri=http%3A%2F%2Fwww.univunix.com%2F"
             li ->
               a class: "sprite sprite-css3", target:"_blank", href:"http://jigsaw.w3.org/css-validator/validator?uri=www.univunix.com"
-          ul class: "nav navbar-nav pull-right", ->
             li ->
               a class: "sprite sprite-cc", target:"_blank", href:"http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"
 text @getBlock('scripts').add(@site.scripts).toHTML()

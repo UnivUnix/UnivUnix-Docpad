@@ -1,4 +1,5 @@
 $(document).ready ->
   $('img.lazy').show().lazyload({
-  	effect: "fadeIn"
+  	effect: "slideDown"
+  	failureLimit: 10
   })

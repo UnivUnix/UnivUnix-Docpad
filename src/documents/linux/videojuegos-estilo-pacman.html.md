@@ -3,6 +3,7 @@ authors: ['Ferthedems']
 date: 2013-01-16 08:00:40+00:00
 layout: post
 title: ¡A comer cocos en Linux! Videojuegos estilo Pacman
+thumbnail: ['/attachments/2013/01/CapturaPacMan1.png', 'PacMan, el comecocos.']
 categories: ['linux']
 tags: ['juegos', 'pacman']
 ---

@@ -4,6 +4,7 @@ date: 2013-01-17 12:50:57+00:00
 layout: post
 slug: gnome-shell-redisena-su-sistema-de-busqueda
 title: Gnome Shell rediseña su sistema de búsqueda
+thumbnail: ['/attachments/2013/01/gnome.jpg', 'Logo de GNOME']
 categories: ['noticias']
 tags: ['entornos de escritorio', 'gnome', 'shell']
 ---
