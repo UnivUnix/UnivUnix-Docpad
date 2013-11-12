@@ -1,27 +1,11 @@
 ---
-author: Aglezabad
-comments: true
+authors: ['Aglezabad']
 date: 2013-01-18 14:57:06+00:00
 layout: post
-slug: adapta-tema-wordpress-html5-valido
 title: Adapta tu tema Wordpress a HTML5 válido.
-wordpress_id: 91
-categories:
-- Programación
-- Tutoriales
-ef_editorial_meta:
-- Contador de palabras
-- Fecha 1º borrador
-- Requiere foto
-following_users:
-- Aglezabad
-tags:
-- Estándares
-- HTML5
-- PHP
-- SEO
-- Temas
-- Wordpress
+thumbnail: ['/attachments/2013/01/HTML5_Logo_512.png', 'Logo de HTML5']
+categories: ['tutoriales', 'programación']
+tags: ['estándares', 'html5', 'php', 'seo', 'temas', 'wordpress']
 ---
 
 [![HTML5 logo](http://www.univunix.com/wp-content/uploads/HTML5_Logo_512-300x300.png)](http://www.univunix.com/wp-content/uploads/HTML5_Logo_512.png)Desde el año pasado, se ha promovido por parte de compañías como Google el uso de la última revisión del lenguaje HTML. HTML5 otrorga múltiples cambios, tales como la división del espacio del cuerpo en diversas secciones con nombre propio, tales como <header>,<footer> o <article>; facilitando la comprensión del diseño. Por su parte, tanto los desarrolladores de Wordpress como aquellos que crean diseños para este gestor de contenidos, ya están sacando a la luz una gran cantidad de temas con los que personalizar nuestra web.

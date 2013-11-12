@@ -5,7 +5,7 @@ layout: post
 title: Fallece Aaron Swartz, co-autor de las RSS
 thumbnail: ['/attachments/2013/01/Aaron_Swartz_2_at_Boston_Wikipedia_Meetup.jpg', 'Fotografía de Aaron Swartz en la "Boston Wikipedia Meetup"']
 categories: ['noticias']
-tags: ['personalidades', 'RSS']
+tags: ['personalidades', 'rss']
 ---
 
 Aaron Swartz, estudiante prodigio y activista en la red, se **suicidó** el pasado Viernes 11 en su 

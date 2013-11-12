@@ -1,24 +1,11 @@
 ---
-author: Aglezabad
-comments: true
+authors: ['Aglezabad']
 date: 2013-02-03 21:30:48+00:00
 layout: post
-slug: la-gran-evasion-migrar-wordpress-smf-a-nginx
 title: 'La gran evasión: Migrar Wordpress a Nginx'
-wordpress_id: 95
-categories:
-- Debian
-- Tutoriales
-following_users:
-- Aglezabad
-- Ferthedems
-tags:
-- Debian
-- Nginx
-- PHP
-- SMF
-- Web
-- Wordpress
+thumbnail: ['/attachments/2013/02/lagranevasionapache.jpg', 'La gran evasión (de Apache)']
+categories: ['debian', 'tutoriales']
+tags: ['nginx', 'php', 'smf', 'web', 'wordpress']
 ---
 
 [![La gran evasión de Apache](http://www.univunix.com/wp-content/uploads/lagranevasiónapache-300x182.jpg)](http://www.univunix.com/wp-content/uploads/lagranevasiónapache.jpg)Todos buscamos un mejor rendimiento en nuestro servidor, para dar una web rápida, fiable y con un bajo consumo de memoria. Estando en Apache, siempre aprovechamos de alguna forma el intentar optimizar la configuración y los tiempos de respuesta entre otros; pero nunca hemos planteado cambiar el servidor por otro que se ajuste a nuestras exigencias. Para ello, basta con buscar en Internet las comparativas necesarias y dar un juicio al respecto. El artículo que dió mi postura de cambio fue por parte de la web whisperdale.net, quienes hacían una [comparativa entre los servidores web libres/opensource](http://www.whisperdale.net/11-nginx-vs-cherokee-vs-apache-vs-lighttpd.html) más conocidos (por eso no está ISS presente): Apache, Nginx, Lighttpd y Cherokee.

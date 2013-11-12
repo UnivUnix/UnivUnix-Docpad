@@ -1,19 +1,11 @@
 ---
-author: Ferthedems
-comments: true
+authors: ['Ferthedems']
 date: 2013-02-06 15:20:22+00:00
 layout: post
 slug: crea-tu-pagina-web-estatica-gratis-en-google-drive
 title: Crea tu página web estática gratis en Google Drive
-wordpress_id: 109
-categories:
-- Tutoriales
-following_users:
-- Ferthedems
-tags:
-- Desarrollo
-- Tutoriales
-- Web
+categories: ['tutoriales']
+tags: ['desarrollo', 'web']
 ---
 
 **![GDrive Logo](http://www.univunix.com/wp-content/uploads/Google_Drive_logo_webreignited-150x150.jpg)Google Drive**, el _servicio en la nube_ de Google tipo Dropbox, nos permite crear **páginas web estáticas** sencillas que podrán albergar **HTML**, **CSS** y **Javascript**. Así pues, si estáis buscando crear un pequeño proyecto, como por ejemplo una web con fotos de vuestro _equipo local de fútbol_ o de "_la peña de amigos_", podéis utilizar perfectamente este servicio. También podría serle útil a algún desarrollador a la hora de servir pruebas de contenido estático a los clientes.

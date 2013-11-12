@@ -1,20 +1,11 @@
 ---
-author: Ferthedems
-comments: true
+authors: ['Ferthedems']
 date: 2013-02-04 14:03:44+00:00
 layout: post
-slug: sublime-text-3-ya-esta-en-fase-beta
 title: Sublime-text 3 ya está en fase beta
-wordpress_id: 106
-categories:
-- Noticias
-following_users:
-- Ferthedems
-tags:
-- Desarrollo
-- Editor
-- Programación
-- Subime-Text
+thumbnail: ['/attachments/2013/02/sublime_text_icon_2181.png', 'Icono de Sublime Text']
+categories: ['noticias']
+tags: ['desarrollo','editor','programación','sublime-text']
 ---
 
 **![Sublime Text Icon](http://www.univunix.com/wp-content/uploads/sublime_text_icon_2181.png)Sublime-text** es un **editor de código** caracterizado por ser extremadamente **ligero** y **versátil**, pudiendo ser **extensible** con _plugins_ desarrollados en Python y contando con opciones geniales como el soporte del cada vez más utilizado _[zen-coding](http://en.wikipedia.org/wiki/Zen_Coding)_, _compilación para Less_ o _edición múltiple_. Otro de los aspectos que lo hacen genial es el **soporte de múltiples sistemas**, entre los que se encuentra nuestro querido **Linux**. Gran parte de esta web ha sido diseñada utilizando el susodicho editor en conjunto con Vim.

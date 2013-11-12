@@ -14,17 +14,17 @@ section id: "content", class: "container", ->
               unless @hasPrevPage()
                 li class: "disabled previous", ->
                   a ->
-                    text "< Anteriores"
+                    text "< Nuevas"
               else
                 li class: "previous", ->
                   a href: @getPrevPage(), ->
-                    text "< Anteriores"
+                    text "< Nuevas"
               unless @hasNextPage()
                 li class: "disabled next", ->
                   a ->
-                    text "Nuevas >"
+                    text "Anteriores >"
               else
                 li class: "next", ->
                   a href: @getNextPage(), ->
-                    text "Nuevas >"
+                    text "Anteriores >"
     text @partial('sidebar.html.coffee', @)
