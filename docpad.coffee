@@ -1,9 +1,18 @@
 # Import
 moment = require('moment')
+moment.lang('es')
 
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig = {
+
+  # =================================
+  # Regenerate delay
+  regenerateDelay: 5000
+
+  # =================================
+  # Server configuration
+  port: 9000
 
   # =================================
   # Template Data
@@ -42,7 +51,6 @@ docpadConfig = {
         "/vendor/twitter-bootstrap/js/dropdown.js",
         "/vendor/twitter-bootstrap/js/collapse.js",
         "/vendor/twitter-bootstrap/js/modal.js",
-        "/scripts/disqus-count.js",
         "/scripts/app.js"
       ]
 
@@ -199,19 +207,14 @@ docpadConfig = {
           res.redirect(newUrl+req.url, 301)
         else
           next()
-          
-  enviroments:
-    development:
-      templateData:
-        site:
-          url: 'http://localhost:9778'
 
-    production:
-      templateData:
-        site:
-          url: 'http://www.univunix.com'
+  # =====================================
+  # Enviroments: development, production.
+  # Use docpad -e <enviroment> to select.
 
   plugins:
+    livereload:
+      enabled: false
     thumbnails:
       presets:
         'thumbnail':

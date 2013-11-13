@@ -2,8 +2,8 @@
 authors: ['Ferthedems']
 date: 2013-02-09 16:59:34+00:00
 layout: post
-slug: corre-linux-corre-guia-para-principiantes
 title: ¡Corre, Linux, corre! Guía para principiantes
+thumbnail: ['attachments/2013/02/ubuntulogo.png', 'Logo de Ubuntu']
 categories: ['noticias', 'ubuntu']
 tags: ['libros', 'principiantes']
 ---

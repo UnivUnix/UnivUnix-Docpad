@@ -1,22 +1,11 @@
 ---
-author: Ferthedems
-comments: true
+authors: ['Ferthedems']
 date: 2013-02-09 15:08:37+00:00
 layout: post
-slug: novedades-en-libre-office-open-office-y-ms-office-linux
 title: Novedades en Libre Office, Open Office y MS-Office (Linux)
-wordpress_id: 117
-categories:
-- Noticias
-following_users:
-- Ferthedems
-tags:
-- Lanzamientos
-- Libre Office
-- Linux
-- Microsoft
-- Ofimatica
-- Open Office
+thumbnail: ['/attachments/2013/02/libreoffice.png', 'Logo de Libreoffice, la suite ofimática GPL']
+categories: ['noticias']
+tags: ['lanzamientos', 'libreoffice', 'openoffice', 'microsoft', 'ofimática']
 ---
 
 Este es un artículo un poco extraño. En él primero comentaré a modo de noticia el lanzamiento de LibreOffice 4.0. A continuación, mostraré algunas características del nuevo OpenOffice 4.0 que considero que van a dar que hablar, y finalmente daré mi opinión sobre algo que mucha gente lleva años esperando, el lanzamiento de MS-Office para Linux.

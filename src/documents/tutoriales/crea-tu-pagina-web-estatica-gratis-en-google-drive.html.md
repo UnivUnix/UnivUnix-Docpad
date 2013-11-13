@@ -2,8 +2,8 @@
 authors: ['Ferthedems']
 date: 2013-02-06 15:20:22+00:00
 layout: post
-slug: crea-tu-pagina-web-estatica-gratis-en-google-drive
 title: Crea tu página web estática gratis en Google Drive
+thumbnail: ['/attachments/2013/02/drivelogo.jpg', 'Logo de Google Drive']
 categories: ['tutoriales']
 tags: ['desarrollo', 'web']
 ---

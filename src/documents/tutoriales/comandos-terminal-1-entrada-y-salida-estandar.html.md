@@ -1,22 +1,11 @@
 ---
-author: Ferthedems
-comments: true
+authors: ['Ferthedems']
 date: 2013-02-10 12:19:26+00:00
 layout: post
-slug: comandos-terminal-1-entrada-y-salida-estandar
 title: 'Comandos terminal (1): entrada y salida estándar'
-wordpress_id: 128
-categories:
-- Linux
-- Tutoriales
-following_users:
-- Ferthedems
-tags:
-- Bash
-- Comandos
-- Linux
-- Terminal
-- Tutoriales
+thumbnail: ['/attachments/2013/02/terminal_icon.jpg', 'El terminal es una aplicación muy potente siempre desaprovechada.']
+categories: ['linux', 'tutoriales']
+tags: ['bash', 'comandos', 'terminal']
 ---
 
 ![icon term linux](http://www.univunix.com/wp-content/uploads/terminal_icon-150x150.jpg)He decidido hacer **varias publicaciones** en las que detallaré **cómo utilizar los comandos de la terminal** más básicos de nuestro Linux, de forma que, cuando hayamos aprendido a manejarnos con ellos, podremos **diseñar scripts para Bash** que automaticen múltiples tareas de una forma eficiente en términos de código.
