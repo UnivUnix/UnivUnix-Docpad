@@ -254,6 +254,19 @@ body{
         border-bottom: 1px solid @border-bottom-bg;
       }
     }
+    .tag-list{
+      border-top: 1px solid #d2d2d2;
+      border-bottom: 1px solid #d2d2d2;
+      margin: 5px 0 15px 0;
+      padding: 15px 5px;
+      a{
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+    .social-post{
+      margin-top: 30px;
+    }
     
   }
 //Sprite
@@ -354,5 +367,39 @@ body{
         background-position: 0 -994px;
       }
     }    
+  }
+}
+
+//===========================
+// Media queries
+//===========================
+@media (max-width:320px){
+  .container{
+    .row{
+      .col-lg-9, .col-sm-6{
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+  .thumbnail{
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .caption{
+    position: relative;
+    background: none;
+    color: #fff;
+    &:hover{
+      background: none;
+    }
+  }
+}
+
+@media (max-width:760px){
+  .sprite{
+    &-brand{
+      margin-left: 5px;
+    }
   }
 }

@@ -19,7 +19,12 @@ article id: @document.id, class: "post", ->
       a class: "sprite sprite-share sprite-share-twitter", href: "http://twitter.com/share?url=" + @document.url + "&amp;text=" + @formatURL(@document.title) + "-&amp;via=UnivUnix", target: "_blank", title: "Compártelo en Twitter"
       a class: "sprite sprite-share sprite-share-google", href: "https://plus.google.com/share?url=" + @document.url, target: "_blank", title: "Compártelo en Google Plus"
       a class: "sprite sprite-share sprite-share-linkedin", href: "http://www.linkedin.com/shareArticle?mini=true&amp;url=" + @document.url + "&amp;title=" + @formatURL(@document.title), target: "_blank", title: "Divulga el artículo en LinkedIn"
-    div class: "tag-list"
+    div class: "tag-list", ->
+      if @document.tags?
+        for tag in @document.tags
+          a class: "label label-primary", href: "/tags?tag=" + tag, ->
+            i class: "glyphicon glyphicon-tag"
+            text tag
     div id: "disqus_thread"
     noscript ->
       text "Please enable JavaScript to view the "

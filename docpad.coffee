@@ -58,7 +58,6 @@ docpadConfig = {
         "/scripts/disqus.js"
       ]
 
-
     # -----------------------------
     # Helper Functions
 
