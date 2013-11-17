@@ -8,7 +8,7 @@ section id: "content", class: "container", ->
       div class: "container", ->
         text @content
       if @document.isPaged?
-        if @hasPrevPage || @hasNextPage()
+        if @hasPrevPage or @hasNextPage()
           nav id: "post-nav", ->
             ul class: "pager", ->
               unless @hasPrevPage()

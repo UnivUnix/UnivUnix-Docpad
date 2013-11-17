@@ -29,10 +29,11 @@ La página web http://univunix.com es explotada con publicidad por Ángel Gonzá
    Todos los contenidos propios (hechos por la administración del sitio) están cubiertos por la licencia
    Creative Commons BY-NC-SA,
 
-  [![Creative Commons License](http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US)
-
-  UnivUnix by [Ángel González y Fernando Moro](http://www.univunix.com) is licensed under a 
-  [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US).
+   <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">
+   <img class="img-responsive lazy" alt="Creative Commons License" src="/img/placeholder.gif" data-original="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" style="margin: 0 auto; display: block">
+   </a>
+   UnivUnix by [Ángel González y Fernando Moro](http://www.univunix.com) is licensed under a 
+   [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US).
 
   3.2. En esta página web pueden existir contenidos de terceros. En cualquiera de los casos,
    y como es intención siempre el respetar los derechos de autor y las leyes del copyright,
@@ -91,6 +92,7 @@ La página web http://univunix.com es explotada con publicidad por Ángel Gonzá
    Al navegar por esta web, acepta el uso de estas cookies, mostradas a continuación:
 
   * Google Analytics (Estadística de visitas)
+  * Google Adsense (Publicidad)
 
   El objetivo de estas cookies es meramente funcional, para calcular estadíticas de visitas y
    para conservar la sesión de los usuarios a lo largo de esta web.

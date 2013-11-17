@@ -8,7 +8,7 @@ categories: ['debian', 'tutoriales']
 tags: ['nginx', 'php', 'smf', 'web', 'wordpress']
 ---
 
-[![La gran evasión de Apache](http://www.univunix.com/wp-content/uploads/lagranevasiónapache-300x182.jpg)](http://www.univunix.com/wp-content/uploads/lagranevasiónapache.jpg)Todos buscamos un mejor rendimiento en nuestro servidor, para dar una web rápida, fiable y con un bajo consumo de memoria. Estando en Apache, siempre aprovechamos de alguna forma el intentar optimizar la configuración y los tiempos de respuesta entre otros; pero nunca hemos planteado cambiar el servidor por otro que se ajuste a nuestras exigencias. Para ello, basta con buscar en Internet las comparativas necesarias y dar un juicio al respecto. El artículo que dió mi postura de cambio fue por parte de la web whisperdale.net, quienes hacían una [comparativa entre los servidores web libres/opensource](http://www.whisperdale.net/11-nginx-vs-cherokee-vs-apache-vs-lighttpd.html) más conocidos (por eso no está ISS presente): Apache, Nginx, Lighttpd y Cherokee.
+Todos buscamos un mejor rendimiento en nuestro servidor, para dar una web rápida, fiable y con un bajo consumo de memoria. Estando en Apache, siempre aprovechamos de alguna forma el intentar optimizar la configuración y los tiempos de respuesta entre otros; pero nunca hemos planteado cambiar el servidor por otro que se ajuste a nuestras exigencias. Para ello, basta con buscar en Internet las comparativas necesarias y dar un juicio al respecto. El artículo que dió mi postura de cambio fue por parte de la web whisperdale.net, quienes hacían una [comparativa entre los servidores web libres/opensource](http://www.whisperdale.net/11-nginx-vs-cherokee-vs-apache-vs-lighttpd.html) más conocidos (por eso no está ISS presente): Apache, Nginx, Lighttpd y Cherokee.
 
 La **conclusión del artículo** era la siguiente: **Nginx tenía mayor rendimiento a nivel general**, sobre todo con varios clientes conectados de forma simultánea; mientras que Lighttpd quedaba en segundo puesto, con resultados similares. Por otra parte, Apache quedó en la última posición. A pesar de los resultados, **Apache es el servidor web más usado**, ya que es sencillo de configurar para los sitios que usan PHP.
 
@@ -16,32 +16,7 @@ El único inconveniente que tiene Nginx como servidor único en Wordpress es la 
 
 Él, en su caso, usó Ubuntu como distribución base para el servidor, por lo que aplicar esa guía para otras distribuciones puede variar. En mi caso, yo utilizo **Debian squeeze** (la versión estable del momento), por lo que difiere ligeramente el método.
 
-
-### Índice
-
-
-Este tutorial se compone de las siguientes secciones:
-
-
-
-	
-  * Desinstalación de Apache.
-
-	
-  * [Instalación de Nginx y el paquete php-fpm.](linux/la-gran-evasion-migrar-wordpress-smf-a-nginx/2/)
-
-	
-  * [Configuración de Nginx.](linux/la-gran-evasion-migrar-wordpress-smf-a-nginx/3/)
-
-	
-  * [Migración de la web.](/linux/la-gran-evasion-migrar-wordpress-smf-a-nginx/4/)
-
-
-<!-- more -->
-
-
 ### Desinstalación de Apache
-
 
 Esta es la parte más sencilla de todas, vamos a desinstalar el paquete apache2 y sus asociados, los cuales podemos encontrar con:
 
@@ -55,15 +30,11 @@ Para facilitar la tarea, los paquetes a desinstalar están presentes en el sigui
     # aptitude remove apache2 apache2-dev apache2-mpm apache2.2-bin apache2.2-common
 
 
-Esto desinstalará Apache, para evitar conflictos de puertos en el servidor. No borro las configuraciones por si nos interesa volver a Apache por cualquier motivo. En caso contrario, si estás seguro de permanecer en Nginx, puedes sustituir "remove" por "purge". También hay que tener en cuenta que el nombre de algunos paquetes puede variar, dependiendo de los repositorios no oficiales que tengas en uso. **En [la página siguiente](/linux/la-gran-evasion-migrar-wordpress-smf-a-nginx/2/), explicaremos la instalación de Nginx** y los módulos php necesarios.
-
-
-
+Esto desinstalará Apache, para evitar conflictos de puertos en el servidor. No borro las configuraciones por si nos interesa volver a Apache por cualquier motivo. En caso contrario, si estás seguro de permanecer en Nginx, puedes sustituir "remove" por "purge". También hay que tener en cuenta que el nombre de algunos paquetes puede variar, dependiendo de los repositorios no oficiales que tengas en uso.
 
 ### Instalación de Nginx y del módulo php-fpm
 
-
-[![Nginx-logo](http://www.univunix.com/wp-content/uploads/Nginx-logo-300x115.jpg)](http://www.univunix.com/wp-content/uploads/Nginx-logo.jpg)Aquí tendremos alguna complicación, y es porque **el paquete php-fpm** que explica Daniel **no está disponible en los repositorios oficiales de Debian** (con el nombre php5-fpm), así que tenemos que recurrir a un repositorio externo. Hay algo de intriga en usar repositorios externos porque puede haber incompatibilidades con el resto de paquetes (ej: paquetes de la rama wheezy en squeeze o sucesos similares) pero no hay inconveniente, ya que es un **repositorio exclusivo de la versión squeeze**.
+<img alt="Panel de privacidad de Gnome Shell 3.8" src="/img/placeholder.gif" data-original="/attachments/2013/02/Nginx-logo.jpg" class="img-responsive img-rounded lazy pull-left" >Aquí tendremos alguna complicación, y es porque **el paquete php-fpm** que explica Daniel **no está disponible en los repositorios oficiales de Debian** (con el nombre php5-fpm), así que tenemos que recurrir a un repositorio externo. Hay algo de intriga en usar repositorios externos porque puede haber incompatibilidades con el resto de paquetes (ej: paquetes de la rama wheezy en squeeze o sucesos similares) pero no hay inconveniente, ya que es un **repositorio exclusivo de la versión squeeze**.
 
 Por algún casual os ha debido de sonar [dotdeb.org](http://www.dotdeb.org), el autonombrado "repositorio de servidores LAMP Debian". Si no os suena, he de decir que es un repositorio cuyo objetivo es mantener las últimas versiones estables de programas de servidor como mysql-server, apache, el propio nginx, y diversos módulos php. Son los mismos paquetes que te encuentras en el repositorio oficial, pero su tiempo de renovación de paquetes es menor (sale antes una nueva versión en dotdeb que en el oficial, eso es obvio), y por ello, son versiones más avanzadas.
 
@@ -96,13 +67,7 @@ Hacemos un update para actualizar la lista de paquetes, realizamos las actualiza
     # aptitude dist-upgrade
     # aptitude install nginx php5-fpm
 
-
-**En [la próxima página](/linux/la-gran-evasion-migrar-wordpress-smf-a-nginx/3/), procedemos a la configuración de Nginx**, para dejarlo en funcionamiento.
-
-
-
 ### Configurar el servidor Nginx
-
 
 A continuación, hay que configurar nginx, de tal forma que podamos activar las fncionalidades que queramos. Os mostraré un ejemplo, el cual es una vieja configuración del servidor. El mismo está basado en la configuración de Daniel Miessler, con retoques míos y de otras configuraciones, como la de perusio ([aquí tenéis su repositorio en github](https://github.com/perusio/wordpress-nginx), con diversas configuraciones):
 
@@ -175,13 +140,9 @@ A continuación, hay que configurar nginx, de tal forma que podamos activar las 
     }
 
 
-La configuración, evidentemente, puede variar para cada caso, pero siempre puedes acceder a la wiki de nginx, al repositorio de perusio para guiarte en tu modificación. **[A continuación](/linux/la-gran-evasion-migrar-wordpress-smf-a-nginx/4/), procederemos a configurar nuestro sitio y a trasladarlo a Nginx de la forma menos traumática.**
-
-
-
+La configuración, evidentemente, puede variar para cada caso, pero siempre puedes acceder a la wiki de nginx, al repositorio de perusio para guiarte en tu modificación.
 
 ### Migración de la web
-
 
 Este es un paso relativamente sencillo, ya que solamente nos queda configurar el dominio virtual a cada web que tengamos. En vez de estar un buen rato explicando para qué sirve cada una de las opciones, os dejo una configuración modelo, que servirá como base. **Esta configuración hay que crearla en /etc/nginx/sites-available/<nombre del sitio>.**
 
@@ -288,12 +249,8 @@ Este es un paso relativamente sencillo, ya que solamente nos queda configurar el
 Como dije en el capítulo anterior, estas son configuraciones que hice basándome en la configuraciones hechas por Daniel Miessler y Perusio. Concretamente, esta es parte de la configuración de mi (Aglezabad) web personal, [Interusers](http://www.interusers.eu). Reitero que esto una configuración modelo y puede tener sus errores y posibles mejoras, la intención es otorgar una base. Para lo demás, está la wiki de Nginx.
 
 Para activar el servidor virtual, creamos un enlace simbólico del archivo apuntando a la carpeta "sites-enabled". Después, hacemos una recarga de la configuración.
-
     
     # ln -s /etc/nginx/sites-available/<nombre del sitio> /etc/nginx/sites-enabled/<nombre del sitio>
     # service nginx reload
 
-
-
-
-Y, por fin, ya tendremos nuestra web o blog hecho en Wordpress bajo el amparo de Nginx. Espero que os sirva de utilidad esta pequeña guía para tener una base y desarrollar vuestro camino en la configuración de una web. **Si tenéis alguna duda, ahí tenéis el [foro](http://www.univunix.com/forum), donde os ayudaremos en todo lo posible.**
+Y, por fin, ya tendremos nuestra web o blog hecho en Wordpress bajo el amparo de Nginx. Espero que os sirva de utilidad esta pequeña guía para tener una base y desarrollar vuestro camino en la configuración de una web.

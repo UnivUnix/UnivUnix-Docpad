@@ -219,6 +219,18 @@ docpadConfig = {
         'thumbnail':
           w: 700
           h: 440
+        'small':
+          w: 300
+          h: 300
+        'medium':
+          w: 450
+          h: 450
+        'large':
+          w: 700
+          h: 700
+        'xtralarge':
+          w: 1024
+          h: 1024
       targets:
         'thumbnail': (img,args) ->
           return img

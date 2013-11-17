@@ -8,7 +8,7 @@ categories: ['tutoriales', 'programación']
 tags: ['estándares', 'html5', 'php', 'seo', 'temas', 'wordpress']
 ---
 
-[![HTML5 logo](http://www.univunix.com/wp-content/uploads/HTML5_Logo_512-300x300.png)](http://www.univunix.com/wp-content/uploads/HTML5_Logo_512.png)Desde el año pasado, se ha promovido por parte de compañías como Google el uso de la última revisión del lenguaje HTML. HTML5 otrorga múltiples cambios, tales como la división del espacio del cuerpo en diversas secciones con nombre propio, tales como <header>,<footer> o <article>; facilitando la comprensión del diseño. Por su parte, tanto los desarrolladores de Wordpress como aquellos que crean diseños para este gestor de contenidos, ya están sacando a la luz una gran cantidad de temas con los que personalizar nuestra web.
+Desde el año pasado, se ha promovido por parte de compañías como Google el uso de la última revisión del lenguaje HTML. HTML5 otrorga múltiples cambios, tales como la división del espacio del cuerpo en diversas secciones con nombre propio, tales como header, footer o article; facilitando la comprensión del diseño. Por su parte, tanto los desarrolladores de Wordpress como aquellos que crean diseños para este gestor de contenidos, ya están sacando a la luz una gran cantidad de temas con los que personalizar nuestra web.
 
 El único inconveniente que puede haber es la no-validez del contenido html por parte del validador W3C, organización que determina el estándar de los formatos web. Los problemas que causan este resultado son producidos por parte del software gestor y por parte del diseño en sí, ya que pudo dejar de ser válido si ha habido cambios de atributos en alguna revisión del lenguaje. Esto último hace que algunos temas recientes no tengan validez plena.
 
@@ -38,8 +38,7 @@ Esta función es muy común y en múltiples sitios web explican esta parte.
 
 ### Evitar usar ' rel="publisher" ' (Google +)
 
-
-[![Google Plus](http://www.univunix.com/wp-content/uploads/googleplus-300x160.jpg)](http://www.univunix.com/wp-content/uploads/googleplus.jpg)No solamente "category tag" es repudiado por la W3C, también **el microformato "publisher" no está declarado en la lista y, por ello, no es válido.** Para dar algo de información, "publisher" es un microformato que promueve Google para asociar una página de Google+ con el sitio web o empresa al que está relacionado. Esto añade gran valor al SEO y desarrollo de una web, pero hace que nuestro diseño ya no sea estándar.
+<img alt="Panel de privacidad de Gnome Shell 3.8" src="/img/placeholder.gif" data-original="/attachments/2013/01/googleplus.jpg" class="img-responsive img-rounded lazy pull-left">No solamente "category tag" es repudiado por la W3C, también **el microformato "publisher" no está declarado en la lista y, por ello, no es válido.** Para dar algo de información, "publisher" es un microformato que promueve Google para asociar una página de Google+ con el sitio web o empresa al que está relacionado. Esto añade gran valor al SEO y desarrollo de una web, pero hace que nuestro diseño ya no sea estándar.
 
 Durante mucho tiempo, no había alternativa alguna para relacionar nuestra web con Google+, pero gracias a [un estado de Gerwin Sturm](https://plus.google.com/112336147904981294875/posts/b8CczJQDdLc) se ha hallado una vía para validar nuestro tema. Si tenemos un enlace a nuestra página de Google +, podemos cambiar sutilmente su forma para que tenga la relación incorporada al enlace.
 

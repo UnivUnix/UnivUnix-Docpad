@@ -1,5 +1,7 @@
 ---
 layout: wrap-9-3
+isPaged: true
+pageSize: 6
 dynamic: true
 ---
 

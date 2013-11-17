@@ -13,6 +13,10 @@ article id: @document.id, class: "post", ->
   section class: "post-content", ->
     h1 ->
       @document.title
+    if @document.thumbnail?
+      img src: @getUrl("/img/placeholder.gif"), 'data-original': @getThumbnail(@getUrl(@document.thumbnail[0]), 'small'), class: "img-responsive lazy img-rounded pull-left", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
+      noscript ->
+        img src: @getThumbnail(@getUrl(@document.thumbnail[0]), 'small'), class: "img-responsive img-rounded pull-left", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""  
     text @content
     div class: "social-post", ->
       a class: "sprite sprite-share sprite-share-facebook", href: "http://www.facebook.com/sharer.php?u=" + @document.url + "&amp;t=" + @formatURL(@document.title), target: "_blank", title: "Recomiéndalo en Facebook"

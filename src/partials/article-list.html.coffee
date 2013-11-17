@@ -16,5 +16,5 @@ if @tag?
       text "No se han encontrado artículos con el tag "
       code @tag
       text " ."
-  for document in @getCollection('posts').findAllLive({tags:$has:@tag}, [date:-1]).toJSON()
+  for document in (@getCollection('posts').findAllLive({tags:$has:@tag}, [date:-1]).toJSON()[@document.page.startIdx...@document.page.endIdx])
     text @partial('article-link.html.coffee', @,{document: document})
