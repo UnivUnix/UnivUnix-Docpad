@@ -38,7 +38,7 @@ Esta función es muy común y en múltiples sitios web explican esta parte.
 
 ### Evitar usar ' rel="publisher" ' (Google +)
 
-<img alt="Panel de privacidad de Gnome Shell 3.8" src="/img/placeholder.gif" data-original="/attachments/2013/01/googleplus.jpg" class="img-responsive img-rounded lazy pull-left">No solamente "category tag" es repudiado por la W3C, también **el microformato "publisher" no está declarado en la lista y, por ello, no es válido.** Para dar algo de información, "publisher" es un microformato que promueve Google para asociar una página de Google+ con el sitio web o empresa al que está relacionado. Esto añade gran valor al SEO y desarrollo de una web, pero hace que nuestro diseño ya no sea estándar.
+<img alt="Logo de Google+" src="/img/placeholder.gif" data-original="/attachments/2013/01/googleplus.jpg" class="img-responsive img-rounded lazy pull-left">No solamente "category tag" es repudiado por la W3C, también **el microformato "publisher" no está declarado en la lista y, por ello, no es válido.** Para dar algo de información, "publisher" es un microformato que promueve Google para asociar una página de Google+ con el sitio web o empresa al que está relacionado. Esto añade gran valor al SEO y desarrollo de una web, pero hace que nuestro diseño ya no sea estándar.
 
 Durante mucho tiempo, no había alternativa alguna para relacionar nuestra web con Google+, pero gracias a [un estado de Gerwin Sturm](https://plus.google.com/112336147904981294875/posts/b8CczJQDdLc) se ha hallado una vía para validar nuestro tema. Si tenemos un enlace a nuestra página de Google +, podemos cambiar sutilmente su forma para que tenga la relación incorporada al enlace.
 
