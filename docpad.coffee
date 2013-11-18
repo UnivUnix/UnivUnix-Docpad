@@ -219,6 +219,9 @@ docpadConfig = {
         'thumbnail':
           w: 700
           h: 440
+        'thumb':
+          w: 150
+          h: 150
         'small':
           w: 300
           h: 300
@@ -236,7 +239,10 @@ docpadConfig = {
           return img
             .resize(700)
             .crop(700, 440)
-
+        'thumb': (img, args) ->
+          return img
+            .resize(150,150)
+            .crop(150,150)
 }
 
 # Export our DocPad Configuration
