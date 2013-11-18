@@ -1,59 +1,19 @@
 ---
-author: Aglezabad
-comments: true
+authors: ['Aglezabad']
 date: 2013-02-22 23:30:02+00:00
 layout: post
 slug: mejorando-lo-mejorable-buenas-practicas-en-nginx-conf
 title: 'Mejorando lo mejorable: Buenas prácticas en nginx.conf'
-wordpress_id: 162
-categories:
-- Tutoriales
-following_users:
-- Aglezabad
-- Ferthedems
-tags:
-- Configuración
-- Nginx
-- Web
+thumbnail: ['/attachments/2013/02/Nginx-logo-2.jpg', 'Logo de Nginx']
+categories: ['tutoriales']
+tags: ['configuración', 'nginx', 'web']
 ---
 
-[![Nginx-logo](http://www.univunix.com/wp-content/uploads/Nginx-logo-300x115.jpg)](http://www.univunix.com/wp-content/uploads/Nginx-logo.jpg)Normalmente, cuando queremos aprender a configurar un sistema desconocido, nos basamos en ejemplos funcionales que vamos modificando y mejorando con el paso del tiempo. Evidentemente, si desconocemos cómo configurar un servicio, es normal que reproduzcamos errores diversos. En este caso, vamos a explicar los errores más comunes que se encuentran en las configuraciones del servidor web Nginx, el cual tiene [una guía de instalación y configuración](http://www.univunix.com/tutoriales/la-gran-evasion-migrar-wordpress-smf-a-nginx/). Como el ejemplo de configuración de la guía anterior tiene algunos errores, pondré una nueva versión aquí, para que podáis ver la diferencia.
-
-
-### Índice
-
-
-Este tutorial se compone de las siguientes secciones:
-
-
-
-	
-  * Evita poner "root" en cada bloque "location".
-
-	
-  * Evita incluir múltiples directivas de índice.
-
-	
-  * Evita usar sentencias condicionales (if).
-
-	
-  * [Configuración de ejemplo.](/tutoriales/mejorando-lo-mejorable-buenas-practicas-en-nginx-conf/2/)
-
-
-![](http://www.univunix.com/wp-includes/js/tinymce/plugins/wordpress/img/trans.gif)
-
+Normalmente, cuando queremos aprender a configurar un sistema desconocido, nos basamos en ejemplos funcionales que vamos modificando y mejorando con el paso del tiempo. Evidentemente, si desconocemos cómo configurar un servicio, es normal que reproduzcamos errores diversos. En este caso, vamos a explicar los errores más comunes que se encuentran en las configuraciones del servidor web Nginx, el cual tiene [una guía de instalación y configuración](http://www.univunix.com/tutoriales/la-gran-evasion-migrar-wordpress-smf-a-nginx/). Como el ejemplo de configuración de la guía anterior tiene algunos errores, pondré una nueva versión aquí, para que podáis ver la diferencia.
 
 ### Evita poner el parámetro "root" en cada bloque "location".
 
-
 Uno de los fallos comunes que puede tener una configuración es el añadir el parámetro "root" a cada bloque "location". Este parámetro indica la ruta de la carpeta donde comienza la raíz del sitio web a mostrar. Si vemos el ejemplo extraído de la wiki:
-
-
-
-
-
-
-
     
     server {
       server_name www.domain.com;
@@ -71,21 +31,7 @@ Uno de los fallos comunes que puede tener una configuración es el añadir el pa
       }
     }
 
-
-
-
-
-
-
-
 Nos damos cuenta de lo siguiente: Añadimos el mismo valor al parámetro en cada sección "location", complicando la legibilidad de la configuración; además, ¿Qué sucede si el cliente entra en una zona no definida? Esto puede causar problemas con el "backend" php (php-fpm, php-cgi), por ejemplo.
-
-
-
-
-
-
-
     
     server {
       server_name www.domain.com;
@@ -101,27 +47,11 @@ Nos damos cuenta de lo siguiente: Añadimos el mismo valor al parámetro en cada
       }
     }
 
-
-
-
-
-
-
-
 La solución es muy sencilla: pon el parámetro root dentro del bloque "server". Así cualquier bloque "location" tendrá el "root" del servidor concreto y la configuración se interpretará mejor por cualquier persona. Si por casualidad dispones de otras rutas raíz, siempre puedes indicar la raíz en el bloque "location" necesario.
-
 
 ### Evita incluir múltiples directivas de índice.
 
-
 ¿Crees que es necesario poner las mismas directivas en cada una de las secciones?
-
-
-
-
-
-
-
     
     http {
       index index.php index.htm index.html;
@@ -145,21 +75,7 @@ La solución es muy sencilla: pon el parámetro root dentro del bloque "server".
       }
     }
 
-
-
-
-
-
-
-
 Ya te respondo directamente. Es completamente innecesario incluirlas en todas partes. Solo basta con indicar la directiva en la sección padre de tu configuración. Es decir, si la sección padre es "http", pones la directiva en "http".
-
-
-
-
-
-
-
     
     http {
       index index.php index.htm index.html;
@@ -180,31 +96,10 @@ Ya te respondo directamente. Es completamente innecesario incluirlas en todas pa
       }
     }
 
-
-
-
-
-
-
-
-
-
 ### No uses sentencias condicionales (if).
-
-
-
-
 #### Redirecciones.
 
-
 El siguiente ejemplo es una configuración de virtualhost con redirección 301 desde un dominio www a dominio sin www.
-
-
-
-
-
-
-
     
     server {
       server_name domain.com *.domain.com;
@@ -215,23 +110,9 @@ El siguiente ejemplo es una configuración de virtualhost con redirección 301 d
       }
     }
 
-
-
-
-
-
-
-
 Tenemos tres problemas en el ejemplo. El primero de todos es la sentencia condicional que comprueba el host que solicita el cliente. Desde la wiki de Nginx, indican que el uso de sentencias if son muy negativas para el funcionamiento del servidor, tal como indican en la página "[If is Evil](http://wiki.nginx.org/IfIsEvil)". En términos concretos, indican que Nginx va a estar evaluando la condición por cada petición que realicemos. Esa acción es extremadamente ineficiente y debe evitarse.
 
 La solución es muy sencilla, en ver de hacer un único virtualhost para ambos subdominios, haz dos virtualhost: el que captura el subdominio www retornará un código 301 con el dominio sin www.
-
-
-
-
-
-
-
     
     server {
       server_name www.domain.com;
@@ -242,30 +123,16 @@ La solución es muy sencilla, en ver de hacer un único virtualhost para ambos s
       [...]
     }
 
-
-
-
-
-
-
-
 Aparte de evitar usar condicionales innecesarias, se mejora la interpretación de la configuración por parte del usuario.
 
+<div class="alert alert-info">
 Nota: El parámetro $scheme hace que la redirección sea por el mismo protocolo que toma del dominio con www.
-
+</div>
 
 #### Peticiones de ficheros.
 
+También evita usar sentencias if en la petición de ficheros. Nginx implementa un método que evita hacer este tipo de comprobaciones.
 
-También evita usar sentencias if en la petición de ficheros. Nginx implementa un método de comprobación que evita hacer este tipo de comprobaciones.
-
-
-
-
-
-
-
-    
     server {
       root /var/www/domain.com;
       location / {
@@ -275,22 +142,8 @@ También evita usar sentencias if en la petición de ficheros. Nginx implementa 
       }
     }
 
-
-
-
-
-
-
-
 Esta es la configuración adecuada, la cual aprovecha la política de comprobación comentada.
-
-
-
-
-
-
-
-    
+   
     server {
       root /var/www/domain.com;
       location / {
@@ -298,22 +151,11 @@ Esta es la configuración adecuada, la cual aprovecha la política de comprobaci
       }
     }
 
-
-
-
-
-
-
-
-**A continuación, veremos una [configuración de ejemplo](/tutoriales/mejorando-lo-mejorable-buenas-practicas-en-nginx-conf/2/), procedente de un tutorial anterior de esta web.**
-
-
+**A continuación, veremos una configuración de ejemplo procedente de un tutorial anterior de esta web.**
 
 ### Configuración de ejemplo.
 
-
 Esta es una configuración de ejemplo, en el cual se ha aplicado las prácticas mencionadas.
-
     
     server {
         server_name  interusers.eu;
@@ -491,10 +333,6 @@ Esta es una configuración de ejemplo, en el cual se ha aplicado las prácticas 
         server          127.0.0.1:9000;
     }
 
-
-
-
 ### Conclusión
-
 
 No se han indicado todas las mejoras posibles a realizar en una configuración de Nginx, para no prolongar en exceso el artículo. Pero podéis acceder a todas ellas a través de [la wiki del proyecto](http://wiki.nginx.org/Pitfalls) (en Inglés), el cual ha sido fuente para realizar este tutorial. Espero que os haya servido.
