@@ -3,7 +3,7 @@ author: Aglezabad
 comments: true
 date: 2013-04-26 19:45:18+00:00
 layout: post
-published: false
+ignored: true
 slug: lo-mejor-de-cada-entorno-lxde-con-aplicaciones-gnome
 title: 'Lo mejor de cada entorno: LXDE con aplicaciones GNOME'
 wordpress_id: 240

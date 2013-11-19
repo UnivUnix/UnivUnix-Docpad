@@ -140,6 +140,9 @@ docpadConfig = {
     categoryPages: (database) ->
       database.findAllLive({isCategoryPage: true}, [categoryOrder:1, title: 1])
 
+    authorPages: (database) ->
+      database.findAllLive({isAuthorPage: true}, [authorOrder:1, title: 1])
+
     posts: (database) ->
       database.findAllLive({categories:$exists:true}, [date:-1])
 

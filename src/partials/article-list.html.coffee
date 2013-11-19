@@ -18,3 +18,13 @@ if @tag?
       text " ."
   for document in (@getCollection('posts').findAllLive({tags:$has:@tag}, [date:-1]).toJSON()[@document.page.startIdx...@document.page.endIdx])
     text @partial('article-link.html.coffee', @,{document: document})
+if @author?
+  if @getCollection('posts').findAllLive({authors:$has:@author}, [date: -1]).toJSON().length is 0
+    h1 ->
+      text "No hay artículos."
+    p ->
+      text "No se han encontrado artículos del autor "
+      code @author
+      text " ."
+  for document in (@getCollection('posts').findAllLive({authors:$has:@author}, [date:-1]).toJSON()[@document.page.startIdx...@document.page.endIdx])
+    text @partial('article-link.html.coffee', @,{document: document})

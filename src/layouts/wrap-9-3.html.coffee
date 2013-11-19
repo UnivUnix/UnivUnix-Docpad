@@ -27,4 +27,9 @@ section id: "content", class: "container", ->
                 li class: "next", ->
                   a href: @getNextPage(), ->
                     text "Anteriores >"
-    text @partial('sidebar.html.coffee', @)
+    if @document.isAuthorPage?
+      unless @document.isAuthorPage
+        text @partial('sidebar.html.coffee', @)
+      else
+        text @partial('sidebar-author.html.coffee', @)
+    else text @partial('sidebar.html.coffee, @')

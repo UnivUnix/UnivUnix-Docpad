@@ -1,71 +1,45 @@
 ---
-author: kennynnek
-comments: true
+authors: ['Kennynnek']
 date: 2013-05-21 02:03:18+00:00
 layout: post
 slug: debian-7-como-lograr-usar-tarjeta-wifi
-title: 'Debian 7, cómo lograr usar tu tarjeta Wi-Fi. '
-wordpress_id: 274
-categories:
-- Debian
-- Linux
-- Tutoriales
-following_users:
-- Aglezabad
-- kennynnek
+title: 'Debian 7, cómo lograr usar tu tarjeta Wi-Fi.'
+thumbnail: ['/attachments/2013/05/debian.png', 'Logo de Debian']
+categories: ['debian', 'linux', 'tutoriales']
+tags: ['wifi', 'configuración']
 ---
 
-[![Logotipo de Debian](http://www.univunix.com/wp-content/uploads/url-227x300.gif)](http://www.univunix.com/wp-content/uploads/url.gif)La semana siguiente a la salida de Debian Wheezy, lo instalé con Gnome 3.4 como interfaz de escritorio. Tuve que hacer algunas cosas para que mi sistema funcionase correctamente y deseo compartirlas con ustedes. Anteriormente, con Ubuntu, tuve que realizar diversas tareas desde la terminal y muchas veces ignoraba qué estaba haciendo. Por ello, he decidido hacer este artículo. Obviamente existe una infinidad de comandos en Linux y otro gran montón de paquetes y programas que podemos instalar.
-
-
-
-
-**Así**** que este artículo está dirigido a principiantes que hacen cosas básicas y desean entender lo que están haciendo.**
-
-
-
+La semana siguiente a la salida de Debian Wheezy, lo instalé con Gnome 3.4 como interfaz de escritorio. Tuve que hacer algunas cosas para que mi sistema funcionase correctamente y deseo compartirlas con ustedes. Anteriormente, con Ubuntu, tuve que realizar diversas tareas desde la terminal y muchas veces ignoraba qué estaba haciendo. Por ello, he decidido hacer este artículo. Obviamente existe una infinidad de comandos en Linux y otro gran montón de paquetes y programas que podemos instalar. **Así que este artículo está dirigido a principiantes que hacen cosas básicas y desean entender lo que están haciendo.**
 
 Después de hacer una instalación limpia desde un usb (no es necesario explicar este proceso, ya que hay diversas guías para ello), me di cuenta que la tarjeta wifi no funcionaba. Un ejemplo bastante común. Investigando por la red, hallé un artículo en la [Wiki oficial de Debian ](http://wiki.debian.org/WiFi)en donde se especificaban los paquetes necesarios para usar determinadas tarjetas de red inalámbricas. Solo era necesario buscar esos paquetes. Ahora bien, ¿qué hacer en caso de no saber cual tarjeta Wi-Fi tengo? Muy fácil, usaremos lspci. Abrimos una terminal (en mi caso al presionar Alt+F2 puedo escribir gnome-terminal y se abrirá, o pueden buscarla dentro de las aplicaciones) y escribimos
-
     
     $ lspci | grep -w Wireless
 
-
 **lspci** no tiene un significado literal, pero podría ser List Peripheral Component Interconnect. La interconexión de componentes periféricos es:
-
 
 > "un bus de ordenador estándar para conectar dispositivos periféricos directamente a tu placa base."
 
-
 Vale que esto no es un blog de electrónica, pero ¿alguna vez han visto las ranuras de plástico blancas o grises en su placa base? Bueno, pues a eso se refiere. Asi que **con lspci tenemos una lista** de todos esos componentes conectados a nuestra placa.
 **grep** es una instrucción para **filtrar** la respuestas de los comandos. El objetivo aquí es solo explicar las instrucciones usadas, así que no ahondaremos. Hay muchas formas de utilizar grep, pero al escribir -w hacemos referencia a que la búsqueda coincida con una palabra, la cual escribimos a continuación  en nuestro caso Wireless, porque necesitamos activar nuestra tarjeta de red inalámbrica. Dependiendo de nuestra tarjeta específica nos devolverá algo así
-
-    
+   
     01:00.0 Network controller: Intel Corporation Centrino Wireless-N 1030 [Rainbow Peak] (rev 34)
-
 
 (Para más información de **grep** (un comando bastante útil) revisen esta entrada de UnivUnix [Comandos terminal (4): “grepeando](http://www.univunix.com/linux/comandos-terminal-4-grepeando/) por Ferthedems)
 
 De esta manera, en la wiki que antes mencionaba, procedemos a buscar el paquete que debemos instalar. En mi caso es **iwlwifi**, así que procedo a instalarlo. En la wiki están las instrucciones de como instalarlo, aún así, explicaremos que significan. Primero necesitaremos agregar unas líneas en un archivo que se llama sources.list y debemos saber que /etc/apt es su carpeta de ubicación. Las líneas son las siguientes:
-
     
     # Debian 7.0 "Wheezy"
     deb http://http.debian.net/debian/ wheezy main contrib non-free
 
-
 Eso significa que tendremos que hacer varias cosas y las explicaremos lo más simple y completo posible para que puedas saber que estas haciendo con tu sistema exactamente. Las instrucciones en la terminal serian las siguientes
-
     
     $ su
     # cd /etc/apt
     # nano sources.list
 
-
 Escribir las dos lineas que hemos descrito anteriormente, guardar el documento (Ctrl+O) y salir del editor (Ctrl+C).
-
     
     # exit
-
 
 Ahora vamos a explicar el código. **su** es una instrucción para obtener permisos de administrador en el sistema.Significa "super user". Al usar esta instrucción deberán escribir la contraseña de superusuario que establecieron en la instalación.
 
@@ -78,13 +52,11 @@ Ahora vamos a explicar el código. **su** es una instrucción para obtener perm
 Como comentario **importante** debo decir que al estar dentro del archivo sources.list deben borrar toda referencia a los discos de instalación de Debian, si en caso aparecen.
 
 En mi caso, para mi tarjeta de red especifica, lo único que faltará será
-
     
     # apt-get update
     # apt-get install firmware-iwlwifi
     # modprobe -r iwlwifi
     # modprobe iwlwifi
-
 
 Como mencionábamos antes, **apt-get** se encargara de actualizar su lista de paquetes disponibles y de instalar el paquete requerido. Es importante mencionar que para estas primeras dos
 
