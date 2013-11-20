@@ -14,22 +14,22 @@ section id: "content", class: "container", ->
               unless @hasPrevPage()
                 li class: "disabled previous", ->
                   a ->
-                    text "< Nuevas"
+                    text "&lt; Nuevas"
               else
                 li class: "previous", ->
                   a href: @getPrevPage(), ->
-                    text "< Nuevas"
+                    text "&lt; Nuevas"
               unless @hasNextPage()
                 li class: "disabled next", ->
                   a ->
-                    text "Anteriores >"
+                    text "Anteriores &gt;"
               else
                 li class: "next", ->
                   a href: @getNextPage(), ->
-                    text "Anteriores >"
+                    text "Anteriores &gt;"
     if @document.isAuthorPage?
       unless @document.isAuthorPage
         text @partial('sidebar.html.coffee', @)
       else
         text @partial('sidebar-author.html.coffee', @)
-    else text @partial('sidebar.html.coffee, @')
+    else text @partial('sidebar.html.coffee', @)

@@ -19,6 +19,6 @@ Como siempre, tenéis disponibles las isos de los diferentes sabores de esta dis
 
 El otro punto del día es la futura llegada de** Debian Wheezy**, que en la primera o segunda semana de Mayo estará disponible como sistema estable. Como opinión personal, he de decir que Wheezy está en un punto de maduración bueno para ser una novedad, pero el cambio desde Debian 6 será lento, ya que **Squeeze **goza de gran funcionalidad a pesar de tener un software anticuado. Yo estoy usando ambas versiones y estoy muy contento con ambas.
 
-<div class="alert alert-info"
+<div class="alert alert-info">
 _Lamento no prolongar lo suficiente esta noticia, pero los administradores de UnivUnix estamos un poco liados con nuestros estudios. Ruego que diculpen la insuficiencia de contenido en estos días.__
 </div>
