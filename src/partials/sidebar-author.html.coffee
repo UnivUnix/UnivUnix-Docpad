@@ -16,6 +16,10 @@ aside id: "sidebar", class: "col-lg-3", role: "author", ->
           text "Acerca de " + @document.title
       div class: "widget-content", ->
         ul ->
+          if @document.range?
+            li ->
+              span class: "badge", ->
+                text @document.range
           if @document.realName?
             li ->
               strong ->

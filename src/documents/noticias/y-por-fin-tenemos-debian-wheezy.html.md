@@ -4,7 +4,7 @@ date: 2013-05-05 10:53:01+00:00
 layout: post
 slug: y-por-fin-tenemos-debian-wheezy
 title: Y por fin tenemos Debian Wheezy
-thumbnail: ['/attachments/2013/05/debian.png', 'Logo de Debian']
+thumbnail: ['/attachments/2013/05/debian.jpg', 'Logo de Debian']
 categories: ['debian', 'linux', 'noticias']
 tags: ['versiones', 'wheezy', 'estable']
 ---

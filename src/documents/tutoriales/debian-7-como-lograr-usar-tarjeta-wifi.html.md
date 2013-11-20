@@ -4,7 +4,7 @@ date: 2013-05-21 02:03:18+00:00
 layout: post
 slug: debian-7-como-lograr-usar-tarjeta-wifi
 title: 'Debian 7, cómo lograr usar tu tarjeta Wi-Fi.'
-thumbnail: ['/attachments/2013/05/debian.png', 'Logo de Debian']
+thumbnail: ['/attachments/2013/05/debian.jpg', 'Logo de Debian']
 categories: ['debian', 'linux', 'tutoriales']
 tags: ['wifi', 'configuración']
 ---
