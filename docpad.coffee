@@ -217,6 +217,15 @@ docpadConfig = {
   plugins:
     livereload:
       enabled: false
+    redirector:
+      "forum/":"http://www.univunix.com/"
+      "feed/":"http://www.univunix.com/feeds/rss.xml"
+      "linux/debian-7-como-lograr-usar-tarjeta-wifi": "http://www.univunix.com/tutoriales/debian-7-como-lograr-usar-tarjeta-wifi"
+      "linux/comandos-terminal-1-entrada-y-salida-estandar": "http://www.univunix.com/tutoriales/comandos-terminal-1-entrada-y-salida-estandar"
+      "linux/comandos-terminal-3-expresiones-regulares": "http://www.univunix.com/tutoriales/comandos-terminal-3-expresiones-regulares"
+      "tutoriales/mejorando-lo-mejorable-buenas-practicas-en-nginx-conf/2": "http://www.univunix.com/tutoriales/mejorando-lo-mejorable-buenas-practicas-en-nginx-conf"
+      
+
     thumbnails:
       presets:
         'thumbnail':

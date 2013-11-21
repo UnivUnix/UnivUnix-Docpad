@@ -44,7 +44,8 @@
     "docpad-plugin-paged": "~2.2.3",
     "moment": "~2.1.0",
     "docpad-plugin-thumbnails": "~2.1.1",
-    "ws": "~0.4.27"
+    "ws": "~0.4.27",
+    "docpad-plugin-redirector": "~2.0.0"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "~2.5.3"
