@@ -14,9 +14,9 @@ article id: @document.id, class: "post", ->
     h1 ->
       @document.title
     if @document.thumbnail?
-      img src: @getUrl("/img/placeholder.gif"), 'data-original': @getThumbnail(@getUrl(@document.thumbnail[0]), 'thumb'), class: "img-responsive lazy img-rounded pull-left", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
+      img src: @getUrl("/img/placeholder.gif"), 'data-original': @getThumbnail(@document.thumbnail[0], 'thumb'), class: "img-responsive lazy img-rounded pull-left", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
       noscript ->
-        img src: @getThumbnail(@getUrl(@document.thumbnail[0]), 'thumb'), class: "img-responsive img-rounded pull-left", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""  
+        img src: @getThumbnail(@document.thumbnail[0], 'thumb'), class: "img-responsive img-rounded pull-left", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""  
     text @content
     div class: "social-post", ->
       a class: "sprite sprite-share sprite-share-facebook", href: "http://www.facebook.com/sharer.php?u=" + @document.url + "&amp;t=" + @formatURL(@document.title), target: "_blank", title: "Recomiéndalo en Facebook"
