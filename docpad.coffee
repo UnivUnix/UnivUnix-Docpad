@@ -222,6 +222,7 @@ docpadConfig = {
         "forum/":"http://www.univunix.com/noticias/nuevo-diseno-de-univunix"
         "forum/viewforum.php":"http://www.univunix.com/noticias/nuevo-diseno-de-univunix"
         "forum/viewtopic.php":"http://www.univunix.com/noticias/nuevo-diseno-de-univunix"
+        "forum/posting.php": "http://www.univunix.com/noticias/nuevo-diseno-de-univunix"
         "feed/":"http://www.univunix.com/feeds/rss.xml"
         "linux/el-reto-univunix-adios-a-mysql-y-php": "http://www.univunix.com/noticias/el-reto-univunix-adios-a-mysql-y-php"
         "linux/debian-7-como-lograr-usar-tarjeta-wifi": "http://www.univunix.com/tutoriales/debian-7-como-lograr-usar-tarjeta-wifi"
@@ -231,6 +232,10 @@ docpadConfig = {
         "tutoriales/la-gran-evasion-migrar-wordpress-smf-a-nginx/2": "http://www.univunix.com/tutoriales/la-gran-evasion-migrar-wordpress-smf-a-nginx"
         "tutoriales/la-gran-evasion-migrar-wordpress-smf-a-nginx/3": "http://www.univunix.com/tutoriales/la-gran-evasion-migrar-wordpress-smf-a-nginx"
         "tutoriales/la-gran-evasion-migrar-wordpress-smf-a-nginx/4": "http://www.univunix.com/tutoriales/la-gran-evasion-migrar-wordpress-smf-a-nginx"
+    sitemap:
+      cachetime: 600000
+      changefreq: 'weekly'
+      priority: 0.5
     thumbnails:
       presets:
         'thumbnail':
