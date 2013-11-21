@@ -14,6 +14,12 @@ docpadConfig = {
   # Server configuration
   port: 9000
 
+  # Our own 404 middleware
+  middleware404: false  # default
+
+  # Our own 500 middleware
+  middleware500: false  # default
+  
   # =================================
   # Template Data
   # These are variables that will be accessible via our templates
