@@ -3,7 +3,7 @@ authors: ['Aglezabad']
 date: 2013-11-21 22:46:55+01:00
 layout:post
 title:'La seguridad es necesaria: desenmascara.me'
-thumbnail:['/attachments/2013/11/desenmascarame.png']
+thumbnail:['/attachments/2013/11/desenmascarame.png', 'Desenmascara.me']
 categories: ['linux']
 tags: ['seguridad','servidores']
 ---
