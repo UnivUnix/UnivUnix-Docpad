@@ -4,7 +4,7 @@ date: 2013-11-22 12:49:40+01:00
 layout: post
 slug: seguridad-necesaria-desenmascarame
 title: 'La seguridad es necesaria: desenmascara.me'
-thumbnail: ['/attachments/2013/11/desenmascarame-result.png']
+thumbnail: ['/attachments/2013/11/desenmascarame-result.png', 'Desenmascara.me']
 categories: ['linux']
 tags: ['seguridad','servidores','software','web']
 ---
