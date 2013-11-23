@@ -38,4 +38,3 @@ article id: @document.id, class: "post", ->
       text "comments powered by "
       span class: "logo-disqus", ->
         text "Disqus"
-text @getBlock('scripts').add(@site.postscripts).toHTML()

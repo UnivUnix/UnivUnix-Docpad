@@ -47,15 +47,8 @@ docpadConfig = {
       scripts: [
         "/scripts/jquery-min.js",
         "/scripts/lazyload-min.js",
-        "/vendor/twitter-bootstrap/js/transition.js",
-        "/vendor/twitter-bootstrap/js/dropdown.js",
-        "/vendor/twitter-bootstrap/js/collapse.js",
-        "/vendor/twitter-bootstrap/js/modal.js",
+        "/scripts/bootstrap-min.js",
         "/scripts/app.js"
-      ]
-
-      postscripts: [
-        "/scripts/disqus.js"
       ]
 
     # -----------------------------
