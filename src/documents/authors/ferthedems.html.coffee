@@ -5,7 +5,6 @@ title: "Ferthedems"
 authorOrder: 1
 range: "Admin"
 isPaged: true
-pagedCollection: 'posts'
 pageSize: 6
 realName: "Fernando Moro"
 country: "España"
