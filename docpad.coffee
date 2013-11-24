@@ -212,10 +212,10 @@ docpadConfig = {
       enabled: false
     redirector:
       redirects:
-        "forum/": "http://www.univunix.com/noticias/nuevo-diseno-de-univunix"
-        "forum/viewforum.php": "http://www.univunix.com/noticias/nuevo-diseno-de-univunix"
-        "forum/viewtopic.php": "http://www.univunix.com/noticias/nuevo-diseno-de-univunix"
-        "forum/posting.php": "http://www.univunix.com/noticias/nuevo-diseno-de-univunix"
+        #"forum/": "http://www.univunix.com/noticias/nuevo-diseno-de-univunix"
+        #"forum/viewforum.php": "http://www.univunix.com/noticias/nuevo-diseno-de-univunix"
+        #"forum/viewtopic.php": "http://www.univunix.com/noticias/nuevo-diseno-de-univunix"
+        #"forum/posting.php": "http://www.univunix.com/noticias/nuevo-diseno-de-univunix"
         "//noticias/nuevo-diseno-de-univunix": "http://www.univunix.com/noticias/nuevo-diseno-de-univunix"
         "feed/": "http://www.univunix.com/feeds/rss.xml"
         "linux/el-reto-univunix-adios-a-mysql-y-php": "http://www.univunix.com/noticias/el-reto-univunix-adios-a-mysql-y-php"
