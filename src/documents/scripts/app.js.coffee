@@ -12,9 +12,15 @@ disqus_shortname = "univunix"
   (document.getElementsByTagName("HEAD")[0] or document.getElementsByTagName("BODY")[0]).appendChild s
 )()
 (->
-  dsq = document.createElement('script')
-  dsq.type = 'text/javascript'
-  dsq.async = true
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'
-  (document.getElementsByTagName('head')[0] or document.getElementsByTagName('body')[0]).appendChild dsq
+  list = document.getElementsByTagName("div")
+  divfound = false
+  for element in list
+    if element.getAttribute("id") is "disqus_thread"
+      divfound = true
+  if divfound is true
+    dsq = document.createElement('script')
+    dsq.type = 'text/javascript'
+    dsq.async = true
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'
+    (document.getElementsByTagName('head')[0] or document.getElementsByTagName('body')[0]).appendChild dsq
 )()
