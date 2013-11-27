@@ -1,5 +1,5 @@
 ---
-layout: wrap-9-3
+layout: sidebar
 title: 'Linux'
 isCategoryPage: true
 categoryOrder: 2

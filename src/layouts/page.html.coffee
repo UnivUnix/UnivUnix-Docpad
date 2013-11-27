@@ -1,5 +1,5 @@
 ---
-layout: wrap-9-3
+layout: sidebar
 ---
 
 article id: @document.id, class: "post", ->

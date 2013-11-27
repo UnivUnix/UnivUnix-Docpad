@@ -1,5 +1,5 @@
 ---
-layout: wrap-9-3
+layout: sidebar
 title: 'Mint'
 isCategoryPage: true
 isPaged: true

@@ -1,6 +1,6 @@
 ---
 isAuthorPage: true
-layout: wrap-9-3
+layout: sidebar-author
 title: "Ferthedems"
 authorOrder: 1
 range: "Admin"

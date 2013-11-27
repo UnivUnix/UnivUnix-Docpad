@@ -14,7 +14,12 @@ article id: @document.id, class: "col-sm-6 separator", ->
         a href: @document.url, ->
           text @document.title
       p ->
-        text @partial('category-list.html.coffee', @, {categories: @document.categories})
+        i class: "glyphicon glyphicon-folder-open"
+        for webCategory in @uniqueArray(@getCollection('categoryPages').toJSON())
+          if webCategory.title?
+            if @document.categories.indexOf(webCategory.title.toLowerCase()) isnt -1
+              a href: webCategory.url, ->
+                text webCategory.title
     footer ->
       div class: "text-center", ->
         button type: "button", class: "btn btn-sm btn-default", ->

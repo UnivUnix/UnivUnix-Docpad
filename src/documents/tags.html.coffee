@@ -1,5 +1,5 @@
 ---
-layout: wrap-9-3
+layout: sidebar
 isPaged: true
 pageSize: 6
 dynamic: true

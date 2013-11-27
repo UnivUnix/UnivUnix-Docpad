@@ -1,5 +1,5 @@
 ---
-layout: wrap-9-3
+layout: sidebar
 title: 'Noticias'
 isCategoryPage: true
 categoryOrder: 1

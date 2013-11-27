@@ -1,5 +1,5 @@
 ---
-layout: wrap-12
+layout: no-sidebar
 title: 'Error 404'
 dynamic: true
 ---
