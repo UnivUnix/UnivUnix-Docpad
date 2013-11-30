@@ -5,6 +5,7 @@ title: "Aglezabad"
 authorOrder: 1
 range: "Admin"
 isPaged: true
+pagedCollection: 'posts'
 pageSize: 6
 realName: "Ángel González"
 country: "España"

@@ -1,6 +1,7 @@
 ---
 layout: sidebar
-isPaged: true
+isPaged: false
+pagedCollection: 'posts'
 pageSize: 6
 dynamic: true
 ---
