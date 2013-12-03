@@ -1,8 +1,3 @@
-$(document).ready ->
-  $('img.lazy').show().lazyload({
-  	effect: "slideDown"
-  	failureLimit: 6
-  })
 disqus_shortname = "univunix"
 (->
   s = document.createElement("script")
@@ -24,3 +19,17 @@ disqus_shortname = "univunix"
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'
     (document.getElementsByTagName('head')[0] or document.getElementsByTagName('body')[0]).appendChild dsq
 )()
+$(document).ready ->
+  $('#content').css("display","none")
+  $('#content').fadeIn("slow")
+  $("a").click((event) ->
+    event.preventDefault()
+    linkLocation = this.href
+    $('#content').fadeOut("slow", redirectPage(linkLocation))
+  )
+  redirectPage=(linkLocation) ->
+    window.location = linkLocation
+  $('img.lazy').show().lazyload({
+  	effect: "slideDown"
+  	failureLimit: 6
+  })

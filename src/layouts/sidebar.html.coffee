@@ -6,6 +6,7 @@ section id: "content", class: "container", ->
   div class: "row", ->
     div class: "col-lg-9", role: "main", ->
       div class: "container", ->
+        div id: "cookieTool", class: "col-sm-12"
         text @content
       div class: "container", ->
         div class: "row", ->
@@ -46,7 +47,6 @@ section id: "content", class: "container", ->
             h3 ->
               text "Publicidad"
           div class: "widget-content", ->
-            script async: yes, src: "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
             # UnivUnix
             ins class: "adsbygoogle", style: "display:block;width:250px;height:250px;", 'data-ad-client':"ca-pub-9661747922699028", 'data-ad-slot':"1309145396"
             script ->

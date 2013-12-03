@@ -6,6 +6,7 @@ section id: "content", class: "container", ->
   div class: "row", ->
     div class: "col-lg-12", role: "main", ->
       div class: "container", ->
+        div id: "cookieTool", class: "col-sm-12"
         text @content
       div class: "container", ->
         div class: "row", ->
