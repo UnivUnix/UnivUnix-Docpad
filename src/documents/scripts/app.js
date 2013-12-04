@@ -16,6 +16,8 @@ var disqus_shortname = 'univunix'; // required: replace example with your forum 
 }());
 $(document).ready(function() {
 	$("#content").css("display", "none");
+});
+$(window).load(function() {
   $("#content").fadeIn(500);
   $('img.lazy').show().lazyload({
     effect: "slideDown",
