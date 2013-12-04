@@ -2,6 +2,8 @@
 layout: navbars
 ---
 
+script type:"text/javascript", ->
+  '''document.write('<div id="wrapper">');'''
 section id: "content", class: "container", ->
   div class: "row", ->
     div class: "col-lg-9", role: "main", ->
@@ -62,3 +64,5 @@ section id: "content", class: "container", ->
                 li ->
                   a href: "/authors/"+author.title.toLowerCase(), ->
                     text author.title
+script type:"text/javascript", ->
+  '''document.write('</div>');'''

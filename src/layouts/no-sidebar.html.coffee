@@ -2,6 +2,8 @@
 layout: navbars
 ---
 
+script type:"text/javascript", ->
+  '''document.write('<div id="wrapper">');'''
 section id: "content", class: "container", ->
   div class: "row", ->
     div class: "col-lg-12", role: "main", ->
@@ -29,3 +31,5 @@ section id: "content", class: "container", ->
                   li class: "next disabled", ->
                     a ->
                       text "Antiguos"
+script type:"text/javascript", ->
+  '''document.write('</div>');'''
