@@ -9,13 +9,13 @@ article id: @document.id, class: "post", ->
       text @postDate(@document.date, "ue")
     i class: "glyphicon glyphicon-user"
     for author in @document.authors
-      a class: "author", href: "/authors/" + author.toLowerCase(), ->
+      a class: "fadepage author", href: "/authors/" + author.toLowerCase(), ->
         text author
     i class: "glyphicon glyphicon-folder-open"
     for webCategory in @uniqueArray(@getCollection('categoryPages').toJSON())
       if webCategory.title?
         if @document.categories.indexOf(webCategory.title.toLowerCase()) isnt -1
-          a href: webCategory.url, ->
+          a class: "fadepage", href: webCategory.url, ->
             text webCategory.title
     
   section class: "post-content", ->

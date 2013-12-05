@@ -1,6 +1,6 @@
 article id: @document.id, class: "col-sm-6 separator", ->
   div class: "thumbnail thumb-hover", ->
-    a href: @document.url, ->
+    a class: "fadepage", href: @document.url, ->
       if @document.thumbnail?
         img src: @getUrl("/img/placeholder.gif"), 'data-original': @getThumbnail(@document.thumbnail[0], 'thumbnail'), class: "img-responsive lazy", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
         noscript ->
@@ -11,14 +11,14 @@ article id: @document.id, class: "col-sm-6 separator", ->
           img src: @getThumbnail("/img/placeholder.png", 'thumbnail'), class: "lazy img-responsive", alt: "No article image"  
     header class: "caption", ->
       h3 ->
-        a href: @document.url, ->
+        a class: "fadepage", href: @document.url, ->
           text @document.title
       p ->
         i class: "glyphicon glyphicon-folder-open"
         for webCategory in @uniqueArray(@getCollection('categoryPages').toJSON())
           if webCategory.title?
             if @document.categories.indexOf(webCategory.title.toLowerCase()) isnt -1
-              a href: webCategory.url, ->
+              a class: "fadepage", href: webCategory.url, ->
                 text webCategory.title
     footer ->
       div class: "text-center", ->
@@ -27,9 +27,9 @@ article id: @document.id, class: "col-sm-6 separator", ->
           time class: "updated", datetime: @postDate(@document.date, "html"), ->
             text @postDate(@document.date, "ue")
         div class: "btn-group", ->
-          a class: "btn btn-sm btn-default", href: @document.url, ->
+          a class: "fadepage btn btn-sm btn-default", href: @document.url, ->
             i class: "glyphicon glyphicon-comment"
-          a class: "btn btn-sm btn-default", href: @document.url+"#disqus_thread", ->
+          a class: "fadepage btn btn-sm btn-default", href: @document.url+"#disqus_thread", ->
             text "-"
           button type: "button", class: "btn btn-sm btn-default dropdown-toggle", 'data-toggle': "dropdown", ->
             i class: "glyphicon glyphicon-retweet"

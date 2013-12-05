@@ -17,7 +17,7 @@ section id: "content", class: "container", ->
               ul class: "pager", ->
                 if @hasPrevPage()
                   li class: "previous", ->
-                    a href: @getPrevPage(), ->
+                    a class: "fadepage", href: @getPrevPage(), ->
                       text "Nuevos"
                 else
                   li class: "previous disabled", ->
@@ -25,7 +25,7 @@ section id: "content", class: "container", ->
                       text "Nuevos"
                 if @hasNextPage()
                   li class: "next", ->
-                    a href: @getNextPage(), ->
+                    a class: "fadepage", href: @getNextPage(), ->
                       text "Antiguos"
                 else
                   li class: "next disabled", ->
@@ -41,7 +41,7 @@ section id: "content", class: "container", ->
             ul ->
               for document in @uniqueArray(@getCollection('pages').toJSON())
                 li class: ('active' if @document.url == document.url), ->
-                  a href: document.url, property: "dc:title", ->
+                  a class: "fadepage", href: document.url, property: "dc:title", ->
                     document.title
       section id: "ads", class: "widget", ->
         div class: "container", ->
@@ -62,7 +62,7 @@ section id: "content", class: "container", ->
             ul ->
               for author in @uniqueArray(@getCollection('authorPages').toJSON())
                 li ->
-                  a href: "/authors/"+author.title.toLowerCase(), ->
+                  a class: "fadepage", href: "/authors/"+author.title.toLowerCase(), ->
                     text author.title
 script type:"text/javascript", ->
   '''document.write('</div>');'''

@@ -20,12 +20,12 @@ $(document).ready(function() {
     failureLimit: 6
   });
   $("#wrapper").fadeIn(500);
-	$('a').click(function(event){
-		event.preventDefault();
-		linkLocation = this.href;
-		$("#wrapper").fadeOut(500, redirectPage);
-	});
-  
+  $('a.fadepage').click(function(event){
+	  event.preventDefault();
+	  linkLocation = this.href;
+	  $("#wrapper").fadeOut(500, redirectPage);
+  });
+
   function redirectPage() {
 		window.location = linkLocation;
 	}
