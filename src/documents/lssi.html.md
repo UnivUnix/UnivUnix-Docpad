@@ -93,6 +93,12 @@ La página web http://univunix.com es explotada con publicidad por Ángel Gonzá
 
   * Google Analytics (Estadística de visitas)
   * Google Adsense (Publicidad)
+  * Disqus (Sistema de comentarios/Técnica)
+  * Cloudflare (Técnica)
+
+  <br/>
+  ####Configuración de cookies.
+  <div id="cookietool-settings"></div><br/>
 
   El objetivo de estas cookies es meramente funcional, para calcular estadíticas de visitas y
    para conservar la sesión de los usuarios a lo largo de esta web.
