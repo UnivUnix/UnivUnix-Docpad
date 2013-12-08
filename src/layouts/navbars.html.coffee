@@ -18,6 +18,9 @@ header class: "navbar navbar-inverse navbar-fixed-top", ->
             li class: ('active' if @isPageCategory(@document.categories, document.title) or @document.url == document.url), ->
               a class: "fadepage", href: document.url, property: "dc:title", ->
                 document.title
+        li ->
+          a class: "fadepage", href: "http://forum.univunix.com/", ->
+            text "Foro"
       ul class: "nav navbar-nav pull-right", ->
         li ->
           a class: "sprite sprite-share", 'data-toggle': "modal", href: "#social"
