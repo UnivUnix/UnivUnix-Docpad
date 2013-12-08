@@ -1,4 +1,4 @@
-UnivUnix for Raspberry Pi and non Raspi servers.
+UnivUnix Docpad for Raspberry Pi and non Raspi servers.
 
 This is an optimized version of UnivUnix (http://www.unviunix.com) for Raspberry Pi used as server.
 
