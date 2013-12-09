@@ -23,11 +23,12 @@ html lang: "es", ->
   body ->
     text @content
     text @getBlock('scripts').add(@site.scripts).toHTML()
+    script type: "text/javascript", ->
+      text '''var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-37637477-1']);
+      _gaq.push(['_setDomainName', 'univunix.com']);
+      _gaq.push(['_trackPageview']);'''
     script src:"/scripts/cookietool.js"
     script ->
       text '''CookieTool.Config.set('link','http://www.univunix.com/lssi.html');
       CookieTool.API.impliedAgreement();'''
-    script type: "text/javascript", ->
-      text '''var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-37637477-1']);
-      _gaq.push(['_trackPageview']);'''
