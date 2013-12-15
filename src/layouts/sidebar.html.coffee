@@ -43,16 +43,6 @@ section id: "content", class: "container", ->
                 li class: ('active' if @document.url == document.url), ->
                   a class: "fadepage", href: document.url, property: "dc:title", ->
                     document.title
-      section id: "ads", class: "widget", ->
-        div class: "container", ->
-          div class: "widget-title", ->
-            h3 ->
-              text "Publicidad"
-          div class: "widget-content", ->
-            # UnivUnix
-            ins class: "adsbygoogle", style: "display:block;width:250px;height:250px;", 'data-ad-client':"ca-pub-9661747922699028", 'data-ad-slot':"1309145396"
-            script ->
-              text "(adsbygoogle = window.adsbygoogle || []).push({});"
       section id: "staff", class: "widget", ->
         div class: "container", ->
           div class: "widget-title", ->
@@ -64,5 +54,14 @@ section id: "content", class: "container", ->
                 li ->
                   a class: "fadepage", href: "/authors/"+author.title.toLowerCase(), ->
                     text author.title
+      section id: "ads", class: "widget", ->
+        div class: "container", ->
+          div class: "widget-title", ->
+            h3 ->
+              text "Publicidad"
+          div class: "widget-content", ->
+            ins class:"adsbygoogle", style:"display:block", 'data-ad-client':"ca-pub-9661747922699028", 'data-ad-slot':"3506915392", 'data-ad-format':"auto"
+            script ->
+              text "(adsbygoogle = window.adsbygoogle || []).push({});"
 script type:"text/javascript", ->
   '''document.write('</div>');'''
