@@ -11,8 +11,8 @@
         <% for document in @getCollection('posts').toJSON(): %>
             <item>
                 <title><%= document.title %></title>
-                <link><%= @site.url+'/'+document.url %></link>
-                <guid><%= @site.url+'/'+document.url %></guid>
+                <link><%= @getUrl(document.url) %></link>
+                <guid><%= @getUrl(document.url) %></guid>
                 <pubDate><%= @postDate(document.date) %></pubDate>
             </item>
         <% end %>

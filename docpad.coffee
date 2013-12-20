@@ -1,14 +1,10 @@
 # Import
 moment = require('moment')
-moment.lang('es')
+moment.lang('en')
 
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig = {
-
-  # =================================
-  # Regenerate delay
-  regenerateDelay: 5000
 
   # =================================
   # Server configuration
@@ -34,9 +30,6 @@ docpadConfig = {
       description: """
         Una web donde te pondremos al día en la información que rodea a Linux y derivados de Unix: noticias, tutoriales y software variado e interesante.
         """
-
-      # The website author's email
-      email: ""
 
       # Styles
       styles: [
