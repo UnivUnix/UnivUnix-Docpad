@@ -74,6 +74,15 @@ docpadConfig = {
     getUrl: (document) ->
       return @site.url+document
 
+    getPostExtract: (content) ->
+      i = content.search('</p>')
+      if i >= 0
+        content[0..i+3]             
+      else
+        content
+
+    formatURL: (url) ->
+      url.replace(/\s/g, "%20")
 
     isPageCategory: (categories, indexTitle) ->
       if categories?
@@ -110,16 +119,14 @@ docpadConfig = {
         else "ddd, DD MMM YYYY HH:mm:ss ZZ"
       moment(date).format(format)
       
-
-    formatURL: (url) ->
-      url.replace(/\s/g, "%20")
-
   # =================================
   # Collections
   # These are special collections that our website makes available to us
   
   collections:
 
+    # Main collections
+    # ---------------------------------------
     pages: (database) ->
       database.findAllLive({isPage: true}, [pageOrder:1,title:1])
 
@@ -132,6 +139,16 @@ docpadConfig = {
     posts: (database) ->
       database.findAllLive({categories:$exists:true}, [date:-1])
 
+    # Author collections
+    # ---------------------------------------
+    aglezabad: ->
+      @getCollection('posts').findAllLive({authors:$has:'Aglezabad'}, [date:-1])
+
+    ferthedems: ->
+      @getCollection('posts').findAllLive({authors:$has:'Ferthedems'}, [date:-1])
+
+    # Category collections
+    # ---------------------------------------
     linux: ->
       @getCollection('posts').findAllLive({categories:$has:'linux'}, [date:-1])
       
@@ -215,18 +232,6 @@ docpadConfig = {
         'thumb':
           w: 150
           h: 150
-        'small':
-          w: 300
-          h: 300
-        'medium':
-          w: 450
-          h: 450
-        'large':
-          w: 700
-          h: 700
-        'xtralarge':
-          w: 1024
-          h: 1024
       targets:
         'thumbnail': (img,args) ->
           return img

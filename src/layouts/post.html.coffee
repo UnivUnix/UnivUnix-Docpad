@@ -34,7 +34,7 @@ article id: @document.id, class: "post", ->
     div class: "tag-list", ->
       if @document.tags?
         for tag in @document.tags
-          a class: "label label-primary", href: "/tags?tag=" + tag, ->
+          a class: "label label-primary", ->
             i class: "glyphicon glyphicon-tag"
             text tag
     div id: "disqus_thread"
