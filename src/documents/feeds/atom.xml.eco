@@ -9,9 +9,9 @@
 		<entry>
 			<title><%= document.title %></title>
 			<link href="<%= @getUrl(document.url) %>"/>
-			<author></author>
+			<author><name></name></author>
 			<updated><%= document.date.toISOString() %></updated>
-			<description><%= @getPostExtract(String(document.contentRenderedWithoutLayouts)) %></description>
+			<summary><%= @getPostExtract(String(document.contentRenderedWithoutLayouts)) %></summary>
 			<id><%= @getUrl(document.url) %></id>
 		</entry>
 	<% end %>

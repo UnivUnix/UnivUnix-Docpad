@@ -147,6 +147,9 @@ docpadConfig = {
     ferthedems: ->
       @getCollection('posts').findAllLive({authors:$has:'Ferthedems'}, [date:-1])
 
+    kennynnek: ->
+      @getCollection('posts').findAllLive({authors:$has:'Kennynnek'}, [date:-1])
+
     # Category collections
     # ---------------------------------------
     linux: ->
