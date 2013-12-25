@@ -21,7 +21,7 @@ header class: "navbar navbar-inverse navbar-fixed-top", ->
         li ->
           a class: "fadepage", href: "http://forum.univunix.com/", ->
             text "Foro"
-      ul class: "nav navbar-nav pull-right", ->
+      ul class: "nav navbar-nav navbar-right", ->
         li ->
           a class: "sprite sprite-share", 'data-toggle': "modal", href: "#social"
 	div class: "modal fade", id: "social", ->

@@ -151,12 +151,14 @@ body{
       padding: 0;
       border: 0;
       text-align: center;
-      .border-radius(0);
+      .border-top-radius(0);
+      .border-bottom-radius(10px);
       box-shadow: rgba(128, 128, 128, 0.74) 0 2px 4px;
       img{
         z-index: -1;
         margin: auto;
         vertical-align: middle;
+        .border-bottom-radius(10px);
         background: #fff;
       }
       .caption{
@@ -191,7 +193,6 @@ body{
         font-size: 0.8em;
       }
       footer{
-        border-top: 1px solid #a4a4a4;
         padding: 10px;
         .btn{
           margin-bottom: 5px;
@@ -204,16 +205,17 @@ body{
   #sidebar{
     .widget{
       .container{
-        margin: 20px 0;
+        margin: 0 0 20px;
         padding: 0;
-        .border-radius(7px);
+        background: #2d2d2d;
+        .border-bottom-radius(10px);
         box-shadow: rgba(128, 128, 128, 0.74) 0 2px 4px;
         max-width: none;
       }
       &-title{
         background: #3198B6;
         padding: 1px 15px;
-        .border-top-radius(4px);
+        .border-bottom-radius(10px);
         h3{
           color: #fff;
           text-shadow: 0 1px 0 #fff;
@@ -224,8 +226,7 @@ body{
       }
       &-content{
         padding: 0 6px 6px 6px;
-        background: #2d2d2d;
-        .border-bottom-radius(7px);
+        .border-bottom-radius(10px);
         color: #fff;
         ul{
           list-style: none;
@@ -353,15 +354,13 @@ body{
       background-position: 0 -934px;
       width: 30px;
       height: 30px;
-      margin-top: 10px !important;
-      margin-bottom: 10px !important;
-      margin-right: 10px;
+      margin: 10px;
       &:hover{
         background-position: 0 -874px;
       }
       &-facebook{
         background-position: 0 -407px;
-        margin: 0;
+        margin: 2px;
         display: inline-block;
         &:hover{
           background-position: 0 -347px;
@@ -369,7 +368,7 @@ body{
       }
       &-google{
         background-position: 0 -527px;
-        margin: 0;
+        margin: 2px;
         display: inline-block;
         &:hover{
           background-position: 0 -467px;
@@ -377,7 +376,7 @@ body{
       }
       &-linkedin{
         background-position: 0 -647px;
-        margin: 0;
+        margin: 2px;
         display: inline-block;
         &:hover{
           background-position: 0 -587px;
@@ -385,7 +384,7 @@ body{
       }
       &-twitter{
         background-position: 0 -767px;
-        margin: 0;
+        margin: 2px;
         display: inline-block;
         &:hover{
           background-position: 0 -707px;

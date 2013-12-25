@@ -1,9 +1,6 @@
 ---
 layout: navbars
 ---
-
-script type:"text/javascript", ->
-  '''document.write('<div id="wrapper">');'''
 section id: "content", class: "container", ->
   div class: "row", ->
     div class: "col-lg-9", role: "main", ->
@@ -60,8 +57,6 @@ section id: "content", class: "container", ->
             h3 ->
               text "Publicidad"
           div class: "widget-content", ->
-            ins class:"adsbygoogle", style:"display:inline-block;width:250px;height:250px", 'data-ad-client':"ca-pub-9661747922699028", 'data-ad-slot':"1309145396"
+            ins class:"adsbygoogle", style:"display:block", 'data-ad-client':"ca-pub-9661747922699028", 'data-ad-slot':"3506915392", 'data-ad-format':"auto"
             script ->
               text "(adsbygoogle = window.adsbygoogle || []).push({});"
-script type:"text/javascript", ->
-  '''document.write('</div>');'''
