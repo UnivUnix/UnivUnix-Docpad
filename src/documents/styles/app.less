@@ -12,6 +12,9 @@
   src: local('Lato Regular'), local('Lato-Regular'), url('http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff') format('woff');
 }
 
+//BorderRadius
+//---------------------
+@border-radius-px: 2px;
 //Post
 //---------------------
 @border-bottom-bg: #d2d2d2;
@@ -151,14 +154,12 @@ body{
       padding: 0;
       border: 0;
       text-align: center;
-      .border-top-radius(0);
-      .border-bottom-radius(10px);
+      .border-radius(@border-radius-px);
       box-shadow: rgba(128, 128, 128, 0.74) 0 2px 4px;
       img{
         z-index: -1;
         margin: auto;
         vertical-align: middle;
-        .border-bottom-radius(10px);
         background: #fff;
       }
       .caption{
@@ -193,6 +194,7 @@ body{
         font-size: 0.8em;
       }
       footer{
+        border-top: 1px solid #a4a4a4;
         padding: 10px;
         .btn{
           margin-bottom: 5px;
@@ -208,14 +210,14 @@ body{
         margin: 0 0 20px;
         padding: 0;
         background: #2d2d2d;
-        .border-bottom-radius(10px);
+        .border-radius(@border-radius-px);
         box-shadow: rgba(128, 128, 128, 0.74) 0 2px 4px;
         max-width: none;
       }
       &-title{
         background: #3198B6;
         padding: 1px 15px;
-        .border-bottom-radius(10px);
+        .border-top-radius(@border-radius-px);
         h3{
           color: #fff;
           text-shadow: 0 1px 0 #fff;
@@ -226,7 +228,7 @@ body{
       }
       &-content{
         padding: 0 6px 6px 6px;
-        .border-bottom-radius(10px);
+        .border-bottom-radius(@border-radius-px);
         color: #fff;
         ul{
           list-style: none;
@@ -234,8 +236,7 @@ body{
           padding: 5px 0;
           .active{
             background: rgb(200, 200, 200);
-            .border-top-radius(5px);
-            .border-bottom-radius(5px);
+            .border-radius(@border-radius-px);
           }
           li{
             border-bottom: 1px dotted #444;
@@ -429,7 +430,7 @@ body{
     padding-left: 0;
   }
   .caption{
-    position: relative;
+    position: relative !important;
     background: none;
     color: #fff !important;
     &:hover{
