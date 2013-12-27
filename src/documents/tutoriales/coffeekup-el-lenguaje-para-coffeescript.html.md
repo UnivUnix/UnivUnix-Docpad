@@ -4,7 +4,7 @@ date: 2013-12-25 21:52:50+01:00
 title: Coffeekup, el lenguaje de marcado para Coffeescript
 layout: post
 thumbnail: ['/attachments/2013/12/coffeekup.png', 'Logo de Coffeekup.']
-categories: ['tutoriales']
+categories: ['tutoriales','programación']
 tags: ['coffeekup', 'coffeescript', 'javascript', 'web', 'html']
 ---
 Como continuación al [anterior artículo en donde hablabámos sobre Docpad](http://www.univunix.com/tutoriales/sitio-web-veloz-con-docpad), tenemos un pequeño tutorial sobre coffekup, uno de los lenguajes usados en esta aplicación y en esta web.
