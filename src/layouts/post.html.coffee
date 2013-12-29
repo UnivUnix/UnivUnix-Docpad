@@ -9,13 +9,13 @@ article id: @document.id, class: "post", ->
       text @postDate(@document.date, "ue")
     i class: "glyphicon glyphicon-user"
     for author in @document.authors
-      a class: "fadepage author", href: "/authors/" + author.toLowerCase(), ->
+      a class: "author", href: "/authors/" + author.toLowerCase(), ->
         text author
     i class: "glyphicon glyphicon-folder-open"
     for webCategory in @uniqueArray(@getCollection('categoryPages').toJSON())
       if webCategory.title?
         if @document.categories.indexOf(webCategory.title.toLowerCase()) isnt -1
-          a class: "fadepage", href: webCategory.url, ->
+          a href: webCategory.url, ->
             text webCategory.title
     
   section class: "post-content", ->
@@ -34,7 +34,7 @@ article id: @document.id, class: "post", ->
     div class: "tag-list", ->
       if @document.tags?
         for tag in @document.tags
-          a class: "label label-primary", ->
+          a class: "label label-primary", href:"/tags?sargs=" + tag, ->
             i class: "glyphicon glyphicon-tag"
             text tag
     div id: "disqus_thread"

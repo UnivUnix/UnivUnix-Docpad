@@ -16,14 +16,17 @@ header class: "navbar navbar-inverse navbar-fixed-top", ->
         for document in @uniqueArray(@getCollection('categoryPages').toJSON())
           if document.categoryOrder?
             li class: ('active' if @isPageCategory(@document.categories, document.title) or @document.url == document.url), ->
-              a class: "fadepage", href: document.url, property: "dc:title", ->
+              a href: document.url, property: "dc:title", ->
                 document.title
         li ->
-          a class: "fadepage", href: "http://forum.univunix.com/", ->
+          a href: "http://forum.univunix.com/", ->
             text "Foro"
       ul class: "nav navbar-nav navbar-right", ->
         li ->
           a class: "sprite sprite-share", 'data-toggle': "modal", href: "#social"
+      form class:"navbar-form navbar-right hidden-xs", role:"search", action:"/search", ->
+        div class:"form-group", ->
+          input type:"text", name:"sargs", class:"form-control", placeholder:"Buscar..."
 	div class: "modal fade", id: "social", ->
 		div class: "modal-dialog", ->
       div class: "modal-content", ->

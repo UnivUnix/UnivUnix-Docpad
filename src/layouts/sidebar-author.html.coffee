@@ -14,7 +14,7 @@ section id: "content", class: "container", ->
               ul class: "pager", ->
                 if @hasPrevPage()
                   li class: "previous", ->
-                    a class: "fadepage", href: @getPrevPage(), ->
+                    a href: @getPrevPage(), ->
                       text "Nuevos"
                 else
                   li class: "previous disabled", ->
@@ -22,7 +22,7 @@ section id: "content", class: "container", ->
                       text "Nuevos"
                 if @hasNextPage()
                   li class: "next", ->
-                    a class: "fadepage", href: @getNextPage(), ->
+                    a href: @getNextPage(), ->
                       text "Antiguos"
                 else
                   li class: "next disabled", ->

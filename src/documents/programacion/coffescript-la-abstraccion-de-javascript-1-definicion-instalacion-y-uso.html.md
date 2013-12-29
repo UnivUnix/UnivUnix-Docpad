@@ -27,7 +27,7 @@ Este es un código escrito en Coffeescript:
     # Condiciones:
     number = -42 if opposite
     
-    # Functiones:
+    # Funciones:
     square = (x) -> x * x
     
     # Vectores:
@@ -183,7 +183,7 @@ Las siguientes opciones son:
     </tbody>
 </table>
 
-Y eso es todo de momento. En la pŕoxima parte, vendrá la traducción de la documentación acerca de las funciones, condiciones y bucles. Para más información, es recomendable ir a la [página oficial](http://coffeescript.org). 
+Y eso es todo de momento. En la próxima parte, vendrá la traducción de la documentación acerca de las funciones, condiciones y bucles. Para más información, es recomendable ir a la [página oficial](http://coffeescript.org). 
 
 
 
