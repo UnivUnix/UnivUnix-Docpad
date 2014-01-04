@@ -1,6 +1,6 @@
 ---
 isAuthorPage: true
-layout: sidebar-author
+layout: authorsdbar
 title: "Ferthedems"
 authorOrder: 1
 range: "Admin"

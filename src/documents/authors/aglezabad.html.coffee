@@ -1,6 +1,6 @@
 ---
 isAuthorPage: true
-layout: sidebar-author
+layout: authorsdbar
 title: "Aglezabad"
 authorOrder: 1
 range: "Admin"

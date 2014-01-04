@@ -1,5 +1,5 @@
 ---
-layout: no-sidebar
+layout: nosdbar
 title: 'Error 404'
 dynamic: true
 ---

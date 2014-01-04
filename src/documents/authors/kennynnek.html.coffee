@@ -1,6 +1,6 @@
 ---
 isAuthorPage: true
-layout: sidebar-author
+layout: authorsdbar
 title: "Kennynnek"
 authorOrder: 3
 range: "Redactor"
