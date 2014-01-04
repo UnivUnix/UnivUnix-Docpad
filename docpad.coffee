@@ -228,13 +228,14 @@ docpadConfig = {
       changefreq: 'weekly'
       priority: 0.5
     thumbnails:
+      imageMagick: true
       presets:
         'thumbnail':
           w: 700
           h: 440
         'thumb':
-          w: 150
-          h: 150
+          w: 250
+          h: 250
       targets:
         'thumbnail': (img,args) ->
           return img
@@ -242,8 +243,8 @@ docpadConfig = {
             .crop(700, 440)
         'thumb': (img, args) ->
           return img
-            .resize(150,150)
-            .crop(150,150)
+            .resize(250,250)
+            .crop(250,250)
 }
 
 # Export our DocPad Configuration
