@@ -24,7 +24,7 @@ header class: "navbar navbar-inverse navbar-fixed-top", ->
       ul class: "nav navbar-nav navbar-right", ->
         li ->
           a class: "sprite sprite-share", 'data-toggle': "modal", href: "#social"
-      form class:"navbar-form navbar-right hidden-xs", role:"search", action:"/search", ->
+      form class:"navbar-form navbar-right hidden-sm hidden-xs", role:"search", action:"/search", ->
         div class:"form-group", ->
           input type:"text", name:"sargs", class:"form-control", placeholder:"Buscar..."
 	div class: "modal fade", id: "social", ->

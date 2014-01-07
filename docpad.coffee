@@ -92,12 +92,17 @@ docpadConfig = {
               return true
       return false
 
-
+    postDate: (date, type) ->
+      format = switch type
+        when "html" then "YYYY-MM-DD"
+        when "ue" then "DD/MM/YYYY"
+        else "ddd, DD MMM YYYY HH:mm:ss ZZ"
+      moment(date).format(format)
+      
     uniqueArray: (origArray) ->
       resArray = []
       origLength = origArray.length
       x = 0
-
       while x < origLength
         found = undefined
         y = 0
@@ -111,14 +116,6 @@ docpadConfig = {
         x++
       resArray
 
-
-    postDate: (date, type) ->
-      format = switch type
-        when "html" then "YYYY-MM-DD"
-        when "ue" then "DD/MM/YYYY"
-        else "ddd, DD MMM YYYY HH:mm:ss ZZ"
-      moment(date).format(format)
-      
   # =================================
   # Collections
   # These are special collections that our website makes available to us
