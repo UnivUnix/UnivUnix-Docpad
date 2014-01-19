@@ -15,4 +15,4 @@ Docpad utiliza lenguaje de marcado para realizar los artículos y estos son gene
 
 Por si queréis informaros más sobre el software, tenéis la página oficial: [http://docpad.org/](http://docpad.org/)
 
-Además, he de comunicaros que el código del reto está disponible en github, donde podréis clonarlo, modificarlo para realizar vuestros sitios (respetando la autoría de los artículos) o indicar vuestras sugerencias o problemas que veáis. El repositorio se encuentra en:[ https://github.com/Aglezabad/UnivUnix-RPi](https://github.com/Aglezabad/UnivUnix-RPi)
+Además, he de comunicaros que el código del reto está disponible en github, donde podréis clonarlo, modificarlo para realizar vuestros sitios (respetando la autoría de los artículos) o indicar vuestras sugerencias o problemas que veáis. El repositorio se encuentra en:[ https://github.com/Aglezabad/UnivUnix-Docpad](https://github.com/Aglezabad/UnivUnix-Docpad)
