@@ -13,6 +13,8 @@ Hoy les traigo un pequeña historia y muy breve introducción a Tizen, uno de lo
 
 <br/>
 <br/>
+<br/>
+<br/>
 
 <img alt="Ramas evolutivas de Tizen" src="/img/placeholder.gif" data-original="/attachments/2013/04/tizen.png" class="img-responsive img-rounded lazy" style="margin: 0 auto; display: block">
 

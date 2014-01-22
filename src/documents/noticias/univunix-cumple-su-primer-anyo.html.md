@@ -57,7 +57,7 @@ Tras este pequeño discurso, vamos a comentar el resumen anual de visitas según
             <td>6 254</td>
         </tr>
         <tr>
-            <td>Méjico</td>
+            <td>México</td>
             <td>2 493</td>
         </tr>
         <tr>
