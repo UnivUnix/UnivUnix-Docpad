@@ -9,7 +9,7 @@ tags: ['coffeescript', 'javascript', 'web']
 ---
 Con el fin de facilitar la comprensión del lenguaje Coffeescript, se ha realizado la traducción de la documentación disponible en la [página web original](http://coffeescript.org).
 
-**Coffescript es un pequeño lenguaje cuyo resultado de compilación es Javascript.** La intención de este lenguaje es mostrar las capacidades de Javascript bajo un punto de vista más sencillo y simple.
+**Coffeescript es un pequeño lenguaje cuyo resultado de compilación es Javascript.** La intención de este lenguaje es mostrar las capacidades de Javascript bajo un punto de vista más sencillo y simple.
 
 La regla de oro de Coffeescript es que *"solamente es Javascript"*. El código se compila a una equivalencia 1-1 con Javascript y no hay ningún tipo de interpretación por medio; esto permite el uso de librerías JS en CoffeeScript y viceversa y que el código resultante sea legible y mostrado de la mejor forma posible. Además, es compatible con cualquier motor Javascript con casi el mismo rendimiento que haber hecho el código directamente.
 
