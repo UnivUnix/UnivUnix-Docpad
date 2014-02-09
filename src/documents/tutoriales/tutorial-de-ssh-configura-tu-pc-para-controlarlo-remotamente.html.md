@@ -141,7 +141,7 @@ Y presionaremos _enter_ hasta que el comando haga todas las acciones pertinentes
 
 Ahora copiaremos la _llave_ al servidor para que pueda reconocernos:
     
-    ssh-copy-id '<strong>usuario</strong>@<strong>ip.del.servidor</strong> -p <strong>puerto</strong>'
+<pre>ssh-copy-id '<strong>usuario</strong>@<strong>ip.del.servidor</strong> -p <strong>puerto</strong>'</pre>
 
 Que en nuestro ejemplo sería:
     
@@ -153,7 +153,7 @@ Y listo. Ahora para arrancar la sesión teclearemos **_ssh -p 8643 univunix@192
 
 Si queremos copiar archivos vía terminal, del servidor a cliente, será tan sencillo como utilizar el siguiente comando:
     
-    scp -P <strong>puerto</strong> <span style="color: #ff6600;"><em>ruta/archivo/servidor</em></span> <strong>usuario</strong>@<strong>ip.del.cliente</strong>:<span style="color: #0000ff;"><em>ruta/para/colocar/en/cliente </em></span>
+<pre>scp -P <strong>puerto</strong> <span style="color: #ff6600;"><em>ruta/archivo/servidor</em></span> <strong>usuario</strong>@<strong>ip.del.cliente</strong>:<span style="color: #0000ff;"><em>ruta/para/colocar/en/cliente </em></span></pre>
 
 Seguramente os estéis preguntando qué sentido tiene poner la _IP del cliente_ en el comando anterior. He aquí la magia. Esa IP no tiene por qué ser la de nuestro cliente, puede ser la de **otro ordenador cualquiera al que queramos copiar el archivo**.
 
@@ -161,7 +161,7 @@ Seguramente os estéis preguntando qué sentido tiene poner la _IP del cliente_�
 
 Deberemos utilizar la siguiente sintaxis:
     
-    ssh -X <em>[-p puerto]</em> usuario@servidor nombre_de_la_aplicación
+<pre>ssh -X <em>[-p puerto]</em> usuario@servidor nombre_de_la_aplicación</pre>
 
 <img alt="Ejemplo de una sesión de bash" src="/img/placeholder.gif" data-original="/attachments/2013/03/Captura-de-pantalla-de-2013-03-04-142206.png" class="img-responsive img-rounded lazy" style="margin: 0 auto; display: block;">
 
@@ -177,7 +177,7 @@ En primer lugar, instalaremos en el cliente el paquete **SSHfs**. Para ello en e
 
 Y nos conectaremos con un comando que se rige según la siguiente sintaxis:
     
-    sshfs <em>usuario</em>@<em>ip.del.servidor</em>:<span style="color: #ff6600;"><em>/Directorio/que/montaremos/</em></span> <span style="color: #0000ff;"><em>/carpeta/del/cliente/donde/se/montará</em></span> -p <em>puerto</em> -o nonempty
+<pre>sshfs <em>usuario</em>@<em>ip.del.servidor</em>:<span style="color: #ff6600;"><em>/Directorio/que/montaremos/</em></span> <span style="color: #0000ff;"><em>/carpeta/del/cliente/donde/se/montará</em></span> -p <em>puerto</em> -o nonempty</pre>
 
 <img alt="Ejemplo de una sesión de bash" src="/img/placeholder.gif" data-original="/attachments/2013/03/Captura-de-pantalla-de-2013-02-17-171736.png" class="img-responsive img-rounded lazy" style="margin: 0 auto; display: block;">
 
@@ -185,7 +185,7 @@ _¿Y qué hacer para que las carpetas remotas se monten automáticamente cuando 
 
 Deberemos haber configurado el sistema para _hacer login sin contraseña _(visto anteriormente). Luego, editaremos el fichero **/etc/fstab** y añadiremos al final una línea con el siguiente contenido:
     
-    sshfs#<strong>usuario</strong>@<strong>ip.del.servidor</strong>:<span style="color: #ff6600;">/Directorio/que/montaremos/</span> <span style="color: #0000ff;">/carpeta/del/cliente/donde/se/montará</span> fuse port=<strong>puerto</strong>,defaults,nonempty,port=22,uid=<strong>usuario</strong>,gid=<strong>idGrupoUsuario</strong>,users,user,noauto 0 0
+<pre>sshfs#<strong>usuario</strong>@<strong>ip.del.servidor</strong>:<span style="color: #ff6600;">/Directorio/que/montaremos/</span> <span style="color: #0000ff;">/carpeta/del/cliente/donde/se/montará</span> fuse port=<strong>puerto</strong>,defaults,nonempty,port=22,uid=<strong>usuario</strong>,gid=<strong>idGrupoUsuario</strong>,users,user,noauto 0 0</pre>
 
 En sistemas como Ubuntu y sus derivados **usuario** e **idGrupoUsuario** tendrán el mismo valor, que sería el del usuario con el que vamos a iniciar sesión. Por ejemplo, para nuestro caso de prueba sería '_univunix_'.
 
@@ -199,7 +199,7 @@ Como existen numerosos navegadores de archivos, nosotros realizaremos el acceso 
 
 En nautilus, primero tendremos que activar la barra de búsqueda en modo tradicional pulsando _CTRL+L_. Luego, estableceremos la conexión tecleando en esta última la dirección de acuerdo a la siguiente nomenclatura:
     
-    sftp://<strong>usuario</strong>@<strong>servidor</strong>:<strong>puerto</strong>
+<pre>sftp://<strong>usuario</strong>@<strong>servidor</strong>:<strong>puerto</strong></pre>
 
 <img alt="Ejemplo de una sesión de bash" src="/img/placeholder.gif" data-original="/attachments/2013/03/Captura-de-pantalla-de-2013-02-17-164411.png" class="img-responsive img-rounded lazy" style="margin: 0 auto; display: block;">
 
