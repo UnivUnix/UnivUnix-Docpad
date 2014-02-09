@@ -1,6 +1,6 @@
 ---
 authors: ['Aglezabad']
-date: 2014-2-5 18:28:50+01:00
+date: 2014-2-9 21:36:50+01:00
 title: Coffeescript, la abstracción de Javascript (4): Programación orientada a objetos.
 layout: post
 thumbnail: ['/attachments/2013/12/coffeescript.png', 'Logo de Coffeescript.']
