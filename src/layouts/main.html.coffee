@@ -1,13 +1,13 @@
 doctype 5
-html lang: "es", ->
+html lang:"es",->
   head ->
     title @getPreparedTitle()
-    meta charset: "utf-8"
-    meta "http-equiv": "content-type", "content": "text/html; charset=utf-8"
+    meta charset:"utf-8"
+    meta "http-equiv":"content-type","content":"text/html; charset=utf-8"
+    meta "name":"description","content":@getPreparedDescription()
     
     ie "lt IE 9", ->
       meta "http-equiv": "X-UA-Compatible", "content": "IE=edge,chrome=1"
-    meta "name": "description", "content": @getPreparedDescription()
     
     if @getPreparedKeywords() != ""
       meta "name": "keywords", "content": @getPreparedKeywords()
@@ -29,6 +29,6 @@ html lang: "es", ->
       _gaq.push(['_setDomainName', 'univunix.com']);
       _gaq.push(['_trackPageview']);'''
     script src:"/scripts/cookietool.js"
-    script ->
+    script type:"text/javascript",->
       text '''CookieTool.Config.set('link','http://www.univunix.com/lssi.html');
       CookieTool.API.impliedAgreement();'''

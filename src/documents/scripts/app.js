@@ -14,19 +14,10 @@ var disqus_shortname = 'univunix'; // required: replace example with your forum 
   s.src = '//' + disqus_shortname + '.disqus.com/count.js';
   (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 }());
+
 $(document).ready(function() {
   $('img.lazy').show().lazyload({
     effect: "fadeIn",
     failureLimit: 6
   });
-  /*$("#wrapper").fadeIn(500);
-  $('a.fadepage').click(function(event){
-	  event.preventDefault();
-	  linkLocation = this.href;
-	  $("#wrapper").fadeOut(500, redirectPage);
-  });*/
-
-  function redirectPage() {
-		window.location = linkLocation;
-	}
 });

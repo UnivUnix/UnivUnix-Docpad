@@ -61,7 +61,15 @@ docpadConfig = {
     # Get the prepared site/document description
     getPreparedDescription: ->
       # if we have a document description, then we should use that, otherwise use the site's description
-      @document.description or @site.description
+      # if @document.isCategoryPage is true
+      #   @site.description
+      # else if @document.isAuthorPage is true
+      #   @site.description
+      # else unless @document.title
+      #   @site.description
+      # else
+      #   @getPostExtract(@document.contentRendered)
+      @site.description
 
     # Get the prepared site/document keywords
     getPreparedKeywords: ->
