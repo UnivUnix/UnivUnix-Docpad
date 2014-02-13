@@ -24,8 +24,8 @@ article id: @document.id, class: "col-sm-6 separator", ->
       div class: "text-center", ->
         button type: "button", class: "btn btn-sm btn-default", ->
           i class: "glyphicon glyphicon-calendar"
-          time class: "updated", datetime: @postDate(@document.date, "html"), ->
-            text @postDate(@document.date, "ue")
+          time class: "updated", datetime: @document.computerDate, ->
+            @document.humanDate
         div class: "btn-group", ->
           a class: "btn btn-sm btn-default", href: @document.url, ->
             i class: "glyphicon glyphicon-comment"

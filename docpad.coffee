@@ -1,7 +1,3 @@
-# Import
-moment = require('moment')
-moment.lang('en')
-
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig = {
@@ -60,16 +56,12 @@ docpadConfig = {
 
     # Get the prepared site/document description
     getPreparedDescription: ->
-      # if we have a document description, then we should use that, otherwise use the site's description
-      # if @document.isCategoryPage is true
-      #   @site.description
-      # else if @document.isAuthorPage is true
-      #   @site.description
-      # else unless @document.title
-      #   @site.description
-      # else
-      #   @getPostExtract(@document.contentRendered)
-      @site.description
+      #if we have a document description, then we should use that, otherwise use the site's description
+      if @document.isCategoryPage is true or @document.isAuthorPage is true or not @document.title?
+        @site.description
+      else
+        @getPostExtract(String(@document.contentRenderedWithoutLayouts))
+      #@site.description
 
     # Get the prepared site/document keywords
     getPreparedKeywords: ->
@@ -85,7 +77,7 @@ docpadConfig = {
     getPostExtract: (content) ->
       i = content.search('</p>')
       if i >= 0
-        content[0..i+3]             
+        content[3..i-1]             
       else
         content
 
@@ -99,13 +91,6 @@ docpadConfig = {
             if indexTitle.toLowerCase() == cat
               return true
       return false
-
-    postDate: (date, type) ->
-      format = switch type
-        when "html" then "YYYY-MM-DD"
-        when "ue" then "DD/MM/YYYY"
-        else "ddd, DD MMM YYYY HH:mm:ss ZZ"
-      moment(date).format(format)
       
     uniqueArray: (origArray) ->
       resArray = []
@@ -228,6 +213,12 @@ docpadConfig = {
   plugins:
     livereload:
       enabled: false
+    moment:
+      formats: [
+        {raw: 'date', format: 'YYYY-MM-DD', formatted: 'computerDate'}
+        {raw: 'date', format: 'DD/MM/YYYY', formatted: 'humanDate'}
+        {raw: 'date', format: 'ddd, DD MMM YYYY HH:mm:ss ZZ', formatted: 'rfcDate'}
+      ]
     sitemap:
       cachetime: 600000
       changefreq: 'weekly'

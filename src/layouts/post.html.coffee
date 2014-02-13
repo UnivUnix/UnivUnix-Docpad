@@ -5,8 +5,8 @@ layout: sidebar
 article id: @document.id, class: "post", ->
   header class: "post-header", ->
     i class: "glyphicon glyphicon-calendar"
-    time class: "updated", datetime: @postDate(@document.date, "html"), ->
-      text @postDate(@document.date, "ue")
+    time class: "updated", datetime: @document.computerDate, ->
+      @document.humanDate
     i class: "glyphicon glyphicon-user"
     for author in @document.authors
       a class: "author", href: "/authors/" + author.toLowerCase(), ->

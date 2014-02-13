@@ -6,7 +6,7 @@
         <link><%= @site.url %></link>
         <description><%= @site.titleComplement %></description>
         <copyright>UnivUnix - CC BY-NC-SA</copyright>
-        <lastBuildDate><%= @postDate(@site.date) %></lastBuildDate>
+        <lastBuildDate><%= @site.rfcDate %></lastBuildDate>
         <language>es-es</language>
         <image>
             <url><%= @getUrl("/img/univunixrss.png") %></url>
@@ -19,7 +19,7 @@
                 <title><%= document.title %></title>
                 <link><%= @getUrl(document.url) %></link>
                 <guid><%= @getUrl(document.url) %></guid>
-                <pubDate><%= @postDate(document.date) %></pubDate>
+                <pubDate><%= document.rfcDate %></pubDate>
                 <comments><%= @getUrl(document.url+"#disqus_thread") %></comments>
                 <description><%= @getPostExtract(String(document.contentRenderedWithoutLayouts)) %></description>
             </item>
