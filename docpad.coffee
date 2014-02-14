@@ -1,3 +1,5 @@
+htmlToText = require('html-to-text')
+
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig = {
@@ -77,9 +79,9 @@ docpadConfig = {
     getPostExtract: (content) ->
       i = content.search('</p>')
       if i >= 0
-        content[3..i-1]             
+        htmlToText.fromString content[0..i+3]             
       else
-        content
+        htmlToText.fromString content
 
     formatURL: (url) ->
       url.replace(/\s/g, "%20")
