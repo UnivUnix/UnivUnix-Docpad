@@ -24,9 +24,13 @@ header class: "navbar navbar-inverse navbar-fixed-top", ->
       ul class: "nav navbar-nav navbar-right", ->
         li ->
           a class: "sprite sprite-share", 'data-toggle': "modal", href: "#social"
-      form class:"navbar-form navbar-right hidden-sm hidden-xs", role:"search", action:"/search", ->
+      form id:"csr-search-box", class:"navbar-form navbar-right hidden-sm hidden-xs", role:"search", action:"/search", ->
         div class:"form-group", ->
-          input type:"text", name:"sargs", class:"form-control", placeholder:"Buscar..."
+          input type:"hidden", name:"cx", value:"partner-pub-9661747922699028:8029356599"
+          input type:"hidden", name:"cof", value:"FORID:10"
+          input type:"hidden", name:"ie", value:"UTF-8"
+          input type:"text", name:"q", class:"form-control", placeholder:"Buscar..."
+          #input type:"submit", name:"sa", class:"btn btn-primary", value:"Buscar"
 	div class: "modal fade", id: "social", ->
 		div class: "modal-dialog", ->
       div class: "modal-content", ->
@@ -81,3 +85,4 @@ footer class: "navbar navbar-inverse navbar-fixed-bottom", ->
           a class: "sprite sprite-css3", target:"_blank", href:"http://jigsaw.w3.org/css-validator/validator?uri=www.univunix.com"
         li ->
           a class: "sprite sprite-cc", target:"_blank", href:"http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"
+script type:"text/javascript", src:"http://www.google.es/coop/cse/brand?form=cse-search-box&amp;lang=es"

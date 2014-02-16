@@ -63,7 +63,6 @@ docpadConfig = {
         @site.description
       else
         @getPostExtract(String(@document.contentRenderedWithoutLayouts))
-      #@site.description
 
     # Get the prepared site/document keywords
     getPreparedKeywords: ->

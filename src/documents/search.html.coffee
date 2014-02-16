@@ -1,24 +1,14 @@
 ---
-layout: sidebar
+layout: nosdbar
 title: 'Resultados de búsqueda'
-dynamic: true
 ---
 
-if @req.query.sargs
-    query = @req.query.sargs
-    div class:"panel panel-info", ->
-    	header class:"panel-heading", ->
-    		text "Resultados relacionados con #{query}"
-    	section class:"panel-body", ->
-    		ul ->
-		        for document in @getCollection('posts').findAll({title:$like:query}).toJSON()
-		            li 'typeof': 'sioc:Page', about: document.url, class: ('active'  if @document.url is document.url), ->
-		                a href: document.url, property: 'dc:title', ->
-		                    text document.title
+div id:"cse-search-results"
+script type:"text/javascript", ->
+  '''var googleSearchIframeName = "cse-search-results";
+  var googleSearchFormName = "cse-search-box";
+  var googleSearchFrameWidth = 1024;
+  var googleSearchDomain = "www.google.es";
+  var googleSearchPath = "/cse";'''
+script type:"text/javascript", src:"http://www.google.com/afsonline/show_afs_search.js"
 
-else
-	div class:"panel panel-danger", ->
-		header class:"panel-heading", ->
-			text "Búsqueda cancelada."
-		section class:"panel-body", ->
-			text "Faltan argumentos de búsqueda."
