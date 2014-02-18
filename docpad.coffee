@@ -142,10 +142,7 @@ docpadConfig = {
       @getCollection('posts').findAllLive({authors:$has:'Kennynnek'}, [date:-1])
 
     # Category collections
-    # ---------------------------------------
-    linux: ->
-      @getCollection('posts').findAllLive({categories:$has:'linux'}, [date:-1])
-      
+    # ---------------------------------------      
     arch: ->
       @getCollection('posts').findAllLive({categories:$has:'arch'}, [date:-1])
 
@@ -155,17 +152,20 @@ docpadConfig = {
     fedora: ->
       @getCollection('posts').findAllLive({categories:$has:'fedora'}, [date:-1])
 
+    linux: ->
+      @getCollection('posts').findAllLive({categories:$has:'linux'}, [date:-1])
+    
     mageia: ->
       @getCollection('posts').findAllLive({categories:$has:'mageia'}, [date:-1])
 
     mint: ->
       @getCollection('posts').findAllLive({categories:$has:'mint'}, [date:-1])
 
+    noticias: ->
+      @getCollection('posts').findAllLive({categories:$has:'noticias'}, [date:-1])
+
     opensuse: ->
       @getCollection('posts').findAllLive({categories:$has:'opensuse'}, [date:-1])
-
-    ubuntu: ->
-      @getCollection('posts').findAllLive({categories:$has:'ubuntu'}, [date:-1])
 
     programacion: ->
       @getCollection('posts').findAllLive({categories:$has:'programación'}, [date:-1])
@@ -173,8 +173,8 @@ docpadConfig = {
     tutoriales: ->
       @getCollection('posts').findAllLive({categories:$has:'tutoriales'}, [date:-1])
 
-    noticias: ->
-      @getCollection('posts').findAllLive({categories:$has:'noticias'}, [date:-1])
+    ubuntu: ->
+      @getCollection('posts').findAllLive({categories:$has:'ubuntu'}, [date:-1])
 
   # =================================
   # Plugins

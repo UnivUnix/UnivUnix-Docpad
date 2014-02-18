@@ -12,7 +12,7 @@ if @req.query.sargs
     	section class:"panel-body", ->
     		ul ->
 		        for document in @getCollection('posts').findAll({tags:$has:query}).toJSON()
-		            li 'typeof': 'sioc:Page', about: document.url, class: ('active'  if @document.url is document.url), ->
+		            li 'typeof': 'sioc:Page', about: document.url, ->
 		                a href: document.url, property: 'dc:title', ->
 		                    text document.title
 
