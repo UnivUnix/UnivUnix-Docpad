@@ -170,6 +170,9 @@ docpadConfig = {
     programacion: ->
       @getCollection('posts').findAllLive({categories:$has:'programación'}, [date:-1])
 
+    sabayon: ->
+      @getCollection('posts').findAllLive({categories:$has:'sabayon'}, [date:-1])
+
     tutoriales: ->
       @getCollection('posts').findAllLive({categories:$has:'tutoriales'}, [date:-1])
 
