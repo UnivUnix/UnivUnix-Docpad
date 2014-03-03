@@ -12,14 +12,19 @@ Mucha gente pensará que intentar instalar las bibliotecas de openCV en una dist
 
 <br/>
 <br/>
+<br/>
 
 ###La forma sencilla: Equo.
 
-Tal como indica el subtítulo, OpenCV está disponible como paquete de instalación en esta distribución, así que es muy sencillo incorporar las correspondientes bibliotecas. Para ello, primero haremos una actualización de los repositorios con el siguiente comando:
+Tal como indica el título de la sección, OpenCV está disponible como paquete de instalación en esta distribución, así que es muy sencillo incorporar las correspondientes bibliotecas. Para ello, primero haremos una actualización de los repositorios con el siguiente comando:
 
     sudo equo update
 
-Y después realizamos la actualización del sistema para ponerlo al día, ya que Sabayon es una distribución *rolling-release* y, por ello, todas las instalaciones de la misma reciben la última versión disponible. Con este comando lo obtendremos:
+Después realizamos la actualización del sistema para ponerlo al día, ya que Sabayon es una distribución *rolling-release* y, por ello, todas las instalaciones de la misma reciben la última versión disponible. Con este comando lo obtendremos:
 
     sudo equo upgrade
+
+Y por último, basta con indicar el comando de instalación de Equo para incorporar OpenCV y sus dependencias.
+
+    sudo equo install opencv
 
