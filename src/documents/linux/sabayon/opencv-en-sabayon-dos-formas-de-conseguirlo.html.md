@@ -14,7 +14,7 @@ Mucha gente pensará que intentar instalar las bibliotecas de openCV en una dist
 <br/>
 <br/>
 
-###La forma sencilla: Equo.
+###La forma sencilla: Equo (o Rigo por GUI).
 
 Tal como indica el título de la sección, OpenCV está disponible como paquete de instalación en esta distribución, así que es muy sencillo incorporar las correspondientes bibliotecas. Para ello, primero haremos una actualización de los repositorios con el siguiente comando:
 
@@ -28,3 +28,4 @@ Y por último, basta con indicar el comando de instalación de Equo para incorpo
 
     sudo equo install opencv
 
+Tras la instalación, podrás encontrar los headers de opencv en ***/usr/include/opencv*** y ***/usr/include/opencv2***, y la bibliotecas de la misma las encontrarás en ***/usr/lib/***.
