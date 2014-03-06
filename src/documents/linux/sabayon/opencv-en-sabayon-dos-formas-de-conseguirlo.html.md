@@ -29,3 +29,8 @@ Y por último, basta con indicar el comando de instalación de Equo para incorpo
     sudo equo install opencv
 
 Tras la instalación, podrás encontrar los headers de opencv en ***/usr/include/opencv*** y ***/usr/include/opencv2***, y la bibliotecas de la misma las encontrarás en ***/usr/lib/***.
+
+###La forma tradicional, según OpenCV.
+
+También podemos optar por realizar la instalación mediante la forma común para todas las distros y recomendada por la propia documentación de openCV. Para ello, necesitamos:
+
