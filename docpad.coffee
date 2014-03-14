@@ -215,8 +215,6 @@ docpadConfig = {
   # Use docpad -e <enviroment> to select.
 
   plugins:
-    livereload:
-      enabled: false
     moment:
       formats: [
         {raw: 'date', format: 'YYYY-MM-DD', formatted: 'computerDate'}
