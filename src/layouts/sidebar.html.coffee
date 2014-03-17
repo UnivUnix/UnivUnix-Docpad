@@ -58,5 +58,3 @@ section id: "content", class: "container", ->
               text "Publicidad"
           div class: "widget-content", ->
             ins class:"adsbygoogle", style:"display:block", 'data-ad-client':"ca-pub-9661747922699028", 'data-ad-slot':"3506915392", 'data-ad-format':"auto"
-            script ->
-              text "(adsbygoogle = window.adsbygoogle || []).push({});"

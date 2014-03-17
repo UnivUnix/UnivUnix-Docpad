@@ -30,7 +30,6 @@ header class: "navbar navbar-inverse navbar-fixed-top", ->
           input type:"hidden", name:"cof", value:"FORID:10"
           input type:"hidden", name:"ie", value:"UTF-8"
           input type:"text", name:"q", class:"form-control", placeholder:"Buscar..."
-          #input type:"submit", name:"sa", class:"btn btn-primary", value:"Buscar"
 	div class: "modal fade", id: "social", ->
 		div class: "modal-dialog", ->
       div class: "modal-content", ->
