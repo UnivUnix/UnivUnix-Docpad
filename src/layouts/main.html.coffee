@@ -23,9 +23,6 @@ html lang:"es",->
   body ->
     text @content
     text @getBlock('scripts').add(@site.scripts).toHTML()
-    script src:"//balupton.github.io/jquery-scrollto/lib/jquery-scrollto.js"
-    script src:"//browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js"
-    script src:"//rawgithub.com/browserstate/ajaxify/master/ajaxify-html5.js"
     script type: "text/javascript", ->
       text '''var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-37637477-1']);

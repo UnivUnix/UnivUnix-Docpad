@@ -37,6 +37,9 @@ docpadConfig = {
       # Scripts
       scripts: [
         "/scripts/jquery-min.js",
+        "/scripts/jquery-scrollto.js",
+        "/scripts/jquery-history.js",
+        "/scripts/ajaxify-html5.js",
         "/scripts/lazyload-min.js",
         "/scripts/bootstrap-min.js",
         "/scripts/app.js"
