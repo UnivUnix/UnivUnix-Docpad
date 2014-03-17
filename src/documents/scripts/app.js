@@ -1,5 +1,6 @@
 $(function(){
   function initScript(){
+    /* DISQUS */
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'univunix'; // required: replace example with your forum shortname
 
@@ -17,10 +18,21 @@ $(function(){
       (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 
+    /* LAZYLOAD */
     $('img.lazy').show().lazyload({
       effect: "fadeIn",
       failureLimit: 6
     });
+
+    /* ANALYTICS */
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37637477-1']);
+    _gaq.push(['_setDomainName', 'univunix.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* COOKIETOOL */
+    CookieTool.Config.set('link','http://www.univunix.com/lssi.html');
+    CookieTool.API.impliedAgreement();
   }
 
   initScript();
