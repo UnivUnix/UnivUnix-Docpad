@@ -3,31 +3,32 @@ layout: navbars
 ---
 section id: "content", class: "container", ->
   div class: "row", ->
+    div class: "col-lg-12", role: "cookietool", ->
+      div id: "cookieTool"
+  div class: "row", ->
     div class: "col-lg-9", role: "main", ->
-      div class: "container", ->
-        div id: "cookieTool", class: "col-sm-12"
+      div class: "row", ->
         text @content
-      div class: "container", ->
-        div class: "row", ->
-          div class: "col-lg-12", ->
-            if @document.isPaged
-              ul class: "pager", ->
-                if @hasPrevPage()
-                  li class: "previous", ->
-                    a href: @getPrevPage(), ->
-                      text "Nuevos"
-                else
-                  li class: "previous disabled", ->
-                    a ->
-                      text "Nuevos"
-                if @hasNextPage()
-                  li class: "next", ->
-                    a href: @getNextPage(), ->
-                      text "Antiguos"
-                else
-                  li class: "next disabled", ->
-                    a ->
-                      text "Antiguos"
+      div class: "row", ->
+        div class: "col-lg-12", ->
+          if @document.isPaged
+            ul class: "pager", ->
+              if @hasPrevPage()
+                li class: "previous", ->
+                  a href: @getPrevPage(), ->
+                    text "Nuevos"
+              else
+                li class: "previous disabled", ->
+                  a ->
+                    text "Nuevos"
+              if @hasNextPage()
+                li class: "next", ->
+                  a href: @getNextPage(), ->
+                    text "Antiguos"
+              else
+                li class: "next disabled", ->
+                  a ->
+                    text "Antiguos"
     aside id: "sidebar", class: "col-lg-3", role: "complementary", ->
       if @document.photo?
         section id: "photo", class: "widget", ->

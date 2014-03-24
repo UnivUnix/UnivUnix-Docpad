@@ -11,7 +11,7 @@ html lang:"es",->
     
     if @getPreparedKeywords() != ""
       meta "name": "keywords", "content": @getPreparedKeywords()
-    meta "name": "viewport", "content": "width=device-width, initial-scale=1.0"
+    meta "name": "viewport", "content": "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 
     link rel: "shortcut icon",                href: "/icons/favicon.png"
     link rel: "apple-touch-icon",             href: "/icons/apple-icon.png"
@@ -31,4 +31,4 @@ html lang:"es",->
     script src:"/scripts/cookietool.js"
     script type:"text/javascript",->
       text '''CookieTool.Config.set('link','http://www.univunix.com/lssi.html');
-      CookieTool.API.impliedAgreement();'''
+      CookieTool.API.ask();'''

@@ -10,7 +10,7 @@ header class: "navbar navbar-inverse navbar-fixed-top", ->
           text "Toggle navigation"
         for num in [3..1]
           span class: "icon-bar"
-      a id:"brand", class: "fadepage sprite sprite-brand navbar-brand", href: "/"
+      a id:"brand", class: "sprite sprite-brand navbar-brand", href: "/"
     div id:"navigation", class: "collapse navbar-collapse navbar-ex1-collapse navbar-responsive-collapse", ->
       ul class: "nav navbar-nav", ->
         for document in @uniqueArray(@getCollection('categoryPages').toJSON())
@@ -30,7 +30,6 @@ header class: "navbar navbar-inverse navbar-fixed-top", ->
           input type:"hidden", name:"cof", value:"FORID:10"
           input type:"hidden", name:"ie", value:"UTF-8"
           input type:"text", name:"q", class:"form-control", placeholder:"Buscar..."
-          #input type:"submit", name:"sa", class:"btn btn-primary", value:"Buscar"
 	div class: "modal fade", id: "social", ->
 		div class: "modal-dialog", ->
       div class: "modal-content", ->
