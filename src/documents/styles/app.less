@@ -204,13 +204,8 @@ body{
   //--------------------
   #sidebar{
     .widget{
-      .container{
+      &-container{
         margin: 0 0 20px;
-        padding: 0;
-        background: #2d2d2d;
-        .border-radius(@border-radius-px);
-        box-shadow: rgba(128, 128, 128, 0.74) 0 2px 4px;
-        max-width: none;
       }
       &-title{
         background: #3198B6;
@@ -226,8 +221,10 @@ body{
       }
       &-content{
         padding: 0 6px 6px 6px;
-        .border-bottom-radius(@border-radius-px);
         color: #fff;
+        background: #2d2d2d;
+        .border-radius(@border-radius-px);
+        box-shadow: rgba(128, 128, 128, 0.74) 0 2px 4px;
         ul{
           list-style: none;
           margin: 0;

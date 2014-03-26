@@ -49,7 +49,7 @@ CookieTool.Utils = {
 CookieTool.Config = (function() {
 	var config = {
 		'position': 'top',
-		'message': 'En este sitio se usan cookies para ofrecer una experiencia más personalizada. <a href="{{link}}" target="_blank">Más información</a>.<br>¿Permite el uso de cookies?',
+		'message': 'En este sitio se usan cookies para ofrecer una experiencia más personalizada. <a href="{{link}}" target="_blank">Más información</a>.<br>¿Nos consiente usar cookies?',
 		'link': '/cookies',
 		'agreetext': 'Sí',
 		'declinetext': 'No'
@@ -225,14 +225,18 @@ CookieTool.API = {
 	 */
 	ask: function() {
 		var message,
-			status ;
+			status,
+			body = document.body;
 		// Already agreed
 		if( CookieTool.API.status() === CookieTool.API.statuses.AGREE ) {
 			return CookieTool.API.agree();
-		} else if( CookieTool.API.status() === CookieTool.API.statuses.DECLINE ) {
+		}
+		
+		if( CookieTool.API.status() === CookieTool.API.statuses.DECLINE ) {
 			return CookieTool.API.decline();
 		}
 
+		//Modifications for Bootstrap UnivUnix theme
 		var objTo = document.getElementById('cookieTool');
 		message = document.createElement('div');
 		message.className = 'alert alert-warning';
@@ -249,12 +253,14 @@ CookieTool.API = {
 					e.returnValue = false;
 				}
 				message.parentNode.removeChild(message);
+				body.className = body.className.replace(/\bcookietool\b/, '');
 				return false;
 			}
 		}
 
 		message.innerHTML = '<p>' + CookieTool.Config.get('message').replace(/\{\{link\}\}/g, CookieTool.Config.get('link')) + '</p><button class="btn btn-default" data-action="agree">' + CookieTool.Config.get('agreetext') + '</button> <button class="btn btn-default" data-action="decline">' + CookieTool.Config.get('declinetext') + '</button>';
 		objTo.appendChild(message);
+		//End of modifications Bootstrap UnivUnix.
 	},
 
 	/**
@@ -340,6 +346,8 @@ CookieTool.Event.on('agree', function() {
 	}
 	if( window._gaq ) {
 		CookieTool.Utils.loadScript(('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js');
+	} else if ( window.ga ) {
+		CookieTool.Utils.loadScript('//wwww.google-analytics.com/analytics.js');
 	}
 });
 

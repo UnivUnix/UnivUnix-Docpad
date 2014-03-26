@@ -15,9 +15,17 @@ var disqus_shortname = 'univunix'; // required: replace example with your forum 
   (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 }());
 
+//LAZYLOAD
 $(document).ready(function() {
   $('img.lazy').show().lazyload({
     effect: "fadeIn",
     failureLimit: 6
   });
 });
+
+//ADSENSE
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+//COOKIETOOL
+CookieTool.Config.set('link','http://www.univunix.com/lssi.html');
+CookieTool.API.ask();

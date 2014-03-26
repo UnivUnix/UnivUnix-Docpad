@@ -39,6 +39,7 @@ docpadConfig = {
         "/scripts/jquery-min.js",
         "/scripts/lazyload-min.js",
         "/scripts/bootstrap-min.js",
+        "/scripts/cookietool.js",
         "/scripts/app.js"
       ]
 
