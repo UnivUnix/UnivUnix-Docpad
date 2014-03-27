@@ -6,6 +6,7 @@ UnivUnix-Docpad uses third-party software under the following licenses:
 * Lazyload (Mika Tuupola/MIT License)
 * Twitter Bootstrap (Mark Otto & Jacob Thorton/MIT License)
 * EU cookie law script. (Emilio Cobos/No license)
+* Docpad (Benjamin Lupton/MIT License)
 
 The rest of the code is under the MIT License. The content, both images and markdown files, is licensed under the Creative Commons license 3.0 (BY-NC-SA).
 
@@ -13,7 +14,8 @@ The rest of the code is under the MIT License. The content, both images and mark
 
 The MIT License (MIT)
 
-Copyright (c) {{{year}}} {{{fullname}}}
+Copyright (c) 2014 Ángel González
+Copyright (c) 2014 Fernando Moro
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
