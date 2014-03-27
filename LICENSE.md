@@ -14,8 +14,7 @@ The rest of the code is under the MIT License. The content, both images and mark
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Ángel González
-Copyright (c) 2014 Fernando Moro
+Copyright (c) 2014 Ángel González & Fernando Moro
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
