@@ -19,7 +19,7 @@
 	Alexander Vladimirovich Vorobiev for helping us with accessibility.
 
 /* SITE */
-	Last update: Mar 24, 2013
+	Last update: Mar 24, 2014
 	Language: Spanish / Castellano.
 	Doctype: HTML5.
 	Standars: HTML5, CSS3.
