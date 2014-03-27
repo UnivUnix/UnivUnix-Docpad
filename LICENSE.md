@@ -8,7 +8,7 @@ UnivUnix-Docpad uses third-party software under the following licenses:
 * EU cookie law script. (Emilio Cobos/No license)
 * Docpad (Benjamin Lupton/MIT License)
 
-The rest of the code is under the MIT License. The content, both images and markdown files, is licensed under the Creative Commons license 3.0 (BY-NC-SA).
+The rest of the code is under the MIT License. The content, both own images and markdown files, is licensed under the Creative Commons license 3.0 (BY-NC-SA).
 
 <hr>
 
