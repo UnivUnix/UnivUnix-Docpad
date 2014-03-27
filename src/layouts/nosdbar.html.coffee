@@ -4,7 +4,7 @@ layout: navbars
 
 section id: "content", class: "container", ->
   div class: "row", ->
-    div class: "col-lg-12", role: "cookietool", ->
+    div class: "col-lg-12", ->
       div id: "cookieTool"
   div class: "row", ->
     div class: "col-lg-12", role: "main", ->

@@ -23,9 +23,16 @@ $(document).ready(function() {
   });
 });
 
+//ANALYTICS
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-37637477-1', 'univunix.com');
+ga('send', 'pageview');
+
 //ADSENSE
 (adsbygoogle = window.adsbygoogle || []).push({});
 
 //COOKIETOOL
 CookieTool.Config.set('link','http://www.univunix.com/lssi.html');
-CookieTool.API.ask();
+CookieTool.API.impliedAgreement();
