@@ -23,8 +23,6 @@ Pues bien, dicho problema parece ser agua pasada ya que Oracle ha realizado un n
 Así pues todos los que utilicen la versión propietaria de Java pueden **actualizar** 
 la misma y **volverlo a habilitar** en sus navegadores.
 
-Con respecto a _OpenJDK_ y _IcedTea_, la implementación de código abierto de la plataforma Java
- y de la versión web de Java respectivamente, existe cierta **confusión** en los distintos foros
- de internet acerca de si esta **vulnerabilidad** nos afecta o no a sus usuarios.
+Con respecto a _OpenJDK_ y _IcedTea_, la implementación de código abierto de la plataforma Java y de la versión web de Java respectivamente, existe cierta **confusión** en los distintos foros de internet acerca de si esta **vulnerabilidad** nos afecta o no a sus usuarios.
 
 En caso de encontrar información en lo referente a IcedTea, actualizaremos la noticia.
