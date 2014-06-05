@@ -11,7 +11,7 @@ html lang:"es",->
     
     if @getPreparedKeywords() != ""
       meta "name": "keywords", "content": @getPreparedKeywords()
-    meta "name": "viewport", "content": "width=device-width, initial-scale=1.0"
+    meta "name": "viewport", "content": "width=device-width, initial-scale=0.9, maximum-scale=0.9, user-scalable=no"
 
     link rel: "shortcut icon",                href: "/icons/favicon.png"
     link rel: "apple-touch-icon",             href: "/icons/apple-icon.png"

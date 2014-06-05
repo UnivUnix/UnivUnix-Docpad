@@ -3,35 +3,36 @@ layout: navbars
 ---
 section id: "content", class: "container", ->
   div class: "row", ->
+    div class: "col-lg-12", ->
+      div id: "cookieTool"
+  div class: "row", ->
     div class: "col-lg-9", role: "main", ->
-      div class: "container", ->
-        div id: "cookieTool", class: "col-sm-12"
+      div class: "row", ->
         text @content
-      div class: "container", ->
-        div class: "row", ->
-          div class: "col-lg-12", ->
-            if @document.isPaged
-              ul class: "pager", ->
-                if @hasPrevPage()
-                  li class: "previous", ->
-                    a href: @getPrevPage(), ->
-                      text "Nuevos"
-                else
-                  li class: "previous disabled", ->
-                    a ->
-                      text "Nuevos"
-                if @hasNextPage()
-                  li class: "next", ->
-                    a href: @getNextPage(), ->
-                      text "Antiguos"
-                else
-                  li class: "next disabled", ->
-                    a ->
-                      text "Antiguos"
+      div class: "row", ->
+        div class: "col-lg-12", ->
+          if @document.isPaged
+            ul class: "pager", ->
+              if @hasPrevPage()
+                li class: "previous", ->
+                  a href: @getPrevPage(), ->
+                    text "Nuevos"
+              else
+                li class: "previous disabled", ->
+                  a ->
+                    text "Nuevos"
+              if @hasNextPage()
+                li class: "next", ->
+                  a href: @getNextPage(), ->
+                    text "Antiguos"
+              else
+                li class: "next disabled", ->
+                  a ->
+                    text "Antiguos"
     aside id: "sidebar", class: "col-lg-3", role: "complementary", ->
       if @document.photo?
-        section id: "photo", class: "widget", ->
-          div class: "container", ->
+        section id: "photo", class: "widget row", ->
+          div class: "widget-container col-lg-12", ->
             div class: "widget-title", ->
               h3 ->
                 text @document.title
@@ -39,8 +40,8 @@ section id: "content", class: "container", ->
               img class:"img-responsive img-rounded lazy", src: @getUrl("/img/placeholder.gif"), 'data-original': @document.photo[0], alt: @document.photo[1] if @document.photo[1]? or ""
               noscript ->
                 img class:"img-responsive img-rounded", src: @document.photo[0], alt: @document.photo[1] if @document.photo[1]? or ""
-      section id: "info", class: "widget", ->
-        div class: "container", ->
+      section id: "info", class: "widget row", ->
+        div class: "widget-container col-lg-12", ->
           div class: "widget-title", ->
             h3 ->
               text "Acerca de " + @document.title
@@ -66,8 +67,8 @@ section id: "content", class: "container", ->
                     text "Resumen: "
                   text @document.about
       if @document.expertIn?
-        section id: "expertIn", class: "widget", ->
-          div class: "container", ->
+        section id: "expertIn", class: "widget row", ->
+          div class: "widget-container col-lg-12", ->
             div class: "widget-title", ->
               h3 ->
                 text "Conocimientos"

@@ -3,34 +3,35 @@ layout: navbars
 ---
 section id: "content", class: "container", ->
   div class: "row", ->
+    div class: "col-lg-12", ->
+      div id: "cookieTool"
+  div class: "row", ->
     div class: "col-lg-9", role: "main", ->
-      div class: "container", ->
-        div id: "cookieTool", class: "col-sm-12"
+      div class: "row", ->
         text @content
-      div class: "container", ->
-        div class: "row", ->
-          div class: "col-lg-12", ->
-            if @document.isPaged
-              ul class: "pager", ->
-                if @hasPrevPage()
-                  li class: "previous", ->
-                    a href: @getPrevPage(), ->
-                      text "Nuevos"
-                else
-                  li class: "previous disabled", ->
-                    a ->
-                      text "Nuevos"
-                if @hasNextPage()
-                  li class: "next", ->
-                    a href: @getNextPage(), ->
-                      text "Antiguos"
-                else
-                  li class: "next disabled", ->
-                    a ->
-                      text "Antiguos"
+      div class: "row", ->
+        div class: "col-lg-12", ->
+          if @document.isPaged
+            ul class: "pager", ->
+              if @hasPrevPage()
+                li class: "previous", ->
+                  a href: @getPrevPage(), ->
+                    text "Nuevos"
+              else
+                li class: "previous disabled", ->
+                  a ->
+                    text "Nuevos"
+              if @hasNextPage()
+                li class: "next", ->
+                  a href: @getNextPage(), ->
+                    text "Antiguos"
+              else
+                li class: "next disabled", ->
+                  a ->
+                    text "Antiguos"
     aside id: "sidebar", class: "col-lg-3", role: "complementary", ->
-      section id: "pages", class: "widget", ->
-        div class: "container", ->
+      section id: "pages", class: "widget row", ->
+        div class: "widget-container col-lg-12", ->
           div class: "widget-title", ->
             h3 ->
               text "Acerca de:"
@@ -40,8 +41,8 @@ section id: "content", class: "container", ->
                 li class: ('active' if @document.url == document.url), ->
                   a href: document.url, property: "dc:title", ->
                     document.title
-      section id: "staff", class: "widget", ->
-        div class: "container", ->
+      section id: "staff", class: "widget row", ->
+        div class: "widget-container col-lg-12", ->
           div class: "widget-title", ->
             h3 ->
               text "Staff"
@@ -51,8 +52,8 @@ section id: "content", class: "container", ->
                 li ->
                   a href: "/authors/"+author.title.toLowerCase(), ->
                     text author.title
-      section id: "ads", class: "widget", ->
-        div class: "container", ->
+      section id: "ads", class: "widget row", ->
+        div class: "widget-container col-lg-12", ->
           div class: "widget-title", ->
             h3 ->
               text "Publicidad"

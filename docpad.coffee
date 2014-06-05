@@ -231,19 +231,12 @@ docpadConfig = {
       priority: 0.5
     thumbnails:
       imageMagick: true
-      presets:
-        'thumbnail':
-          w: 700
-          h: 440
-        'thumb':
-          w: 250
-          h: 250
       targets:
-        'thumbnail': (img,args) ->
+        'postMain': (img,args) ->
           return img
             .resize(700)
             .crop(700, 440)
-        'thumb': (img, args) ->
+        'postMini': (img, args) ->
           return img
             .resize(250,250)
             .crop(250,250)

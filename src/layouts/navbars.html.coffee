@@ -10,7 +10,7 @@ header class: "navbar navbar-inverse navbar-fixed-top", ->
           text "Toggle navigation"
         for num in [3..1]
           span class: "icon-bar"
-      a id:"brand", class: "fadepage sprite sprite-brand navbar-brand", href: "/"
+      a id:"brand", class: "sprite sprite-brand navbar-brand", href: "/"
     div id:"navigation", class: "collapse navbar-collapse navbar-ex1-collapse navbar-responsive-collapse", ->
       ul class: "nav navbar-nav", ->
         for document in @uniqueArray(@getCollection('categoryPages').toJSON())
