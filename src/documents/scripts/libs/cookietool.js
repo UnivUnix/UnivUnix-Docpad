@@ -342,7 +342,7 @@ CookieTool.API = {
  */
 CookieTool.Event.on('agree', function() {
 	if( window.adsbygoogle ) {
-		CookieTool.Utils.loadScript('http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
+		CookieTool.Utils.loadScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
 	}
 	if( window._gaq ) {
 		CookieTool.Utils.loadScript(('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js');

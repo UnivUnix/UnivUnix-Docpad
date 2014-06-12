@@ -12,7 +12,6 @@ $(document).ready(function() {
 //COOKIETOOL
 CookieTool.Event.on('agree', function() {
   // Código que carga las cookies
-  // Por elemplo:
   CookieTool.Utils.loadScript('/scripts/libs/isogram.js');
   CookieTool.Utils.loadScript('/scripts/libs/disqus.js');
 });
@@ -29,5 +28,5 @@ CookieTool.Event.on('decline', function() {
   CookieTool.Cookie.remove('NID');
   CookieTool.Cookie.remove('SNID');
 });
-CookieTool.Config.set('link','http://www.univunix.com/lssi.html');
+CookieTool.Config.set('link','https://www.univunix.com/lssi.html');
 CookieTool.API.impliedAgreement();
