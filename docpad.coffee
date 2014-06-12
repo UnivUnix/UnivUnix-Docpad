@@ -18,7 +18,7 @@ docpadConfig = {
     # Specify some site properties
     site:
       # The production url of our website
-      url: "http://www.univunix.com"
+      url: "https://www.univunix.com"
 
       # The default title of our website
       title: "UnivUnix"
@@ -72,6 +72,9 @@ docpadConfig = {
       
     #--------------------------------
     # Custom functions
+
+    getUrl: (document) ->
+      return @site.url+document
 
     getPostExtract: (content) ->
       i = content.search('</p>')
