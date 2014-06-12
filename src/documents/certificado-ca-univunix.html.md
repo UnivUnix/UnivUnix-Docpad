@@ -11,6 +11,8 @@ Debido a la falta de medios para costear un certificado SSL wildcard (multidomin
 
 Para que funcionen los certificados, es necesario incorporar esta CA a nuestra base de datos de claves. Para quienes no sepan cómo hacerlo, en unos días iré incorporando breves explicaciones para los navegadores más conocidos. También está la alternativa de añadir una excepción de seguridad a esta web, pero la opción de incorporar la CA es más segura y menos traumática.
 
+Para cualquier duda, pueden [acudir al foro](https://forum.univunix.com/topic/4/univunix-ya-funciona-sobre-seguro).
+
 <a class="btn btn-primary" href="/attachments/certs/CAUnivUnix.pem">
     Descargar certificado
 </a>
