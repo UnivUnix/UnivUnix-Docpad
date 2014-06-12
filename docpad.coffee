@@ -73,9 +73,6 @@ docpadConfig = {
     #--------------------------------
     # Custom functions
 
-    getUrl: (document) ->
-      return @site.url+document
-
     getPostExtract: (content) ->
       i = content.search('</p>')
       if i >= 0

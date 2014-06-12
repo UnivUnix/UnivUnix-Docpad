@@ -23,7 +23,7 @@ div class: "col-lg-12", ->
       h1 ->
         @document.title
       if @document.thumbnail?
-        img src: @getUrl("/img/placeholder.gif"), 'data-original': @getThumbnail(@document.thumbnail[0], 'postMini'), class: "img-responsive lazy img-rounded pull-left", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
+        img src: "/img/placeholder.gif", 'data-original': @getThumbnail(@document.thumbnail[0], 'postMini'), class: "img-responsive lazy img-rounded pull-left", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""
         noscript ->
           img src: @getThumbnail(@document.thumbnail[0], 'postMini'), class: "img-responsive img-rounded pull-left", alt: @document.thumbnail[1] if @document.thumbnail[1]? or ""  
       text @content

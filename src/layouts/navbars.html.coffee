@@ -84,4 +84,4 @@ footer class: "navbar navbar-inverse navbar-fixed-bottom", ->
           a class: "sprite sprite-css3", target:"_blank", href:"http://jigsaw.w3.org/css-validator/validator?uri=www.univunix.com"
         li ->
           a class: "sprite sprite-cc", target:"_blank", href:"http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"
-script type:"text/javascript", src:"http://www.google.es/coop/cse/brand?form=cse-search-box&amp;lang=es"
+script type:"text/javascript", src:"//www.google.es/coop/cse/brand?form=cse-search-box&amp;lang=es"
