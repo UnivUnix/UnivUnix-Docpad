@@ -15,18 +15,5 @@ CookieTool.Event.on('agree', function() {
   CookieTool.Utils.loadScript('/scripts/libs/isogram.js');
   CookieTool.Utils.loadScript('/scripts/libs/disqus.js');
 });
-CookieTool.Event.on('decline', function() {
-  // Borrar las cookies si es posible:
-  CookieTool.Cookie.remove('I4SUserLocale');
-  CookieTool.Cookie.remove('GAPS');
-  CookieTool.Cookie.remove('PREF');
-  CookieTool.Cookie.remove('SID');
-  CookieTool.Cookie.remove('HSID');
-  CookieTool.Cookie.remove('SSID');
-  CookieTool.Cookie.remove('APISID');
-  CookieTool.Cookie.remove('SAPISID');
-  CookieTool.Cookie.remove('NID');
-  CookieTool.Cookie.remove('SNID');
-});
 CookieTool.Config.set('link','https://www.univunix.com/lssi.html');
 CookieTool.API.impliedAgreement();
