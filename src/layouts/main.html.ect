@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%=@getPreparedTitle()%></title>
+		
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="description" content="<%=@getPreparedDescription()%>">
+		<!--[if lt IE 9]>
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<![endif]-->
+
+		<% if @getPreparedKeywords() != "" : %>
+			<meta name="keywords" content="<%=@getPreparedKeywords()%>">
+		<% end %>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<!-- Icon links -->
+		<link rel="shortcut icon" href="/icons/favicon.png">
+		<link rel="apple-touch-icon" href="/icons/apple-icon.png">
+
+		<!-- Styles and JS HTML5 for IE -->
+		<!--[if lt IE 9]>
+			<script async type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+		<![endif]-->
+		<%-@getBlock('styles').add(@site.styles).toHTML()%>
+	</head>
+	<body>
+		<%-@content%>
+		<%-@getBlock('scripts').add(@site.scripts).toHTML()%>
+	</body>
+</html>
