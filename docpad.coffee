@@ -35,7 +35,7 @@ docpadConfig = {
       ]
 
       # Scripts
-      scripts: [
+      scripts: ["",
         "/scripts/libs/jquery-min.js",
         "/scripts/libs/lazyload-min.js",
         "/scripts/libs/bootstrap-min.js",
