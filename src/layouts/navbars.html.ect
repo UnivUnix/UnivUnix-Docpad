@@ -38,7 +38,7 @@ layout: main
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a class="sprite sprite-share" data-toggle="modal" href="#social"></a>
+					<a class="sprite sprite-share" data-toggle="modal" data-target="#social" href="#social"></a>
 				</li>
 			</ul>
 			<form id="csr-search-box" class="navbar-form navbar-right hidden-sm hidden-xs" role="search" action="/search">
@@ -51,7 +51,8 @@ layout: main
 			</form>
 		</div>
 	</div>
-	<div class="modal fade" id="social">
+</header>
+<div class="modal fade" id="social">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -112,7 +113,6 @@ layout: main
 			</div>
 		</div>
 	</div>
-</header>
 <%- @content %>
 <footer class="navbar navbar-inverse navbar-fixed-bottom">
 	<div class="container">

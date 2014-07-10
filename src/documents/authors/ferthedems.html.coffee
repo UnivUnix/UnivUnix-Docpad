@@ -13,4 +13,4 @@ about: "Estudiante de Ingeniería del Software en la Universidad Politécnica de
 expertIn: ['C/C++','HTML5','CSS3','Javascript','Python','Linux (Obviamente)','PHP','JAVA','Bash','Django','Symphony']
 ---
 
-text @partial('article-list.html.coffee', @, {collection: 'ferthedems'})
+text @partial('article-list.html.ect', @, {collection: 'ferthedems'})

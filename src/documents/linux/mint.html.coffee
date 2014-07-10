@@ -7,4 +7,4 @@ pagedCollection: 'mint'
 pageSize: 6
 ---
 
-text @partial('article-list.html.coffee', @, {collection: 'mint'})
+text @partial('article-list.html.ect', @, {collection: 'mint'})

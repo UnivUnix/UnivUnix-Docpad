@@ -8,4 +8,4 @@ pagedCollection: 'tutoriales'
 pageSize: 6
 ---
 
-text @partial('article-list.html.coffee', @, {collection: 'tutoriales'})
+text @partial('article-list.html.ect', @, {collection: 'tutoriales'})

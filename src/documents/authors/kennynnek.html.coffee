@@ -13,4 +13,4 @@ about: "Entusiasta de GNU/Linux y la Filosofia Libre. Usuario de Debian y deriva
 expertIn: ['Linux', 'C#', 'Redes de computación', 'Cisco IOS', 'C++', 'Python', 'Java']
 ---
 
-text @partial('article-list.html.coffee', @, {collection: 'kennynnek'})
+text @partial('article-list.html.ect', @, {collection: 'kennynnek'})

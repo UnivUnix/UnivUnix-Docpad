@@ -7,4 +7,4 @@ pagedCollection: 'opensuse'
 pageSize: 6
 ---
 
-text @partial('article-list.html.coffee', @, {collection: 'opensuse'})
+text @partial('article-list.html.ect', @, {collection: 'opensuse'})
