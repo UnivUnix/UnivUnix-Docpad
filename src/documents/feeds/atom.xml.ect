@@ -7,12 +7,12 @@
 	<id><%= @site.url %></id>
 	<% for document in @getCollection('posts').toJSON(): %>
 		<entry>
-			<title><%= document.title %></title>
-			<link href="<%= @getUrl(document.url) %>"/>
+			<title><%=document.title%></title>
+			<link href="<%=@getUrl(document.url)%>"/>
 			<author><name></name></author>
-			<updated><%= document.date.toISOString() %></updated>
-			<summary><%= @getPostExtract(String(document.contentRenderedWithoutLayouts)) %></summary>
-			<id><%= @getUrl(document.url) %></id>
+			<updated><%=document.date.toISOString()%></updated>
+			<summary><%=@getPostExtract(String(document.contentRenderedWithoutLayouts))%></summary>
+			<id><%=@getUrl(document.url)%></id>
 		</entry>
 	<% end %>
 </feed>
