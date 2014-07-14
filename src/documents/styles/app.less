@@ -9,7 +9,7 @@
   font-family:'Lato';
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url('http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff') format('woff');
+  src: local('Lato Regular'), local('Lato-Regular'), url('//themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff') format('woff');
 }
 
 //BorderRadius
@@ -194,8 +194,9 @@ body{
       footer{
         border-top: 1px solid #a4a4a4;
         padding: 10px;
-        .btn{
-          margin-bottom: 5px;
+        color: #fff;
+        span{
+          padding: 3px;
         }
       }
     }
@@ -204,13 +205,8 @@ body{
   //--------------------
   #sidebar{
     .widget{
-      .container{
+      &-container{
         margin: 0 0 20px;
-        padding: 0;
-        background: #2d2d2d;
-        .border-radius(@border-radius-px);
-        box-shadow: rgba(128, 128, 128, 0.74) 0 2px 4px;
-        max-width: none;
       }
       &-title{
         background: #3198B6;
@@ -226,8 +222,10 @@ body{
       }
       &-content{
         padding: 0 6px 6px 6px;
-        .border-bottom-radius(@border-radius-px);
         color: #fff;
+        background: #2d2d2d;
+        .border-radius(@border-radius-px);
+        box-shadow: rgba(128, 128, 128, 0.74) 0 2px 4px;
         ul{
           list-style: none;
           margin: 0;

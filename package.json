@@ -7,8 +7,12 @@
     "npm": "1.3"
   },
   "dependencies": {
-    "docpad": "~6.64.0",
-    "docpad-plugin-moment": "~2.0.2"
+    "docpad": "~6.69.0",
+    "docpad-plugin-moment": "~2.0.2",
+    "docpad-plugin-paged": "~2.2.5",
+    "docpad-plugin-thumbnails": "~2.1.2",
+    "html-to-text": "latest",
+    "docpad-plugin-ect": "~2.0.1"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

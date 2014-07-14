@@ -1,0 +1,16 @@
+<% if @collection? : %>
+	<% if @getCollection(@collection).toJSON().length is 0 : %>
+		<div class="panel panel-info">
+			<header class="panel-heading">
+				No hay artículos
+			</header>
+			<section class="panel-body">
+				No se han encontrado artículos de <code><%=@collection%></code>.
+			</section>
+		</div>
+	<% else : %>
+		<% for document in (@getCollection(@collection).toJSON()[@document.page.startIdx...@document.page.endIdx]) : %>
+			<%-@partial('article-link.html.ect',@,{document: document})%>
+		<% end %>
+	<% end %>
+<% end %>

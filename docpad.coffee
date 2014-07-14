@@ -18,7 +18,7 @@ docpadConfig = {
     # Specify some site properties
     site:
       # The production url of our website
-      url: "http://www.univunix.com"
+      url: "https://www.univunix.com"
 
       # The default title of our website
       title: "UnivUnix"
@@ -36,13 +36,13 @@ docpadConfig = {
 
       # Scripts
       scripts: [
-        "/scripts/jquery-min.js",
-        "/scripts/jquery-scrollto.js",
-        "/scripts/jquery-history.js",
-        "/scripts/ajaxify-html5.js",
-        "/scripts/lazyload-min.js",
-        "/scripts/bootstrap-min.js",
-        "/scripts/cookietool.js",
+        "/scripts/libs/jquery-min.js",
+        "/scripts/libs/jquery-scrollto.js",
+        "/scripts/libs/jquery-history.js",
+        "/scripts/libs/ajaxify-html5.js",
+        "/scripts/libs/lazyload-min.js",
+        "/scripts/libs/bootstrap-min.js",
+        "/scripts/libs/cookietool.js",
         "/scripts/app.js"
       ]
 
@@ -231,19 +231,12 @@ docpadConfig = {
       priority: 0.5
     thumbnails:
       imageMagick: true
-      presets:
-        'thumbnail':
-          w: 700
-          h: 440
-        'thumb':
-          w: 250
-          h: 250
       targets:
-        'thumbnail': (img,args) ->
+        'postMain': (img,args) ->
           return img
             .resize(700)
             .crop(700, 440)
-        'thumb': (img, args) ->
+        'postMini': (img, args) ->
           return img
             .resize(250,250)
             .crop(250,250)

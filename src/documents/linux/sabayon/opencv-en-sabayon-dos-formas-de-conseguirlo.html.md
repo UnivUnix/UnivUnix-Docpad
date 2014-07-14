@@ -71,4 +71,4 @@ Y con ello tendríamos las librerías de OpenCV instaladas. Su localización en 
 
 Espero que este artículo sirva de ejemplo en que no existen diferencias entre distintas distribuciones. Solo hay que buscar bien las dependencias, que es donde reside el nivel de "dificultad" de cada distro.
 
->Fuentes: [(1)](http://www.ubuntu-mobile.net/instalar-opencv-en-ubuntu/), [(2)](http://docs.opencv.org/doc/tutorials/introduction/linux_install/linux_install.html)
+>Fuentes: [Ubuntu Mobile - Instalar OpenCV en Ubuntu](http://www.ubuntu-mobile.net/instalar-opencv-en-ubuntu/), [OpenCV documentation - Linux install](http://docs.opencv.org/doc/tutorials/introduction/linux_install/linux_install.html)

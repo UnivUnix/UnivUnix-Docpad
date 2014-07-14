@@ -1,0 +1,135 @@
+---
+layout: navbars
+---
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div id="cookieTool"></div>
+		</div>
+	</div>
+	<div class="row">
+		<section id="content" class="col-lg-9" role="main">
+			<div class="row">
+				<%-@content%>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<% if @document.isPaged : %>
+						<ul class="pager">
+							<% if @hasPrevPage() : %>
+								<li class="previous">
+									<a href="<%= @getPrevPage() %>">
+										Nuevos
+									</a>
+								</li>
+							<% else : %>
+								<li class="previous disabled">
+									<a>
+										Nuevos
+									</a>
+								</li>
+							<% end %>
+							<% if @hasNextPage() : %>
+								<li class="next">
+									<a href="<%= @getNextPage() %>">
+										Antiguos
+									</a>
+								</li>
+							<% else : %>
+								<li class="next disabled">
+									<a>
+										Antiguos
+									</a>
+								</li>
+							<% end %>
+						</ul>
+					<% end %>
+				</div>
+			</div>
+		</section>
+		<aside id="sidebar" class="col-lg-3" role="complementary">
+			<% if @document.photo? : %>
+				<div id="photo" class="widget row">
+					<div class="widget-container col-lg-12">
+						<div class="widget-title">
+							<h3>
+								<%= @document.title %>
+							</h3>
+						</div>
+						<div class="widget-content">
+							<img class="img-responsive img-rounded lazy" src="/img/placeholder.gif" data-original="<%= @document.photo[0] %>" alt="<% if @document.photo[1]? : %><%=@document.photo[1]%><% end %>">
+							<noscript>
+								<img class="img-responsive img-rounded" src="<%= @document.photo[0] %>" alt="<% if @document.photo[1]? : %><%=@document.photo[1]%><% end %>">
+							</noscript>
+						</div>
+					</div>
+				</div>
+			<% end %>
+			<div id="info" class="widget row">
+				<div class="widget-container col-lg-12">
+					<div class="widget-title">
+						<h3>
+							Acerca de <%=@document.title%>
+						</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<% if @document.range? : %>
+								<li>
+									<span class="badge">
+										<%=@document.range%>
+									</span>
+								</li>
+							<% end %>
+							<% if @document.realName? : %>
+								<li>
+									<strong>
+										Nombre: 
+									</strong>
+									<%=@document.realName%>
+								</li>
+							<% end %>
+							<% if @document.country? : %>
+								<li>
+									<strong>
+										País: 
+									</strong>
+									<%=@document.country%>
+								</li>
+							<% end %>
+							<% if @document.about? : %>
+								<li>
+									<strong>
+										Resumen: 
+									</strong>
+									<%=@document.about%>
+								</li>
+							<% end %>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<% if @document.expertIn? : %>
+				<div id="expertIn" class="widget row">
+					<div class="widget-container col-lg-12">
+						<div class="widget-title">
+							<h3>
+								Conocimientos
+							</h3>
+						</div>
+						<div class="widget-content">
+							<ul>
+								<% for expert in @document.expertIn : %>
+									<li>
+										<%=expert%>
+									</li>
+								<% end %>
+							</ul>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</aside>
+	</div>
+</div>

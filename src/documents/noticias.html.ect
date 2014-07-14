@@ -1,0 +1,11 @@
+---
+layout: sidebar
+title: 'Noticias'
+isCategoryPage: true
+categoryOrder: 1
+isPaged: true
+pagedCollection: 'noticias'
+pageSize: 6
+---
+
+<%-@partial('article-list.html.ect', @, {collection: 'noticias'})%>

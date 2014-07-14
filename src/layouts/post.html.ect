@@ -1,0 +1,71 @@
+---
+layout: sidebar
+---
+
+<div class="col-lg-12">
+	<article id="<%=@document.id%>" class="post">
+		<header class="post-header">
+			<i class="glyphicon glyphicon-calendar"></i>
+			<time class="updated" datetime="<%=@document.computerDate%>">
+				<%=@document.humanDate%>
+			</time>
+			<i class="glyphicon glyphicon-user"></i>
+			<% for author in @document.authors : %>
+				<a class="author" href="/authors/<%=author.toLowerCase()%>">
+					<%=author%>
+				</a>
+			<% end %>
+			<i class="glyphicon glyphicon-folder-open"></i>
+			<% for webCategory in @uniqueArray(@getCollection('categoryPages').toJSON()) : %>
+				<% if webCategory.title? : %>
+					<% if @document.categories.indexOf(webCategory.title.toLowerCase()) isnt -1 : %>
+						<a href="<%=webCategory.url%>">
+							<%=webCategory.title%>
+						</a>
+					<% end %>
+				<% end %>
+			<% end %>
+		</header>
+		<section class="post-content">
+			<h1>
+				<%=@document.title%>
+			</h1>
+			<% if @document.thumbnail? : %>
+				<img src="/img/placeholder.gif" data-original="<%=@getThumbnail(@document.thumbnail[0], 'postMini')%>" class="img-responsive lazy img-rounded pull-left" alt="<% if @document.thumbnail[1]? : %><%=@document.thumbnail[1]%><% end %>">
+				<noscript>
+					<img src="<%=@getThumbnail(@document.thumbnail[0], 'postMini')%>" class="img-responsive img-rounded pull-left" alt="<% if @document.thumbnail[1]? : %><%=@document.thumbnail[1]%><% end %>">
+				</noscript>
+			<% end %>
+			<%-@content%>
+			<div class="social-port">
+				<a class="sprite sprite-share sprite-share-facebook" href="http://www.facebook.com/sharer.php?u=<%=@getUrl(@document.url)%>&amp;t=<%=@formatURL(@document.title)%>" target: "_blank", title: "Recomiéndalo en Facebook"></a>
+				<a class="sprite sprite-share sprite-share-twitter" href="http://twitter.com/share?url=<%=@getUrl(@document.url)%>&amp;text=<%=@formatURL(@document.title)%>-&amp;via=UnivUnix" target: "_blank" title: "Compártelo en Twitter"></a>
+				<a class="sprite sprite-share sprite-share-google"href="https://plus.google.com/share?url=<%=@getUrl(@document.url)%>" target: "_blank" title: "Compártelo en Google Plus"></a>
+				<a class="sprite sprite-share sprite-share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<%=@getUrl(@document.url)%>&amp;title=<%=@formatURL(@document.title)%>" target: "_blank" title: "Divulga el artículo en LinkedIn"></a>
+			</div>
+			<div class="tag-list">
+				<% if @document.tags? : %>
+					<% for tag in @document.tags : %>
+						<a class="label label-primary" href="/tags?sargs=<%=tag%>">
+							<i class="glyphicon glyphicon-tag"></i>
+							<%=tag%>
+						</a>
+					<% end %>
+				<% end %>
+			</div>
+			<div id="disqus_thread"></div>
+			<noscript>
+				Please enable JavaScript to view the
+				<a href="http://disqus.com/?ref_noscript">
+					comments powered by Disqus.
+				</a>
+			</noscript>
+			<a href="http://disqus.com" class="dsq-brlink">
+				Comments powered by
+				<span class="logo-disqus">
+					Disqus
+				</span>
+			</a>
+		</section>
+	</article>
+</div>
