@@ -233,10 +233,12 @@ docpadConfig = {
       targets:
         'postMain': (img,args) ->
           return img
+            .gravity('Center')
             .resize(700)
             .crop(700, 440)
         'postMini': (img, args) ->
           return img
+            .gravity('Center')
             .resize(250,250)
             .crop(250,250)
 }
