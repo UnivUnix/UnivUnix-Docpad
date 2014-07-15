@@ -31,16 +31,13 @@ docpadConfig = {
 
       # Styles
       styles: [
-        "/styles/bootstrap.css"
+        "/styles/bootstrap-min.css"
       ]
 
       # Scripts
-      scripts: ["",
-        "/scripts/libs/jquery-min.js",
-        "/scripts/libs/lazyload-min.js",
-        "/scripts/libs/bootstrap-min.js",
-        "/scripts/libs/cookietool.js",
-        "/scripts/app.js"
+      scripts: [
+        "",
+        "/scripts/app-min.js"
       ]
 
     # -----------------------------
@@ -211,9 +208,27 @@ docpadConfig = {
         else
           next()
 
+    #Write After
+    #Used to minify our assets with grunt.
+    writeAfter: (opts,next) ->
+      safeps = require('safeps')
+      pathUtil = require('path')
+      docpad = @docpad
+      rootPath = docpad.getConfig().rootPath
+      gruntPath = pathUtil.join(rootPath, 'node_modules', '.bin', 'grunt')
+
+      command = [gruntPath]
+
+      safeps.spawn(command, {cwd:rootPath,output:true}, next)
+
+      @
+
   # =====================================
   # Enviroments: development, production.
   # Use docpad -e <enviroment> to select.
+
+  env: "production"
+  hostname: "localhost"
 
   plugins:
     livereload:

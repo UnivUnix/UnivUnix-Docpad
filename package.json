@@ -11,8 +11,14 @@
     "docpad-plugin-moment": "~2.0.2",
     "docpad-plugin-paged": "~2.2.5",
     "docpad-plugin-thumbnails": "~2.1.2",
+    "docpad-plugin-ect": "~2.0.1",
     "html-to-text": "latest",
-    "docpad-plugin-ect": "~2.0.1"
+    "safeps": "~2.2.12",
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-cssmin": "latest"
+    
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
