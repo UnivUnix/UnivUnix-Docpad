@@ -9,19 +9,21 @@ module.exports = function(grunt) {
 			options: {
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
 			},
-			files: {
-				src: ['out/scripts/libs/jquery-min.js', 'out/scripts/libs/bootstrap-min.js', 'out/scripts/libs/lazyload-min.js', 'out/scripts/libs/cookietool.js', 'out/scripts/app.js'],
-				dest: 'out/scripts/app-min.js'
-			},
+			dist: {
+				files: [
+					{src: ['out/scripts/libs/jquery-min.js', 'out/scripts/libs/bootstrap-min.js', 'out/scripts/libs/lazyload-min.js', 'out/scripts/libs/cookietool.js', 'out/scripts/app.js'], dest: 'out/scripts/app-min.js'},
+				]
+			}
 		},
 		// Minify CSS into one file
 		cssmin: {
 			options: {
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */'
 			},
-			files: {
-				src: ['out/styles/bootstrap.css'],
-				dest: 'out/styles/bootstrap-min.css'
+			dist: {
+				files: [
+					{src: ['out/styles/bootstrap.css'], dest: 'out/styles/bootstrap-min.css'}
+				]
 			}
 		}
 	});

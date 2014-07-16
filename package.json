@@ -12,13 +12,16 @@
     "docpad-plugin-paged": "~2.2.5",
     "docpad-plugin-thumbnails": "~2.1.2",
     "docpad-plugin-ect": "~2.0.1",
+    "docpad-plugin-partials": "~2.9.1",
+    "docpad-plugin-marked": "~2.2.1",
+    "docpad-plugin-less": "~2.4.1",
+    "docpad-plugin-coffeescript": "~2.4.0",
     "html-to-text": "latest",
-    "safeps": "~2.2.12",
-    "grunt": "~0.4.5",
-    "grunt-cli": "~0.1.13",
+    "safeps": "latest",
+    "grunt": "latest",
+    "grunt-cli": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-cssmin": "latest"
-    
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
