@@ -19,20 +19,20 @@ layout: main
 			<ul class="nav navbar-nav">
 				<% for document in @uniqueArray(@getCollection('categoryPages').toJSON()) : %>
 					<% if document.categoryOrder? : %>
-						<% if @isPageCategory(@document.categories, document.title) : %>
+						<% if @isPageCategory(@document.categories, document.title) or @document.title == document.title : %>
 							<li class="active">
 						<% else : %>
 							<li>
 						<% end %>
 						<a href="<%=document.url%>" property="dc:title">
-							<%=document.title%>
+							<%=document.title.toUpperCase()%>
 						</a>
 					</li>
 					<% end %>
 				<% end %>
 				<li>
 					<a href="http://forum.univunix.com/">
-						Foro
+						FORO
 					</a>
 				</li>
 			</ul>
@@ -137,11 +137,14 @@ layout: main
 				<li>
 					<a class="sprite sprite-cc" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES"></a>
 				</li>
-				<li>
-					<a href="http://www.beyondsecurity.com/vulnerability-scanner-verification/www.univunix.com"><img src="https://secure.beyondsecurity.com/verification-images/www.univunix.com/vulnerability-scanner-2.gif" alt="Website Security Test" border="0" /></a>
-				</li>
+				<!-- Only for security checks -->
+				<!--
+					<li>
+						<a href="http://www.beyondsecurity.com/vulnerability-scanner-verification/www.univunix.com"><img src="https://secure.beyondsecurity.com/verification-images/www.univunix.com/vulnerability-scanner-2.gif" alt="Website Security Test" border="0" /></a>
+					</li>
+				-->
 			</ul>
 		</div>
 	</div>
 </footer>
-<script type="text/javascript" src="//www.google.es/coop/cse/brand?form=cse-search-box&amp;lang=es">
+<script type="text/javascript" src="//www.google.es/coop/cse/brand?form=cse-search-box&amp;lang=es"></script>

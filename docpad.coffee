@@ -36,7 +36,6 @@ docpadConfig = {
 
       # Scripts
       scripts: [
-        "",
         "/scripts/app-min.js"
       ]
 
