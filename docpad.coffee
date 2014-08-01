@@ -24,6 +24,15 @@ docpadConfig = {
       title: "UnivUnix"
       titleComplement: "El portal unificado de Unix y Linux."
 
+      # Site keywords
+      keywords: [
+        "Linux",
+        "Noticias",
+        "Tutoriales",
+        "Programación",
+        "Informática"
+      ]
+
       # The website description (for SEO)
       description: """
         Una web donde te pondremos al día en la información que rodea a Linux y derivados de Unix: noticias, tutoriales y software variado e interesante.
@@ -56,7 +65,7 @@ docpadConfig = {
     # Get the prepared site/document description
     getPreparedDescription: ->
       #if we have a document description, then we should use that, otherwise use the site's description
-      if @document.isCategoryPage is true or @document.isAuthorPage is true or not @document.title?
+      if @document.isCategoryPage or @document.isAuthorPage or not @document.title?
         @site.description
       else
         @getPostExtract(String(@document.contentRenderedWithoutLayouts))
@@ -69,8 +78,8 @@ docpadConfig = {
     #--------------------------------
     # Custom functions
 
-    getUrl: (document) ->
-      return @site.url+document
+    getUrl: (url) ->
+      @site.url+url
 
     getPostExtract: (content) ->
       i = content.search('</p>')
@@ -83,29 +92,11 @@ docpadConfig = {
       url.replace(/\s/g, "%20")
 
     isPageCategory: (categories, indexTitle) ->
-      if categories?
+      if categories? and indexTitle?
         for cat in categories
-          if indexTitle?
-            if indexTitle.toLowerCase() == cat
-              return true
+          if indexTitle.toLowerCase() == cat
+            return true
       return false
-      
-    uniqueArray: (origArray) ->
-      resArray = []
-      origLength = origArray.length
-      x = 0
-      while x < origLength
-        found = undefined
-        y = 0
-        while y < resArray.length
-          if origArray[x].title is resArray[y].title
-            found = true
-            break
-          y++
-        origArray[x].url = origArray[x].url.replace(/\.(\d)+/, "") 
-        resArray.push origArray[x] unless found
-        x++
-      resArray
 
   # =================================
   # Collections
@@ -115,17 +106,17 @@ docpadConfig = {
 
     # Main collections
     # ---------------------------------------
-    pages: (database) ->
-      database.findAllLive({isPage: true}, [pageOrder:1,title:1])
+    pages: ->
+      @getCollection('documents').findAllLive({isPage: true, isPagedAuto: $ne: true}, [pageOrder:1,title:1])
 
-    categoryPages: (database) ->
-      database.findAllLive({isCategoryPage: true}, [categoryOrder:1, title: 1])
+    categoryPages: ->
+      @getCollection('documents').findAllLive({isCategoryPage: true, isPagedAuto: $ne: true}, [categoryOrder:1, title: 1])
 
-    authorPages: (database) ->
-      database.findAllLive({isAuthorPage: true}, [authorOrder:1, title: 1])
+    authorPages: ->
+      @getCollection('documents').findAllLive({isAuthorPage: true, isPagedAuto: $ne: true}, [authorOrder:1, title: 1])
 
-    posts: (database) ->
-      database.findAllLive({categories:$exists:true}, [date:-1])
+    posts: ->
+      @getCollection('documents').findAllLive({categories:$exists:true}, [date:-1])
 
     # Author collections
     # ---------------------------------------
@@ -221,7 +212,7 @@ docpadConfig = {
       safeps.spawn(command, {cwd:rootPath,output:true}, next)
 
       @
-
+      
   # =====================================
   # Enviroments: development, production.
   # Use docpad -e <enviroment> to select.

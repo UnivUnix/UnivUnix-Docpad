@@ -17,7 +17,7 @@ layout: main
 		</div>
 		<div id="navigation" class="collapse navbar-collapse navbar-ex1-collapse navbar-responsive collapse">
 			<ul class="nav navbar-nav">
-				<% for document in @uniqueArray(@getCollection('categoryPages').toJSON()) : %>
+				<% for document in @getCollection('categoryPages').toJSON() : %>
 					<% if document.categoryOrder? : %>
 						<% if @isPageCategory(@document.categories, document.title) or @document.title == document.title : %>
 							<li class="active">
@@ -30,11 +30,6 @@ layout: main
 					</li>
 					<% end %>
 				<% end %>
-				<li>
-					<a href="http://forum.univunix.com/">
-						FORO
-					</a>
-				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>

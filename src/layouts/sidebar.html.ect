@@ -58,7 +58,7 @@ layout: navbars
 					</div>
 					<div class="widget-content">
 						<ul>
-							<% for document in @uniqueArray(@getCollection('pages').toJSON()) : %>
+							<% for document in @getCollection('pages').toJSON() : %>
 								<% if @document.url == document.url : %>
 									<li class="active">
 								<% else : %>
@@ -82,7 +82,7 @@ layout: navbars
 					</div>
 					<div class="widget-content">
 						<ul>
-							<% for author in @uniqueArray(@getCollection('authorPages').toJSON()) : %>
+							<% for author in @getCollection('authorPages').toJSON() : %>
 								<li>
 									<a href="/authors/<%= author.title.toLowerCase() %>" property="dc:title">
 										<%= author.title %>

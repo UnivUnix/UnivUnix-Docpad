@@ -16,7 +16,7 @@ layout: sidebar
 				</a>
 			<% end %>
 			<i class="glyphicon glyphicon-folder-open"></i>
-			<% for webCategory in @uniqueArray(@getCollection('categoryPages').toJSON()) : %>
+			<% for webCategory in @getCollection('categoryPages').toJSON() : %>
 				<% if webCategory.title? : %>
 					<% if @document.categories.indexOf(webCategory.title.toLowerCase()) isnt -1 : %>
 						<a href="<%=webCategory.url%>">
@@ -43,16 +43,16 @@ layout: sidebar
 				<a class="sprite sprite-share sprite-share-google"href="https://plus.google.com/share?url=<%=@getUrl(@document.url)%>" target: "_blank" title: "Compártelo en Google Plus"></a>
 				<a class="sprite sprite-share sprite-share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<%=@getUrl(@document.url)%>&amp;title=<%=@formatURL(@document.title)%>" target: "_blank" title: "Divulga el artículo en LinkedIn"></a>
 			</div>
-			<div class="tag-list">
-				<% if @document.tags? : %>
+			<% if @document.tags? : %>
+				<div class="tag-list">
 					<% for tag in @document.tags : %>
-						<a class="label label-primary" href="/tags?sargs=<%=tag%>">
+						<a class="label label-primary" href="/tags/<%=tag%>">
 							<i class="glyphicon glyphicon-tag"></i>
 							<%=tag%>
 						</a>
 					<% end %>
-				<% end %>
-			</div>
+				</div>
+			<% end %>
 			<div id="disqus_thread"></div>
 			<noscript>
 				Please enable JavaScript to view the
