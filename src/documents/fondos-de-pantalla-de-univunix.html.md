@@ -4,7 +4,7 @@ layout: page
 isPage: true
 pageOrder: 3
 thumbnail: ['/attachments/2013/03/fondo_univunix.png', ' Fondo de UnivUnix']
-title: Fondos de pantalla de UnivUnix
+title: Fondos de pantalla
 ---
 
 Ya están disponibles y **listos para ser descargados** nuestros dos primeros fondos de pantalla oficiales de UnivUnix. Se ha optado por tonos azules y simplicidad en el diseño, habiendo disponibles dos versiones: una primera sencilla, con el texto y el logo centrados, ideal para aquellos que buscan escritorios minimalistas o utilizan barras inferiores de iconos _(docks)_, y otra versión más recargada, con algunas imágenes relativas al mundo del _Software Libre_.

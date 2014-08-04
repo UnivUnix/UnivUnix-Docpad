@@ -3,7 +3,7 @@ date: 2014-06-12 19:55:36+00:00
 layout: page
 isPage: true
 pageOrder: 2
-title: Certificado CA de UnivUnix
+title: Certificado CA
 ---
 
 Como ya sabrán por nuestro aviso por las redes sociales, con motivo de la iniciativa **Reset the net** UnivUnix se comprometió a implantar SSL para mejorar la privacidad de nuestros usuarios y, además, añadir un extra de seguridad que nunca viene mal.
