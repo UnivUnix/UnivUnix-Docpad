@@ -26,11 +26,11 @@ docpadConfig = {
 
       # Site keywords
       keywords: [
-        "Linux",
-        "Noticias",
-        "Tutoriales",
-        "Programación",
-        "Informática"
+        "linux",
+        "noticias",
+        "tutoriales",
+        "programación",
+        "informática"
       ]
 
       # The website description (for SEO)

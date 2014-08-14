@@ -2,7 +2,7 @@
 	Author: Angel Gonzalez
 	Contact: aglezabad[at]univunix.com
 	Google+ profile: https://plus.google.com/113350477294024138382
-	Twitter: @Interusers	
+	Twitter: @Aglezabad	
 	From: Madrid, Spain
 
 	Author: Fernando Moro
@@ -10,6 +10,10 @@
 	Google+ profile: https://plus.google.com/112156722898396647740
 	Twitter: @fegnimaggie
 	From: Madrid, Spain
+
+	Author: Kenny Barrera
+	Twitter: @lordofwisdom
+	From: Guatemala
 
 /* THANKS */
 
