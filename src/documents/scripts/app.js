@@ -2,7 +2,6 @@
 $(document).ready(function() {
   $('img.lazy').show().lazyload({
     effect: "fadeIn",
-    failureLimit: 6
   });
 });
 

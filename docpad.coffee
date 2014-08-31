@@ -140,6 +140,9 @@ docpadConfig = {
     fedora: ->
       @getCollection('posts').findAllLive({categories:$has:'fedora'}, [date:-1])
 
+    firefoxos: ->
+      @getCollection('posts').findAllLive({categories:$has:'firefoxos'}, [date:-1])
+
     linux: ->
       @getCollection('posts').findAllLive({categories:$has:'linux'}, [date:-1])
     

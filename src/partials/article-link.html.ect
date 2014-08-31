@@ -23,7 +23,7 @@
 				<i class="glyphicon glyphicon-folder-open"></i>
 				<% for webCategory in @getCollection('categoryPages').toJSON() : %>
 					<% if webCategory.title? : %>
-						<% if @document.categories.indexOf(webCategory.title.toLowerCase()) isnt -1 : %>
+						<% if @document.categories.indexOf(webCategory.pagedCollection) isnt -1 : %>
 							<a href="<%=webCategory.url%>">
 								<%=webCategory.title%>
 							</a>
@@ -34,24 +34,24 @@
 		</header>
 		<footer>
 			<div class="text-center">
-				<span id="time">
+				<span id="time-<%=@document.id%>">
 					<i class="glyphicon glyphicon-calendar"></i>
 					<time class="updated" datetime="<%=@document.computerDate%>">
 						<%=@document.humanDate%>
 					</time>
 				</span>
-				<span id="comments">
+				<span id="comments-<%=@document.id%>">
 					<i class="glyphicon glyphicon-comment"></i>
 					<a href="<%=@document.url%>#disqus_thread">-</a>
 				</span>
-				<span id="share" class="dropdown">
-					<button class="btn btn-sm btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+				<span id="share-<%=@document.id%>" class="dropdown">
+					<button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown">
 						<i class="glyphicon glyphicon-retweet"></i>
 						Compartir
 					</button>
-					<div class="dropdown-menu dropdown-padded" role="menu" aria-labelledby="dropdownMenu1">
+					<span class="dropdown-menu dropdown-padded" role="menu">
 						<%-@partial('social-port.html.ect',@)%>
-					</div>
+					</span>
 				</span>
 			</div>
 		</footer>

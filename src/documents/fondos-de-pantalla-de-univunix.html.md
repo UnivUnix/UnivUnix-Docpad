@@ -9,9 +9,9 @@ title: Fondos de pantalla
 
 Ya están disponibles y **listos para ser descargados** nuestros dos primeros fondos de pantalla oficiales de UnivUnix. Se ha optado por tonos azules y simplicidad en el diseño, habiendo disponibles dos versiones: una primera sencilla, con el texto y el logo centrados, ideal para aquellos que buscan escritorios minimalistas o utilizan barras inferiores de iconos _(docks)_, y otra versión más recargada, con algunas imágenes relativas al mundo del _Software Libre_.
 
-<img alt="UnivUnix" src="/img/placeholder.gif" data-original="/attachments/2013/03/fondo_univunix.png" class="img-responsive img-rounded lazy" style="margin: 0 auto; display: block">
+<img alt="UnivUnix" src="/img/placeholder.gif" data-original="/attachments/2013/03/fondo_univunix.png" class="img-responsive img-rounded lazy center">
 
-<img alt="UnivUnix 2" src="/img/placeholder.gif" data-original="/attachments/2013/03/fondo_univunix2.png" class="img-responsive img-rounded lazy" style="margin: 0 auto; display: block">
+<img alt="UnivUnix 2" src="/img/placeholder.gif" data-original="/attachments/2013/03/fondo_univunix2.png" class="img-responsive img-rounded lazy center">
 
 Esperamos que os gusten. Podéis descargar el _pack_ completo desde mega:
 
