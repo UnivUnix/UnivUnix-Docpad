@@ -87,6 +87,35 @@ e instalamos ClockworkMod:
 	android# adb push recovery-clockwork-6.0.3.3-roamer2.img /sdcard/cwm.img
 	android# adb shell flash_image recovery /sdcard/cwm.img
 
-###Obtener fastboot para grabar nuestra compilación.
+###Rooteo profundo del ZTE Open.
 
-Una vez conseguida la obtención de root y la instalación de un recovery alternativo al original de Mozilla, procederemos a 
+Así lo llama Eduardo González en el artículo que realizó sobre [cómo actualizar a Firefox OS 1.1](http://sl.edujose.org/2013/09/zte-open-hack-actualizando-fxos-11.html). Según él, este paso es necesario para poder acceder a todo el contenido del dispositivo.
+
+Para ello, una vez logrado el paso anterior entramos en el teléfono con adb y copiamos la partición boot:
+
+	$ adb shell
+	android$ su
+	android# cat /dev/mtd/mtd1 > /sdcard/boot.img
+	android# exit
+	android$ exit
+	$ adb pull /sdcard/boot.img /home/"user"/boot.img
+
+Después, procedemos a la instalación de la herramienta abootimg, disponible en los repositorios de Debian y Ubuntu o en [la web del proyecto](https://gitorious.org/ac100/abootimg/source/7e127fee6a3981f6b0a50ce9910267cd501e09d4:). Si se descargan el código fuente, basta con hacer:
+
+	$ make
+	$ sudo make install
+
+Tras haber instalado la herramienta, extraemos el contenido de boot.img:
+
+	$ abootimg -x /home/"user"/boot.img
+
+En la carpeta resultante, creamos un directorio, de nombre a_dir y extraemos la imagen de init:
+
+	$ mkdir "ruta a boot.img expandido"/a_dir; cd "ruta a boot.img expandido"/a_dir
+	$ gunzip -c ../initrd.img | cpio -
+
+Modificar el fichero default.prop con el siguiente contenido
+
+###Obtener fastboot (solo modelos Movistar).
+
+Una vez conseguida la obtención de root y la instalación de un recovery alternativo al original de Mozilla, procederemos a actualizar
